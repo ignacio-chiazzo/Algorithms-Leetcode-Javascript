@@ -54,7 +54,7 @@ Solutions of algorithm problems using Javascript
 | [Binary Gap ](/LeetcodeProblems/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
 | [Tic Tac Toe ](/LeetcodeProblems/Tic_Tac_Toe.js)                                                     |        | |
 | [Permutations With Duplicates ](/LeetcodeProblems/Permutations_With_Duplicates.js)                   |        | |
-| [Deleteion Distance](/LeetcodeProblems/Deletion_Distance.js)                                         |        | |
+| [Deletion Distance](/LeetcodeProblems/Deletion_Distance.js)                                          |        | |
 
 ### Sorting Algorithms
 | Algoritmhs |
