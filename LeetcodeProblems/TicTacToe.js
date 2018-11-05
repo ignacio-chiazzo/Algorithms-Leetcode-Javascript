@@ -60,20 +60,26 @@ class TicTacToe {
   }
 }
 
-ticTacToe = new TicTacToe();
-ticTacToe.isBoardFull();
-ticTacToe.addToken(0,1,"X");
-ticTacToe.printBoard();
-var iter = 0;
-while(iter < 8) {
-  ticTacToe.makeMove();
-  iter++;
+var main = function() {
+  console.log("TBD");
 }
 
-console.log("after 8 moves");
-ticTacToe.isBoardFull();
-ticTacToe.printBoard();
-ticTacToe.makeMove();
+module.exports.main = main;
+
+ticTacToe = new TicTacToe();
+// ticTacToe.isBoardFull();
+// ticTacToe.addToken(0,1,"X");
+// ticTacToe.printBoard();
+// var iter = 0;
+// while(iter < 8) {
+//   ticTacToe.makeMove();
+//   iter++;
+// }
+
+// console.log("after 8 moves");
+// ticTacToe.isBoardFull();
+// ticTacToe.printBoard();
+// ticTacToe.makeMove();
 
 // ticTacToe.printBoard();
 // ticTacToe.addToken(0,0,"X");
