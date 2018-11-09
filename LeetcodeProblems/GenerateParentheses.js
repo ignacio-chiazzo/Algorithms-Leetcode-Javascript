@@ -92,5 +92,5 @@ function main() {
     console.log(`${elem}: ${generateParenthesesApproach2(elem)}`);
   })
 }
-main();
+
 module.exports.main = main

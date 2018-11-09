@@ -1,22 +1,33 @@
-// Import
-var permutationWithoutDuplicates = require("./PermutationsWithoutDuplicates.js");
-var permutationWithDuplicates = require("./PermutationsWithDuplicates.js");
-var subsets = require("./Subsets.js");
-var generateParentheses = require("./GenerateParentheses.js")
-var maximunSubarray = require("./MaximunSubarray.js");
-var coinChange = require("./CoinChange.js");
-var nQueens = require("./NQueens.js");
-var uniquePaths = require("./UniquePaths.js");
-var floodFill = require("./FloodFill.js")
+const fs = require('fs');
 
-// Invocation
+const PROBLEMS_FOLDER = './LeetcodeProblems/';
+const REGEX_PATTERN_HIDDEN_FILES = /(^|\/)\.[^\/\.]/g;
 
-// permutationWithoutDuplicates.main();
-// permutationWithDuplicates.main();
-// subsets.main();
-// generateParentheses.main();
-// maximunSubarray.main();
-// coinChange.main();
-// nQueens.main();
-// uniquePaths.main();
-// floodFill.main();
+var main = async function() {
+  try {
+    const problems = await loadProblems();
+    for(i in problems) { 
+      console.log("Solving: " + problems[i] + ":");
+      const problem = require(PROBLEMS_FOLDER + problems[i]);
+      problem.main();
+      console.log("End of the solution for : " + problems[i] + ",\n\n");
+    }
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+var loadProblems = () => {
+  return new Promise(function (resolve, reject) {
+    fs.readdir(PROBLEMS_FOLDER, (error, files) => {
+      if (error) {
+        reject(error);
+      } else {
+	problems = files.filter(item => !(REGEX_PATTERN_HIDDEN_FILES).test(item));
+	resolve(problems);
+      }
+    })
+  });
+}
+
+main();

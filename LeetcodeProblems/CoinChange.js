@@ -134,21 +134,21 @@ var min = function(a, b, c) {
 
 
 function main() {
-  console.log("-------------");
-  console.log("Approach 1")
-  console.log(coinChange1([], 3));
-  console.log(coinChange1([2], 3));
-  console.log(coinChange1([1, 2, 5], 11));
-  console.log(coinChange1([3,7,405,436], 8839));
-  // console.log(coinChange1([370,417,408,156,143,434,168,83,177,280,117], 9953)); takes forever
+  // console.log("-------------");
+  // console.log("Approach 1")
+  // console.log(coinChange1([], 3));
+  // console.log(coinChange1([2], 3));
+  // console.log(coinChange1([1, 2, 5], 11));
+  // console.log(coinChange1([3,7,405,436], 8839));
+  // // console.log(coinChange1([370,417,408,156,143,434,168,83,177,280,117], 9953)); takes forever
 
-  console.log("-------------");
-  console.log("Approach 2")
-  console.log(coinChange2([], 3));
-  console.log(coinChange2([2], 3));
-  console.log(coinChange2([1, 2, 5], 11));
-  console.log(coinChange2([3,7,405,436], 8839));
-  console.log(coinChange2([370,417,408,156,143,434,168,83,177,280,117], 9953));
+  // console.log("-------------");
+  // console.log("Approach 2")
+  // console.log(coinChange2([], 3));
+  // console.log(coinChange2([2], 3));
+  // console.log(coinChange2([1, 2, 5], 11));
+  // console.log(coinChange2([3,7,405,436], 8839));
+  // console.log(coinChange2([370,417,408,156,143,434,168,83,177,280,117], 9953));
 
   console.log("-------------");
   console.log("Approach 3")
@@ -158,4 +158,5 @@ function main() {
   console.log(coinChange3([3,7,405,436], 8839));
   console.log(coinChange3([370,417,408,156,143,434,168,83,177,280,117], 9953));
 }
-main();
+
+module.exports.main = main;

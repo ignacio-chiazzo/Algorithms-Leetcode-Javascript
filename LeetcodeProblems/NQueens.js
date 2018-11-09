@@ -89,4 +89,5 @@ var main = function(n) {
   printMatrixes(solveNQueens(5), 5);
   printMatrixes(solveNQueens(6), 6);
 }
-main();
+
+module.exports.main = main;
