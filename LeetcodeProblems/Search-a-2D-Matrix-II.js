@@ -54,6 +54,4 @@ var main = function(n) {
   console.log(searchMatrix(matrix1, 15));
 }
 
-main();
-
 module.exports.main = main;
