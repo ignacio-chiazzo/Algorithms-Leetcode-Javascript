@@ -52,3 +52,9 @@ var searchAux = function(nums, target, start, end) {
     return searchAux(nums, target, middle + 1, end);
   }
 }
+
+var main = function(n) {
+  console.log(search([4,5,6,7,0,1,2], 5));
+}
+
+module.exports.main = main;
