@@ -1,6 +1,5 @@
 /*
 Valid Parentheses
-
 https://leetcode.com/problems/valid-parentheses/description/
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -43,7 +42,7 @@ var isValid = function(s) {
       queue.unshift(elem);
     } else {
       if(queue.length === 0)
-          return false;
+        return false;
       
       const elemQueue = queue.shift();
       if(elemQueue === "(" && elem !== ")" ||

@@ -1,8 +1,7 @@
 
 /*
+Unique Binary Search Trees
 https://leetcode.com/problems/unique-binary-search-trees/description/
-
-96. Unique Binary Search Trees
 
 Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
 
@@ -51,26 +50,25 @@ var numTrees2 = function(n) {
 
 var numTreesAux2 = function(leftMin, leftMax, memo) {
   const keyMemo = buildKey(leftMin, leftMax);
-  if(memo[keyMemo]) {
+  if(memo[keyMemo])
     return memo[keyMemo] 
-  }
 
   if(leftMin > leftMax)
-      return 0;
+    return 0;
   
   if(leftMin === leftMax) 
-      return 1;
+    return 1;
   
   var count = 0;
   for(var i = leftMin; i <= leftMax; i++){  
-      const left = numTreesAux2(leftMin, i - 1, memo);
-      const right = numTreesAux2(i + 1, leftMax, memo);  
-      
-      if(left > 0 && right > 0) {
-          count += left * right; 
-      } else {
-          count += (left > 0) ? left : right;
-      }
+    const left = numTreesAux2(leftMin, i - 1, memo);
+    const right = numTreesAux2(i + 1, leftMax, memo);  
+    
+    if(left > 0 && right > 0) {
+      count += left * right; 
+    } else {
+      count += (left > 0) ? left : right;
+    }
   } 
   
   memo[keyMemo] = count;
@@ -89,21 +87,21 @@ var numTrees1 = function(n) {
 
 var numTreesAux1 = function(leftMin, leftMax) {
   if(leftMin > leftMax)
-      return 0;
+    return 0;
   
   if(leftMin === leftMax) 
-      return 1;
+    return 1;
   
   var count = 0;
   for(var i = leftMin; i <= leftMax; i++){  
-      const left = numTreesAux1(leftMin, i - 1);
-      const right = numTreesAux1(i + 1, leftMax);  
-      
-      if(left > 0 && right > 0) {
-          count += left * right; 
-      } else {
-          count += (left > 0) ? left : right;
-      }
+    const left = numTreesAux1(leftMin, i - 1);
+    const right = numTreesAux1(i + 1, leftMax);  
+    
+    if(left > 0 && right > 0) {
+      count += left * right; 
+    } else {
+      count += (left > 0) ? left : right;
+    }
   } 
   
   return count;
@@ -125,7 +123,5 @@ var main = function() {
   console.log(numTrees3(3));
   console.log(numTrees3(5));
 }
-
-main();
 
 module.exports.main = main

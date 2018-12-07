@@ -1,7 +1,7 @@
 /*
+Maximum Subarray
 https://leetcode.com/problems/maximum-subarray/submissions/1
 
-. Maximum Subarray
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
 Example:
@@ -20,9 +20,8 @@ var maxSubArray = function(nums) {
   
   for(var i = 1; i < nums.length; i++) {
     currentMax = max(nums[i], currentMax + nums[i]);
-    if(currentMax > maxSub) {
+    if(currentMax > maxSub)
       maxSub = currentMax;
-    }
   }
 
   return maxSub;

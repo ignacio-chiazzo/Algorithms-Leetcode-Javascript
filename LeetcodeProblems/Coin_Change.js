@@ -1,50 +1,20 @@
 /*
+Coin Change
+https://leetcode.com/problems/coin-change/
 
-https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/
-
-862. Shortest Subarray with Sum at Least K
-Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
-
-If there is no non-empty subarray with sum at least K, return -1.
-
- 
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 
 Example 1:
 
-Input: A = [1], K = 1
-Output: 1
+Input: coins = [1, 2, 5], amount = 11
+Output: 3 
+Explanation: 11 = 5 + 5 + 1
 Example 2:
 
-Input: A = [1,2], K = 4
+Input: coins = [2], amount = 3
 Output: -1
-Example 3:
-
-Input: A = [2,-1,2], K = 3
-Output: 3
- 
-
 Note:
-
-1 <= A.length <= 50000
--10 ^ 5 <= A[i] <= 10 ^ 5
-1 <= K <= 10 ^ 9
-*/
-
-
-/*
-Tree for solution
-
-
-                                           [pos, countOfNumbers, K]
-[pos + 1, countOfNumbers, K]   [pos + 1, countOfNumbers + 1, K - nums[pos]]   [pos, countOfNumbers + 1, K - nums[pos]]
-...
-
-                                                [0, 0, 11]  // [pos, countOfNumbers, K]
-                                /                   |                 \
-            [1, 0, 11]                          [1, 1, 10]                         [0, 1, 10]
-        /       |       \                     /     |     \                       /    |    \
-[2, 0, 11]  [2, 1, 9]  [1, 1, 9]     [2, 0, 10] [2, 2, 8] [1, 2, 8]     [1, 1, 10] [1, 2, 9] [0, 2, 9]
-...
+You may assume that you have an infinite number of each kind of coin.
 */
 
 // Solution 3 
@@ -132,24 +102,7 @@ var min = function(a, b, c) {
   return (b < c) ? b : c;
 }
 
-
 function main() {
-  // console.log("-------------");
-  // console.log("Approach 1")
-  // console.log(coinChange1([], 3));
-  // console.log(coinChange1([2], 3));
-  // console.log(coinChange1([1, 2, 5], 11));
-  // console.log(coinChange1([3,7,405,436], 8839));
-  // // console.log(coinChange1([370,417,408,156,143,434,168,83,177,280,117], 9953)); takes forever
-
-  // console.log("-------------");
-  // console.log("Approach 2")
-  // console.log(coinChange2([], 3));
-  // console.log(coinChange2([2], 3));
-  // console.log(coinChange2([1, 2, 5], 11));
-  // console.log(coinChange2([3,7,405,436], 8839));
-  // console.log(coinChange2([370,417,408,156,143,434,168,83,177,280,117], 9953));
-
   console.log("-------------");
   console.log("Approach 3")
   console.log(coinChange3([], 3));

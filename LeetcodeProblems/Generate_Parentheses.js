@@ -1,4 +1,5 @@
 /* 
+Generate Parentheses
 https://leetcode.com/problems/generate-parentheses
 
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
@@ -31,7 +32,6 @@ var generateParenthesesApproach1 = function(n) {
 @param {string} leftParenthesis Amount for parenthesis left to be added.
 @param {[string]} sol array that contains the solution found so far.
 */
-
 var genParAux = function(str, position, leftParentheses, sol) {
   if(position === str.length) {
     var ret = str + ")".repeat(leftParentheses);

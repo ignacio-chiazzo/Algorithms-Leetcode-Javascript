@@ -1,6 +1,5 @@
 /*
 Simplify Path
-
 https://leetcode.com/problems/simplify-path/description/
 
 Given an absolute path for a file (Unix-style), simplify it. 

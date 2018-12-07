@@ -1,4 +1,6 @@
-/* https://leetcode.com/problems/n-queens/description/
+/* 
+NQueens
+https://leetcode.com/problems/n-queens/description/
 
 Example:
 
