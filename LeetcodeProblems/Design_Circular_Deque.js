@@ -15,7 +15,6 @@ getFront(): Gets the front item from the Deque. If the deque is empty, return -1
 getRear(): Gets the last item from Deque. If the deque is empty, return -1.
 isEmpty(): Checks whether Deque is empty or not. 
 isFull(): Checks whether Deque is full or not.
- 
 
 Example:
 
@@ -29,7 +28,6 @@ circularDeque.isFull();				// return true
 circularDeque.deleteLast();			// return true
 circularDeque.insertFront(4);			// return true
 circularDeque.getFront();			// return 4
- 
 
 Note:
 

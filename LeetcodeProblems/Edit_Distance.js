@@ -27,37 +27,35 @@ inention -> enention (replace 'i' with 'e')
 enention -> exention (replace 'n' with 'x')
 exention -> exection (replace 'n' with 'c')
 exection -> execution (insert 'u')
-
 */
 
 // Optimal solution
 var minDistance = function(word1, word2) {
   var matrix = [];
   for(var i = 0; i <= word1.length; i++) {
-      matrix[i] = [];
-      for(var j = 0; j <= word2.length; j++) {
-          if(i === 0) {
-              matrix[i][j] = j;
-          } else if(j === 0){
-              matrix[i][j] = i;
-          } else {
-              matrix[i][j] = 0;
-          }
-      }
+    matrix[i] = [];
+    for(var j = 0; j <= word2.length; j++) {
+      if(i === 0)
+        matrix[i][j] = j;
+      else if(j === 0)
+        matrix[i][j] = i;
+      else
+        matrix[i][j] = 0;
+    }
   };
   
   for(var i = 1; i <= word1.length; i++) {
-      for(var j = 1; j <= word2.length; j++) {
-          if(word1.charAt(i - 1) === word2.charAt(j - 1)) {
-              matrix[i][j] = matrix[i - 1][j - 1];
-          } else {
-              matrix[i][j] = 1 + min(
-                  matrix[i - 1][j - 1],
-                  matrix[i - 1][j], // add
-                  matrix[i][j - 1]  // remove
-              );   
-          }
+    for(var j = 1; j <= word2.length; j++) {
+      if(word1.charAt(i - 1) === word2.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = 1 + min(
+          matrix[i - 1][j - 1],
+          matrix[i - 1][j], // add
+          matrix[i][j - 1]  // remove
+        );   
       }
+    }
   }
   
   return matrix[word1.length][word2.length];
@@ -65,7 +63,7 @@ var minDistance = function(word1, word2) {
 
 var min = function(a, b, c) {
   if(a < b) {
-      return (a < c) ? a : c;
+    return (a < c) ? a : c;
   }
   return (b < c) ? b : c;
 }
@@ -76,29 +74,26 @@ var minDistance2 = function(word1, word2) {
 }
 
 var minDistanceAux = function(word1, word2, iter1, iter2) {
- if(word1.length === iter1) {
-     return word2.length - iter2;
- }
+  if(word1.length === iter1)
+    return word2.length - iter2;
   
- if(word2.length === iter2) {
-     return word1.length - iter1;
- }
+  if(word2.length === iter2)
+    return word1.length - iter1;
   
- if(word1.charAt(iter1) === word2.charAt(iter2)) {
-     return minDistanceAux(word1, word2, iter1 + 1, iter2 + 1);
- }
-  
- return 1 + min(
-     minDistanceAux(word1, word2, iter1 + 1, iter2 + 1),
-     minDistanceAux(word1, word2, iter1, iter2 + 1), // add
-     minDistanceAux(word1, word2, iter1 + 1, iter2 ) // delete
- )
+  if(word1.charAt(iter1) === word2.charAt(iter2))
+    return minDistanceAux(word1, word2, iter1 + 1, iter2 + 1);
+ 
+  return 1 + min(
+    minDistanceAux(word1, word2, iter1 + 1, iter2 + 1),
+    minDistanceAux(word1, word2, iter1, iter2 + 1), // add
+    minDistanceAux(word1, word2, iter1 + 1, iter2 ) // delete
+  )
 };
 
 var min = function(a, b, c) {
-  if(a < b) {
-      return (a < c) ? a : c;
-  }
+  if(a < b)
+    return (a < c) ? a : c;
+  
   return (b < c) ? b : c;
 }
 
@@ -107,12 +102,11 @@ var main = function() {
   console.log("Approach 1");
   console.log(minDistance("ros", "horse"));
   console.log(minDistance("intention", "execution"));
+
   console.log("-------------");
   console.log("Approach 2");
   console.log(minDistance2("ros", "horse"));
   console.log(minDistance2("intention", "execution"));
 }
-
-main();
 
 module.exports.main = main;

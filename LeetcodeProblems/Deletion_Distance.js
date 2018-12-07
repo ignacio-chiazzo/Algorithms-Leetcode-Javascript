@@ -19,7 +19,6 @@ input:  str1 = "", str2 = ""
 output: 0
 */
 
-
 // Solution 3 Using DP
 var deletionDistanceDP = function(str1, str2) {
   if(str1.length === 0)
@@ -54,9 +53,8 @@ var deletionDistance2 = function(str1, str2) {
 
 var deletionDistanceAux2 = function(str1, str2, pos1, pos2, memo) {
   const valueCashed = getValue(pos1, pos2, memo);
-  if(valueCashed !== undefined) {
+  if(valueCashed !== undefined)
     return valueCashed;
-  }
   var result;
 
   if(str1.length === pos1)
@@ -124,7 +122,5 @@ function main() {
   console.log(deletionDistanceDP("some", "thing")); //output: 9
   console.log(deletionDistanceDP("", "")); // =  0
 }
-
-main();
 
 module.exports.main = main

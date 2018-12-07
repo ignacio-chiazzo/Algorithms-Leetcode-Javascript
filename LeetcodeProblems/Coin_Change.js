@@ -2,7 +2,9 @@
 Coin Change
 https://leetcode.com/problems/coin-change/
 
-You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You are given coins of different denominations and a total amount of money amount. 
+Write a function to compute the fewest number of coins that you need to make up that amount. 
+If that amount of money cannot be made up by any combination of the coins, return -1.
 
 Example 1:
 
@@ -18,19 +20,16 @@ You may assume that you have an infinite number of each kind of coin.
 */
 
 // Solution 3 
-var coinChange3 = function(coins, amount) {
+var coinChange = function(coins, amount) {
   var memo = [];
-
-  for(var i = 0; i <= amount; i++) {
+  for(var i = 0; i <= amount; i++)
     memo[i] = Number.POSITIVE_INFINITY;
-  }
-  memo[0] = 0;
 
+  memo[0] = 0;
   for(var i = 0; i < coins.length; i++) {
     const coin = coins[i];
-    for(var j = coin; j < memo.length; j++) {
+    for(var j = coin; j < memo.length; j++)
       memo[j] = min2(memo[j], memo[j - coin] + 1);
-    }
   }
 
   return (memo[amount] == Number.POSITIVE_INFINITY) ? -1 : memo[amount];
@@ -39,7 +38,6 @@ var coinChange3 = function(coins, amount) {
 var min2 = function(a, b) {
   return (a < b) ? a : b;
 }
-
 
 // Solution 2
 var buildMemoKey = function(position, amount) {
@@ -54,9 +52,9 @@ var coinChange2 = function(coins, amount) {
 
 var coinChangeAux2 = function(coins, amount, pos, memo) {
   var key = buildMemoKey(pos, amount);
-  if(memo[key]) {
+  if(memo[key])
     return memo[key];
-  }
+    
   if(amount < 0) {
     return Number.POSITIVE_INFINITY; 
   } else if(amount == 0) {
@@ -98,18 +96,19 @@ var coinChangeAux1 = function(coins, amount, pos) {
 }
 
 var min = function(a, b, c) {
-  if(a < b) { return (a < c) ? a : c };
+  if(a < b) 
+    return (a < c) ? a : c;
   return (b < c) ? b : c;
 }
 
 function main() {
   console.log("-------------");
-  console.log("Approach 3")
-  console.log(coinChange3([], 3));
-  console.log(coinChange3([2], 3));
-  console.log(coinChange3([1, 2, 5], 11));
-  console.log(coinChange3([3,7,405,436], 8839));
-  console.log(coinChange3([370,417,408,156,143,434,168,83,177,280,117], 9953));
+  console.log("Solution Optimal")
+  console.log(coinChange([], 3));
+  console.log(coinChange([2], 3));
+  console.log(coinChange([1, 2, 5], 11));
+  console.log(coinChange([3, 7, 405, 436], 8839));
+  console.log(coinChange([370, 417, 408, 156, 143, 434, 168, 83, 177, 280, 117], 9953));
 }
 
 module.exports.main = main;

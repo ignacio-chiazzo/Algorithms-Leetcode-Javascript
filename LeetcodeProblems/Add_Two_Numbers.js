@@ -44,34 +44,37 @@ var addTwoNumbers = function(l1, l2) {
   
   const head = number;
   while(l1 !== null || l2 !== null) {
-    var l1elem = 0;
-    var l2elem = 0;
+    var elem = carry;
     if(l1 !== null) {
-      l1elem = l1.val;
+      elem += l1.val;
       l1 = l1.next;
     }
     if(l2 !== null) {
-      l2elem = l2.val;
+      elem += l2.val;
       l2 = l2.next;
     }
     
-    elem = l1elem + l2elem + carry;
     number.next = new ListNode((elem % 10));
     number = number.next;
     carry = (elem >= 10) ? 1 : 0;
   }
-  if(carry === 1) {
+  if(carry === 1)
     number.next = new ListNode(1);
-    number = number.next;
-  }
   return head;
 };
-
 
 var main = function() {
   const list1 = ListNode.linkenList([1,2,3,4]);
   const list2 = ListNode.linkenList([1,2,3,4]);
   console.log(addTwoNumbers(list1, list2));
+
+  const list3 = ListNode.linkenList([1]);
+  const list4 = ListNode.linkenList([1,2]);
+  console.log(addTwoNumbers(list3, list4));
+
+  const list5 = ListNode.linkenList([]);
+  const list6 = ListNode.linkenList([1,2]);
+  console.log(addTwoNumbers(list5, list6));
 }
 
-main();
+module.exports.main = main;

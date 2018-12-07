@@ -53,9 +53,8 @@ var binaryGap = function(N) {
         currentDist++;
         N >>= 1; 
       }
-      if(N !== 0 && currentDist > maxDist) { 
+      if(N !== 0 && currentDist > maxDist)
         maxDist = currentDist;
-      }    
     }
   }
   return maxDist;
@@ -65,6 +64,5 @@ var main = function() {
   console.log(binaryGap(22)); // 10110
   console.log(binaryGap(8)); // 1000
 }
-main();
 
 module.exports.main = main;
