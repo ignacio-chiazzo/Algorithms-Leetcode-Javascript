@@ -9,8 +9,12 @@ var main = async function() {
     for(i in problems) { 
       console.log("Solving: " + problems[i] + ":");
       const problem = require(PROBLEMS_FOLDER + problems[i]);
-      problem.main();
-      console.log("End of the solution for : " + problems[i] + ",\n\n");
+      if (typeof(problem.main) !=='undefined') {
+        problem.main();
+        console.log("End of the solution for : " + problems[i] + ",\n\n");
+      } else {
+        console.warn(problem, "The problem " + problems[i] +  " doesn't have a main method implemented.");
+      }
     }
   } catch (error) {
     throw new Error(error);
@@ -23,8 +27,8 @@ var loadProblems = () => {
       if (error) {
         reject(error);
       } else {
-	problems = files.filter(item => !(REGEX_PATTERN_HIDDEN_FILES).test(item));
-	resolve(problems);
+        problems = files.filter(item => !(REGEX_PATTERN_HIDDEN_FILES).test(item));
+        resolve(problems);
       }
     })
   });

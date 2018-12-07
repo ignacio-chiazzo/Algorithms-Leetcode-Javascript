@@ -61,11 +61,8 @@ var TreeNode = function(val) {
   this.left = this.right = null;
 }
 
-console.log(
-  buildTree(
-    [3,9,20,15,7],
-    [9,3,15,20,7]
-  )
-);
+var main = function() {
+  console.log(buildTree([3,9,20,15,7], [9,3,15,20,7]));
+}
 
 module.exports.main = main
