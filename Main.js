@@ -9,6 +9,7 @@ var main = async function() {
     for(i in problems) { 
       console.log("Solving: " + problems[i] + ":");
       const problem = require(PROBLEMS_FOLDER + problems[i]);
+
       if (typeof(problem.main) !=='undefined') {
         problem.main();
         console.log("End of the solution for : " + problems[i] + ",\n\n");
