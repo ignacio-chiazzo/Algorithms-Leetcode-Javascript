@@ -1,4 +1,5 @@
 /*
+Design Circular Deque
 https://leetcode.com/problems/design-circular-deque/description/
 
 Design your implementation of the circular double-ended queue (deque).
@@ -145,5 +146,5 @@ var main = function(){
   console.log(obj.insertFront(4));
   console.log(obj.getFront());  
 }
-main();
+
 module.exports.main = main;

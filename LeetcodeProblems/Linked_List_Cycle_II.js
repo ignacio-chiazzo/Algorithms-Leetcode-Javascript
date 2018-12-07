@@ -1,4 +1,5 @@
 /*
+Linked List Cycle
 https://leetcode.com/problems/linked-list-cycle-ii/description/
 
 Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
@@ -9,6 +10,7 @@ Follow up:
 Can you solve it without using extra space?
 */
 
+var ListNode = require('../utilsClasses/ListNode').ListNode;
 
 // Optimal solution
 /**
@@ -59,15 +61,9 @@ var main = function() {
   const head = buildCycle();
   console.log(detectCycle(head));
 }
-main();
-
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
-}
 
 function buildCycle() {
-  var node1 =  new ListNode(1);
+  var node1 =  ListNode.linkenList([1,2,3,4,5]);
   var node2 =  new ListNode(2);
   var node3 =  new ListNode(3);
   var node4 =  new ListNode(4);
@@ -78,13 +74,7 @@ function buildCycle() {
   node3.next = node4;
   node4.next = node5;
   node5.next = node2; 
-
-  /*  1 -> 2 -> 3 -> 4 -> 5
-          \            /
-              - - - - -
-  */
   return node1;
 }
 
-main();
 module.exports.main = main;

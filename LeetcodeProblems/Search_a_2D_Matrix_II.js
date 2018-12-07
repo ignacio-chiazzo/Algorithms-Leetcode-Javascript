@@ -1,7 +1,9 @@
 /*
+Search a 2D Matrix II
 https://leetcode.com/problems/search-a-2d-matrix-ii/description/
- Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
- Integers in each row are sorted in ascending from left to right.
+
+Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted in ascending from left to right.
 Integers in each column are sorted in ascending from top to bottom.
 Example:
  Consider the following matrix:
@@ -23,18 +25,18 @@ Given target = 20, return false.
 */
 var searchMatrix = function(matrix, target) {
   if (matrix.length == 0)
-      return false
+    return false
   var lastCol = matrix[0].length - 1;
   var firstRow = 0;
   
   while(lastCol >= 0 && firstRow < matrix.length) {
-      if(matrix[firstRow][lastCol] == target) {
-          return true;
-      } else if(matrix[firstRow][lastCol] > target) {
-          lastCol--;
-      } else {
-          firstRow++;
-      }
+    if(matrix[firstRow][lastCol] == target) {
+      return true;
+    } else if(matrix[firstRow][lastCol] > target) {
+      lastCol--;
+    } else {
+      firstRow++;
+    }
   }
   
   return false;

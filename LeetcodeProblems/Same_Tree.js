@@ -1,8 +1,8 @@
 /*
-
+Same Tree
 https://leetcode.com/problems/same-tree/description/
-Given two binary trees, write a function to check if they are the same or not.
 
+Given two binary trees, write a function to check if they are the same or not.
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
 
 Example 1:
@@ -47,11 +47,11 @@ Output: false
  * @return {boolean}
  */
 var isSameTree = function(p, q) {
-    if(p === null)
-        return q === null;
-    
-    if(q === null || p.val !== q.val)
-        return false;
-    
-    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+  if(p === null)
+    return q === null;
+  
+  if(q === null || p.val !== q.val)
+    return false;
+  
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };

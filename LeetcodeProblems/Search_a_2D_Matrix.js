@@ -1,4 +1,5 @@
 /*
+Search a 2D Matrix
 https://leetcode.com/problems/search-a-2d-matrix/description/
 
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
@@ -83,5 +84,4 @@ var main = function(){
   console.log(searchMatrix(matrix, 3));
 }
 
-main();
 module.exports.main = main;
