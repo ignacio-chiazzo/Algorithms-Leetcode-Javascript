@@ -4,7 +4,9 @@ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
-According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+According to the definition of LCA on Wikipedia: 
+“The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants 
+(where we allow a node to be a descendant of itself).”
 
 Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]
 
@@ -32,6 +34,8 @@ All of the nodes' values will be unique.
 p and q are different and both values will exist in the binary tree.
 */
 
+var TreeNode = require('../UtilsClasses/TreeNode').TreeNode;
+
 // Solution 1
 var lowestCommonAncestor = function(root, p, q) {
   if(root === null)
@@ -48,40 +52,78 @@ var lowestCommonAncestor = function(root, p, q) {
   return left !== null ? left : right;
 };
 
-
 // Solution 2
-var lowestCommonAncestor1 = function(root, p, q) {
-  const pathToP = pathTo(root, p.val);
-  const pathToQ = pathTo(root, q.val);
-  
-  if(pathToP === null || pathToQ === null) 
-      return null;
-  
-  if(pathToP.length === 1)
-      return pathToP[0];
-  if(pathToQ.length === 1)
-      return pathToQ[0];
+var lowestCommonAncestor2 = function(root, p, q) {
+  var pathToP = pathTo(root, p.val);
+  var pathToQ = pathTo(root, q.val);
+
+  if(pathToP.length === 0 || pathToQ === 0)
+    return null;
 
   var iter = 0;
-  while(pathToP[iter + 1] === pathToQ[iter + 1])
-    iter++
+  while(iter < pathToP.length - 1 && iter < pathToQ.length - 1 && pathToP[iter + 1] === pathToQ[iter + 1]) {
+    if(root.left !== null && root.left.val === pathToP[iter + 1]) {
+      root = root.left;  
+    } else {
+      root = root.right;  
+    }
+    iter++;
+  }
     
-  return pathToP[iter];
+  return root;
 };
 
-var pathTo = function(root, a) {
+var pathTo = function(root, value) {
   if(root === null)
-    return null;
-  if(root.val === a)
-    return [root.val];
-
-  const left = pathTo(root.left, a);
-  if (left !== null)
-    return [root.val].concat(left);
-
-  const right = pathTo(root.right, a);
-  if(right !== null)
-    return [root.val].concat(right);
+    return [];
     
-  return null;
+  var list = [root.val];
+  if(root.val === value)
+    return list;
+
+  const left = pathTo(root.left, value);
+  if (left.length > 0)
+    return list.concat(left);
+
+  const right = pathTo(root.right, value);    
+  if(right.length > 0)
+    return list.concat(right);
+    
+  return [];
 }
+
+
+var main = function() {
+  var root = new TreeNode(3);
+  
+  var right = new TreeNode(1);
+  right.left = new TreeNode(0);
+  right.right = new TreeNode(8);
+  root.right = right;
+
+  var left = new TreeNode(5);
+  left.left = new TreeNode(6);
+  
+  var tempRight = new TreeNode(2);
+  tempRight.left = new TreeNode(7);
+  tempRight.right = new TreeNode(4);
+  left.right = tempRight;
+
+  root.left = left;
+
+  //         _______3______
+  //        /              \
+  //     ___5__          ___1__
+  //    /      \        /      \
+  //    6      _2       0       8
+  //          /  \
+  //          7   4
+
+  console.log(lowestCommonAncestor(root, left, tempRight.right));
+  console.log(lowestCommonAncestor(root, left, right));
+
+  console.log(lowestCommonAncestor2(root, left, tempRight.right));
+  console.log(lowestCommonAncestor2(root, left, right));
+}
+
+module.exports.main = main;

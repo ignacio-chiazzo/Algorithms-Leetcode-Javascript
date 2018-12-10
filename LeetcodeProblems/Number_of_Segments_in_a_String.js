@@ -23,16 +23,14 @@ var countSegments = function(s) {
   while(i < s.length) {
     if(s[i] !== " ") {
       count++;
-      while(i < s.length && s[i] !== " ") {
+      while(i < s.length && s[i] !== " ")
         i++;
-      }
     }
     i++;
   }
   
   return count;
 };
-
 
 function main() {
   console.log(countSegments(" "));

@@ -10,7 +10,7 @@ Follow up:
 Can you solve it without using extra space?
 */
 
-var ListNode = require('../utilsClasses/ListNode').ListNode;
+var ListNode = require('../UtilsClasses/ListNode').ListNode;
 
 // Optimal solution
 /**
@@ -42,19 +42,19 @@ var detectCycle = function(head) {
 
 // Naiver solution using a Set
 var detectCycle2 = function(head) {
-    if(head === null || head.next === null) {
-        return null;
-    }
-    var setNodes = new Set();
-    var iter = head;
-    while(iter !== null) {
-        if(setNodes.has(iter)) {
-            return iter;
-        }
-        setNodes.add(iter);
-        iter = iter.next
-    }
+  if(head === null || head.next === null) {
     return null;
+  }
+  var setNodes = new Set();
+  var iter = head;
+  while(iter !== null) {
+    if(setNodes.has(iter)) {
+      return iter;
+    }
+    setNodes.add(iter);
+    iter = iter.next
+  }
+  return null;
 };
 
 var main = function() {

@@ -15,7 +15,7 @@ Input:
 Output: 1->1->2->3->4->4->5->6
 */
 
-var ListNode = require('../utilsClasses/ListNode').ListNode;
+var ListNode = require('../UtilsClasses/ListNode').ListNode;
 
 var mergeKLists = function(lists) {
   if(lists.length === 0)

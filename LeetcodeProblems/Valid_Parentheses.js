@@ -33,27 +33,28 @@ Output: true
 */
 
 var isValid = function(s) {
-  if(s.length === 0)
-    return true;
-  var queue = [];
+  var stack = [];
   for(var i = 0; i < s.length; i++) {
-    const elem = s[i];
-    if(elem === "(" || elem === "[" || elem === "{") {
-      queue.unshift(elem);
-    } else {
-      if(queue.length === 0)
-        return false;
-      
-      const elemQueue = queue.shift();
-      if(elemQueue === "(" && elem !== ")" ||
-        elemQueue === "[" && elem !== "]" ||
-        elemQueue === "{" && elem !== "}")
+    var elem = s.charAt(i);
+    if(elem === ")" || elem === "]" || elem === "}") {
+      if(stack.length === 0)
+        return false; 
+      var lasPar = stack.shift();
+      if(!valid(lasPar, elem))
           return false;
-      }
+    } else {
+      stack.unshift(elem);
+    }
   }
   
-  return queue.length === 0;
+  return stack.length === 0;
 };
+
+var valid = function(parOpen, parClose) {
+  return parOpen === "(" && parClose === ")" || 
+      parOpen === "[" && parClose === "]" || 
+      parOpen === "{" && parClose === "}";
+}
 
 var main = function(){
   console.log(isValid(""));

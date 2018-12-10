@@ -1,6 +1,5 @@
 /*
-221. Maximal Square
-
+Maximal Square
 https://leetcode.com/problems/maximal-square/
 
 Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
@@ -28,7 +27,7 @@ var maximalSquare = function(matrix) {
       if(matrix[i][j] === "1") { // found a 1
         const currentMaxSideLength = getCurrentMaxSideLength(matrix, i, j);
         if(currentMaxSideLength ** 2 > maxSquare)
-            maxSquare = currentMaxSideLength ** 2;
+          maxSquare = currentMaxSideLength ** 2;
       }   
     }
   }

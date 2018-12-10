@@ -29,18 +29,14 @@ var restoreInputBits = function(partial, s, num) {
   
   const oneNum = restoreInputBits([...partial, s.slice(0, 1)], s.slice(1), num - 1);
 
-  if(s.length === 1 || s.slice(0, 1) === "0") { 
+  if(s.length === 1 || s.slice(0, 1) === "0")
     return oneNum 
-  };
 
   const twoNums = restoreInputBits([...partial, s.slice(0, 2)], s.slice(2), num - 1);
-
-  if(s.length === 2 || s.slice(0, 3) > 255) { 
+  if(s.length === 2 || s.slice(0, 3) > 255)
     return [...oneNum, ...twoNums] 
-  };
 
   const threeNums = restoreInputBits([...partial, s.slice(0, 3)], s.slice(3), num - 1);
-
   return [...oneNum, ...twoNums, ...threeNums];
 }
 
@@ -48,7 +44,5 @@ var main = function() {
   console.log(restoreIpAddresses("010010"));
   console.log(restoreIpAddresses("25525511135"));
 }
-
-main();
 
 module.exports.main = main

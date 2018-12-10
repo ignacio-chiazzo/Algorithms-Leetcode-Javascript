@@ -30,6 +30,7 @@ var longestConsecutive = function(nums) {
     var number = nums[i];
     if(setNums.has(number)) {
       setNums.delete(number);
+      
       var prevNum = number - 1;
       while(setNums.has(prevNum)){
         currentCons++;

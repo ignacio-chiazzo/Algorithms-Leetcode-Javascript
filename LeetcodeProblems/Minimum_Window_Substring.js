@@ -2,7 +2,8 @@
 Minimum Window Substring
 https://leetcode.com/problems/minimum-window-substring/
 
-Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+Given a string S and a string T, find the minimum window in S which will contain all the characters in T 
+in complexity O(n).
 
 Example:
 
@@ -44,8 +45,8 @@ var minWindow = function(s, t) {
         }
 
         currentHash[s[start]] = currentHash[s[start]] - 1;
-        currentCount--;
         start++;
+        currentCount--;
       }
     }
     end++;

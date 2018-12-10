@@ -1,5 +1,3 @@
-// https://leetcode.com/problems/permutations-ii/description/
-
 // Permutations without
 var subsetWithoutDuplicates = function(nums) {
   if(nums.lenght == 0){

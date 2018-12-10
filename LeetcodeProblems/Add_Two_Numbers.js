@@ -22,7 +22,7 @@ Explanation: 342 + 465 = 807.
  * }
  */
 
-var ListNode = require('../utilsClasses/ListNode').ListNode;
+var ListNode = require('../UtilsClasses/ListNode').ListNode;
  
 /**
  * @param {ListNode} l1

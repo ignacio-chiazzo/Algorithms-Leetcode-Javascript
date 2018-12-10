@@ -32,8 +32,7 @@ var longestPalindrome = function(str) {
       currentPalStart = i - 1;
       var currentPal = 2; 
       var iter = 1;
-      while(i - iter - 1  >= 0 && i + iter < str.length && 
-        str.charAt(i - iter - 1) == str.charAt(i + iter)) {
+      while(i - iter - 1  >= 0 && i + iter < str.length && str.charAt(i - iter - 1) == str.charAt(i + iter)) {
         currentPalStart = i - iter - 1;
         iter++;
         currentPal += 2;

@@ -23,27 +23,26 @@ var groupAnagrams = function(strs) {
   var ret = [];
   var hashMap = {};
   for(var i = 0; i < strs.length; i++) {
-      const elem = strs[i];
-      const elemSorted = sortString(strs[i]);
-      
-      if(hashMap[elemSorted]) {
-          hashMap[elemSorted].push(elem);
-      } else {
-          hashMap[elemSorted] = [elem];
-      }
+    const elem = strs[i];
+    const elemSorted = sortString(strs[i]);
+    
+    if(hashMap[elemSorted]) {
+      hashMap[elemSorted].push(elem);
+    } else {
+      hashMap[elemSorted] = [elem];
+    }
   }
 
-  for(key in hashMap) {
+  for(key in hashMap)
     ret.push(hashMap[key]);
-  }
+  
 
   return ret;
 };
 
 var sortString = function(str) {
-  if(str.length === 0) {
-      return str;
-  }
+  if(str.length === 0)
+    return str;
   
   return str.split("").sort().join("");
 }

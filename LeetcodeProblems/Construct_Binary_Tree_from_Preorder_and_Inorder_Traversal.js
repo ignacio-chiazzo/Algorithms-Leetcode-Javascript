@@ -28,7 +28,7 @@ Return the following binary tree:
  * }
  */
 
-var TreeNode = require('../utilsClasses/TreeNode').TreeNode;
+var TreeNode = require('../UtilsClasses/TreeNode').TreeNode;
 
 /**
  * @param {number[]} preorder

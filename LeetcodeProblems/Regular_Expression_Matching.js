@@ -1,7 +1,7 @@
-/**
-URL: https://leetcode.com/problems/regular-expression-matching/description/
- 
+/*
 Regular Expression Matching
+https://leetcode.com/problems/regular-expression-matching/description/
+ 
 Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
 
 '.' Matches any single character.
