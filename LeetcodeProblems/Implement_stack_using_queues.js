@@ -24,8 +24,6 @@ Depending on your language, queue may not be supported natively. You may simulat
 You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 */
 
-
-
 class MyStack  {
   constructor() {
     this.q1 = [];

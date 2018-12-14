@@ -14,7 +14,6 @@ Input: 3
 Output: False
 */
 
-
 /**
  * @param {number} c
  * @return {boolean}
@@ -42,3 +41,5 @@ var main = function() {
   console.log(judgeSquareSum(24));
   console.log(judgeSquareSum(25));
 }
+
+module.exports.main = main;
