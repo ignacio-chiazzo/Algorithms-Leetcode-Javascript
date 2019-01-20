@@ -60,3 +60,9 @@ Solutions of algorithm problems using Javascript
 | Algoritmhs |
 |      -     |
 | [Heap Sort](/SortingAlgorithms/heapSort.js)  | 
+
+
+### UtilsClasses
+
+Other languages provides built-in classes (e.g Linked List, Tree, etc). This module contains util classes to use in your problems. 
+
