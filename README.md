@@ -14,6 +14,7 @@ Solutions of algorithm problems using Javascript
 | [merge k sorted lists ](/LeetcodeProblems/merge_k_sorted_lists.js)                                   | Hard   | https://leetcode.com/problems/merge-k-sorted-lists/ |
 | [Subarray Sum Equals K ](/LeetcodeProblems/Subarray_Sum_Equals_K.js)                                 | Medium | https://leetcode.com/problems/subarray-sum-equals-k/ | 
 | [3Sum ](/LeetcodeProblems/3Sum.js)                                                                   | Medium | https://leetcode.com/problems/3sum/ | 
+| [Swap Nodes in Pairs](/LeetcodeProblems/Swap_Nodes_in_Pairs.js)                                      | Medium | https://leetcode.com/problems/swap-nodes-in-pairs/ | 
 | [Add Two Numbers ](/LeetcodeProblems/Add_Two_Numbers.js)                                             | Medium | https://leetcode.com/problems/add-two-numbers/  |
 | [Clone Graph ](/LeetcodeProblems/Clone_Graph.js)                                                     | Medium | https://leetcode.com/problems/clone-graph/ |
 | [Coin Change ](/LeetcodeProblems/Coin_Change.js)                                                     | Medium | https://leetcode.com/problems/coin-change/ |
