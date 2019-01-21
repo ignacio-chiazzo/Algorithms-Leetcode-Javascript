@@ -7,6 +7,7 @@ Solutions of algorithm problems using Javascript
 | Name | Level | Link | 
 | - | - | - |
 | [Edit Distance ](/LeetcodeProblems/Edit_Distance.js)                                                 | Hard   | https://leetcode.com/problems/edit-distance/ |
+| [Remove Invalid Parentheses ](/LeetcodeProblems/Remove_Invalid_Parentheses.js)                       | Hard   | https://leetcode.com/problems/remove-invalid-parentheses/ |
 | [Longest Consecutive Sequence ](/LeetcodeProblems/Longest_Consecutive_Sequence.js)                   | Hard   | https://leetcode.com/problems/longest-consecutive-sequence/ |
 | [Minimum Window Substring ](/LeetcodeProblems/Minimum_Window_Substring.js)                           | Hard   | https://leetcode.com/problems/minimum-window-substring/ |
 | [Regular Expression Matching ](/LeetcodeProblems/Regular_Expression_Matching.js)                     | Hard   | https://leetcode.com/problems/regular-expression-matching/ |
