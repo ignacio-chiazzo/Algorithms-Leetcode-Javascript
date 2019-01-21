@@ -45,4 +45,4 @@ var main = function() {
   console.log(permute([1,2,3,4,5,6]));
 }
 
-exports.module.main = main;
+module.exports.main = main;
