@@ -6,6 +6,7 @@ Solutions of algorithm problems using Javascript
 
 | Name | Level | Link | 
 | - | - | - |
+| [Set Matrix Zeroes](/LeetcodeProblems/Set_Matrix_Zeroes.js)                                          | Hard   | https://leetcode.com/problems/set-matrix-zeroes/ |
 | [Edit Distance ](/LeetcodeProblems/Edit_Distance.js)                                                 | Hard   | https://leetcode.com/problems/edit-distance/ |
 | [Remove Invalid Parentheses ](/LeetcodeProblems/Remove_Invalid_Parentheses.js)                       | Hard   | https://leetcode.com/problems/remove-invalid-parentheses/ |
 | [Longest Consecutive Sequence ](/LeetcodeProblems/Longest_Consecutive_Sequence.js)                   | Hard   | https://leetcode.com/problems/longest-consecutive-sequence/ |
