@@ -6,7 +6,6 @@ Solutions of algorithm problems using Javascript
 
 | Name | Level | Link | 
 | - | - | - |
-| [Set Matrix Zeroes](/LeetcodeProblems/Set_Matrix_Zeroes.js)                                          | Hard   | https://leetcode.com/problems/set-matrix-zeroes/ |
 | [Edit Distance ](/LeetcodeProblems/Edit_Distance.js)                                                 | Hard   | https://leetcode.com/problems/edit-distance/ |
 | [Remove Invalid Parentheses ](/LeetcodeProblems/Remove_Invalid_Parentheses.js)                       | Hard   | https://leetcode.com/problems/remove-invalid-parentheses/ |
 | [Longest Consecutive Sequence ](/LeetcodeProblems/Longest_Consecutive_Sequence.js)                   | Hard   | https://leetcode.com/problems/longest-consecutive-sequence/ |
@@ -14,6 +13,7 @@ Solutions of algorithm problems using Javascript
 | [Regular Expression Matching ](/LeetcodeProblems/Regular_Expression_Matching.js)                     | Hard   | https://leetcode.com/problems/regular-expression-matching/ |
 | [NQueens ](/LeetcodeProblems/NQueens.js)                                                             | Hard   | https://leetcode.com/problems/n-queens/ |
 | [merge k sorted lists ](/LeetcodeProblems/merge_k_sorted_lists.js)                                   | Hard   | https://leetcode.com/problems/merge-k-sorted-lists/ |
+| [Set Matrix Zeroes](/LeetcodeProblems/Set_Matrix_Zeroes.js)                                          | Hard   | https://leetcode.com/problems/set-matrix-zeroes/ |
 | [Subarray Sum Equals K ](/LeetcodeProblems/Subarray_Sum_Equals_K.js)                                 | Medium | https://leetcode.com/problems/subarray-sum-equals-k/ | 
 | [3Sum ](/LeetcodeProblems/3Sum.js)                                                                   | Medium | https://leetcode.com/problems/3sum/ | 
 | [NumberOfIslands ](/LeetcodeProblems/Number_of_Islands.js)                                           | Medium | https://leetcode.com/problems/number-of-islands/ | 
