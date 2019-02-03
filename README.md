@@ -56,9 +56,11 @@ Solutions of algorithm problems using Javascript
 | [Valid Parentheses ](/LeetcodeProblems/Valid_Parentheses.js)                                         | Easy   | https://leetcode.com/problems/valid-parentheses/ |
 | [Backspace String Compare ](/LeetcodeProblems/Backspace_String_Compare.js)                           | Easy   | https://leetcode.com/problems/backspace-string-compare/ |
 | [Binary Gap ](/LeetcodeProblems/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
+| [Best Time to Buy and Sell Stock II ](/LeetcodeProblems/Best_Time_To_Buy_And_Sell_Stock_II.js)       | Easy   | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ |
 | [Tic Tac Toe ](/LeetcodeProblems/Tic_Tac_Toe.js)                                                     |        | |
 | [Permutations With Duplicates ](/LeetcodeProblems/Permutations_With_Duplicates.js)                   |        | |
 | [Deletion Distance](/LeetcodeProblems/Deletion_Distance.js)                                          |        | |
+| [Award Budget Cuts](/LeetcodeProblems/Award_Budget_Cuts.js)                                          |        | |
 
 ### Sorting Algorithms
 | Algoritmhs |
