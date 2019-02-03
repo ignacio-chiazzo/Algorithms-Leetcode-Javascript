@@ -22,14 +22,12 @@ Output:
 ]
 */
 
-
 var subsets = function(nums) {
   var ret = [];
   
   subsetByPosition = function (nums, position, current) {
-    console.log(current);
     if(position == nums.length) {
-        return [current];
+      return [current];
     }
     var currentRight = current.slice().concat([nums[position]]);
     return subsetByPosition(nums, position + 1, currentRight).concat(subsetByPosition(nums, position + 1, current));

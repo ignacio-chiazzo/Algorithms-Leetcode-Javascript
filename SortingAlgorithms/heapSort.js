@@ -46,6 +46,3 @@ console.log(heapSort([1]));
 console.log(heapSort([2, 1]));
 console.log(heapSort([1,7,2,3,4,1,10,2,3,4,5]))
 
-
-
-

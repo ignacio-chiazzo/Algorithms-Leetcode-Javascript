@@ -35,9 +35,8 @@ var subsetWithDuplicatesAux = function(nums, current, sol) {
 
   for(var i = 0; i < nums.length; i++) {
     var newCurrent = [...current, nums[i]]
-
-    var newNum = nums.filter(function(num, index) { return index !== i});
-    subsetWithDuplicatesAux(newNum, newCurrent, sol);
+    var newNums = nums.filter(function(num, index) { return index !== i });
+    subsetWithDuplicatesAux(newNums, newCurrent, sol);
   }
 }
     

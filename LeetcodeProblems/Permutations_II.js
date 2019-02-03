@@ -31,18 +31,15 @@ var permuteUniqueAux = function(n, map, currentSol) {
   }
 
   var ret = [];
-  var set = new Set();
   for(var num in map) {
-    if(!set.has(num)) {
-      const occ = map[num];
-      if(occ === 1) {
-        delete map[num];
-      } else {
-        map[num] = occ -1 ;
-      }
-      ret = [...ret, ...permuteUniqueAux(n, map, currentSol.concat(num))];
-      map[num] = occ;
+    const occ = map[num];
+    if(occ === 1) {
+      delete map[num];
+    } else {
+      map[num] = occ -1 ;
     }
+    ret = [...ret, ...permuteUniqueAux(n, map, currentSol.concat(num))];
+    map[num] = occ;
   }
 
   return ret;
