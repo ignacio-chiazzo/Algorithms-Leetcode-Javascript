@@ -27,6 +27,7 @@ matrix = [
 target = 13
 Output: false
 */
+const assert = require('assert');
 
 /**
  * @param {number[][]} matrix
@@ -59,11 +60,15 @@ var searchMatrixAux = function(matrix, firstRow, lastRow, target) {
 };
  
 var main = function(){
-  console.log(searchMatrix([], 0));
-  console.log(searchMatrix([[1], [3]], 3));
-  console.log(searchMatrix([[1], [3]], 1));
+  test();
+}
+
+var test = function(n) {
+  assert.equal(searchMatrix([], 0), false);
+  assert.equal(searchMatrix([[1], [3]], 3), true);
+  assert.equal(searchMatrix([[1], [3]], 1), true);
   const matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,50]];
-  console.log(searchMatrix(matrix, 3));
+  assert.equal(searchMatrix(matrix, 3), true);
 }
 
 module.exports.main = main;

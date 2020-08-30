@@ -10,6 +10,8 @@ Restrictions:
 The string consists of lower English letters only.
 Length of the given string and k will in the range [1, 10000]
 */
+const assert = require('assert');
+
 var reverseStr = function(s, k) {
   if(k <= 1)
     return s;
@@ -38,10 +40,14 @@ var reverse = function(s, start, end) {
 }
 
 var main = function(){
-  console.log(reverseStr("abcdefg", 2));
-  console.log(reverseStr("abcdefg", 3));
-  console.log(reverseStr("abcdefg", 1));
-  console.log(reverseStr("abcdefg", 0));  
+  test();
+}
+
+var test = function(n) {
+  assert.equal(reverseStr("abcdefg", 2), "bacdfeg");
+  assert.equal(reverseStr("abcdefg", 3), "cbadefg");
+  assert.equal(reverseStr("abcdefg", 1), "abcdefg");
+  assert.equal(reverseStr("abcdefg", 0), "abcdefg");  
 }
 
 module.exports.main = main

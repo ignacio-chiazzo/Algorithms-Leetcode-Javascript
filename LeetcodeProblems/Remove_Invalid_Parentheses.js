@@ -19,6 +19,7 @@ Example 3:
 Input: ")("
 Output: [""]
 */
+const assert = require('assert');
 
 /**
  * @param {string} s
@@ -70,10 +71,14 @@ var isValid = function(s) {
 }
 
 var main = function() {
-  console.log(removeInvalidParentheses("))))(()"));
-  console.log(removeInvalidParentheses("(()"));
-  console.log(removeInvalidParentheses("(d))()"));
-  console.log(removeInvalidParentheses("(())"))
+  test();
+}
+
+var test = function(n) {
+  assert.equal(removeInvalidParentheses("))))(()"), "()");
+  assert.equal(removeInvalidParentheses("(()"), "()");
+  assert.equal(removeInvalidParentheses("(d))()"), "(d)()");
+  assert.equal(removeInvalidParentheses("(())"), "(())");
 }
 
 module.exports.main = main;

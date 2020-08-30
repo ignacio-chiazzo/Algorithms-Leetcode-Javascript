@@ -50,6 +50,7 @@ Output: false
  * @param {*} s 
  * @param {*} p 
  */
+const assert = require('assert');
 
 var isMatch = function(s, p) {
   return isMatchAux(s, p, 0, 0);
@@ -90,12 +91,16 @@ var canBeZero = function(pattern, posPat) {
 }
 
 var main = function(){
-  console.log(isMatch("aa", "a"));
-  console.log(isMatch("aa", "a*"));
-  console.log(isMatch("a","ab*"));
-  console.log(isMatch("ab", ".*"));
-  console.log(isMatch("aab", "c*a*b"));
-  console.log(isMatch("mississippi", "mis*is*p*."));
+  test();
+}
+
+var test = function(n) {
+  assert.equal(isMatch("aa", "a"), false);
+  assert.equal(isMatch("aa", "a*"), true);
+  assert.equal(isMatch("a","ab*"), true);
+  assert.equal(isMatch("ab", ".*"), true);
+  assert.equal(isMatch("aab", "c*a*b"), true);
+  assert.equal(isMatch("mississippi", "mis*is*p*."), false);
 }
 
 module.exports.main = main;
