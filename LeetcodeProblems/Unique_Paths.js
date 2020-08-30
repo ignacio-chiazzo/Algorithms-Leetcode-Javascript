@@ -26,7 +26,7 @@ Output: 28
 
 // Solution 1
 // This solution is a naive solution implementing a binary tree and visiting each node.
-var assert = require('assert');
+const assert = require('assert');
 
 var uniquePaths1 = function(m, n) {
   return uniquePathsAux(0, 0, m, n)

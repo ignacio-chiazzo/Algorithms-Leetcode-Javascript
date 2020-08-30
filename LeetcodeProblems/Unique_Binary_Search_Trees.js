@@ -22,7 +22,7 @@ Given n = 3, there are a total of 5 unique BST's:
 DP Solution: https://www.programcreek.com/2014/05/leetcode-unique-binary-search-trees-java/
 */
 
-var assert = require('assert');
+const assert = require('assert');
 
 // Solution 3 using DP
 var numTrees3 = function (n) {

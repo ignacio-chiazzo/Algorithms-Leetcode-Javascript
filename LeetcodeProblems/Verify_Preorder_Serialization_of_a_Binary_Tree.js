@@ -31,7 +31,7 @@ Example 3:
 Input: "9,#,#,1"
 Output: false
 */
-var assert = require('assert');
+const assert = require('assert');
 
 /**
  * @param {string} preorder
