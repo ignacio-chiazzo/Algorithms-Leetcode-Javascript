@@ -61,13 +61,16 @@ var simplifyPath = function(path) {
 };
 
 var main = function(){
-  console.log(simplifyPath("/../c"));
-  console.log(simplifyPath("/.."));
-  console.log(simplifyPath("/home/")); // => "/home"
-  console.log(simplifyPath("/a/./b/../../c/")); // => "/c"
-  console.log(simplifyPath("/a/../../b/../c//.//")); // => "/c"
-  console.log(simplifyPath("/a//b////c/d//././/..")) // => "/a/b/c"
-  
+  test();
+}
+
+var test = function() { 
+  assert.equal(simplifyPath("/../c"), "/c");
+  assert.equal(simplifyPath("/.."), "/");
+  assert.equal(simplifyPath("/home/"), "/home"); // => "/home"
+  assert.equal(simplifyPath("/a/./b/../../c/"), "/c"); // => "/c"
+  assert.equal(simplifyPath("/a/../../b/../c//.//"), "/c"); // => "/c"
+  assert.equal(simplifyPath("/a//b////c/d//././/.."), "/a/b/c") // => "/a/b/c"
 }
 
 module.exports.main = main
