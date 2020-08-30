@@ -126,5 +126,3 @@ var main = function() {
 }
 
 module.exports.main = main;
-
-main();

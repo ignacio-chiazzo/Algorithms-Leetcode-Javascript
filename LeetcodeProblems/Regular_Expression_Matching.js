@@ -98,5 +98,4 @@ var main = function(){
   console.log(isMatch("mississippi", "mis*is*p*."));
 }
 
-main();
 module.exports.main = main;

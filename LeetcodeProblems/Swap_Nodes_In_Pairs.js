@@ -50,17 +50,14 @@ var swapPairs = function(head) {
 };
 
 var main = function() {
-
-  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([2])), [2, 3]);
   test();
 }
 
 var test = function () {
-  // TODOOOOOOOOOO
-  // ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1,2,3,4])), [2,1,4,3]);
-  // ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([])), []);
-  // ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1])), [1]);
-  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1,2])), [2, 3]);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1,2,3,4])), [2,1,4,3]);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([])), []);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1])), [1]);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1,2])), [2, 1]);
 }
 
 module.exports.main = main;

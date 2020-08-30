@@ -131,4 +131,3 @@ var test = function () {
 }
 
 module.exports.main = main
-main();
