@@ -9,5 +9,5 @@ function test() {
   assert.equal(minDistance2("ros", "horse"), 3);
   assert.equal(minDistance2("intention", "execution"), 5);
 }
-test();
+
 module.exports.test = test;
