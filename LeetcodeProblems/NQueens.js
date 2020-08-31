@@ -18,6 +18,7 @@ Output: [
 ]
 Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above.
 */    
+const assert = require('assert');
 
 /**
  * @param {number} n
@@ -73,6 +74,9 @@ var main = function(n) {
   printMatrixes(solveNQueens(4), 4);
   printMatrixes(solveNQueens(5), 5);
   printMatrixes(solveNQueens(6), 6);
+}
+
+var test = function() {
 }
 
 var printMatrixes = function(matrixes, n) {

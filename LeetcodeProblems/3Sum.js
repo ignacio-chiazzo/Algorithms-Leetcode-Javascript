@@ -18,6 +18,7 @@ A solution set is:
   [-1, -1, 2]
 ]
 */
+const assert = require('assert');
 
 /**
  * @param {number[]} nums
@@ -49,12 +50,25 @@ var threeSum = function(nums) {
 };
 
 var main = function() {
-  console.log(threeSum([]));
-  console.log(threeSum([-1, 0, 1, 2, -1, -4]));
-  console.log(threeSum([0]));
-  console.log(threeSum([0, 0]));
-  console.log(threeSum([0, 0, 0]));
-  console.log(threeSum([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]));
+  test();
+}
+
+var test = function () {
+  assert.deepEqual(threeSum([]), []);
+  assert.deepEqual(threeSum([0]), []);
+  assert.deepEqual(threeSum([0, 0]), []);
+  assert.deepEqual(
+    threeSum([0, 0, 0]), 
+    [[0, 0, 0]]
+  );
+  assert.deepEqual(
+    threeSum([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]), 
+    [[0, 0, 0]]
+  );
+  assert.deepEqual(
+    threeSum([-1, 0, 1, 2, -1, -4]), 
+    [ [ -1, 2, -1 ], [ 0, 1, -1 ] ]
+  );
 }
 
 module.exports.main = main;

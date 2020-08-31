@@ -14,6 +14,8 @@ Input: 3
 Output: False
 */
 
+const assert = require('assert');
+
 /**
  * @param {number} c
  * @return {boolean}
@@ -34,12 +36,17 @@ var judgeSquareSum = function(c) {
 };
 
 var main = function() {
-  console.log(judgeSquareSum(0));
-  console.log(judgeSquareSum(1));
-  console.log(judgeSquareSum(5));
-  console.log(judgeSquareSum(16));
-  console.log(judgeSquareSum(24));
-  console.log(judgeSquareSum(25));
+  test();
+}
+
+var test = function() {
+  assert.strictEqual(judgeSquareSum(0), true);
+  assert.strictEqual(judgeSquareSum(1), true);
+  assert.strictEqual(judgeSquareSum(5), true);
+  assert.strictEqual(judgeSquareSum(16), true);
+  assert.strictEqual(judgeSquareSum(24), false);
+  assert.strictEqual(judgeSquareSum(25), true);
 }
 
 module.exports.main = main;
+

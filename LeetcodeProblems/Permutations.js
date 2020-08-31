@@ -17,6 +17,7 @@ Output:
   [3,2,1]
 ]
 */
+const assert = require('assert');
 
 var permute = function(nums) {
   return permuteAux(nums, 0, [], new Set());
@@ -38,11 +39,24 @@ var permuteAux = function(nums, pos, currentSol, set) {
   return ret;
 }
 
-var main = function() {
-  console.log(permute([]));
-  console.log(permute([1]));
-  console.log(permute([1,2,3]));
-  console.log(permute([1,2,3,4,5,6]));
+var main = function() {  test();
+}
+
+function test() {
+  // assert.deepEqual(
+  assert.deepEqual(permute([]), [ [] ]);
+  assert.deepEqual(permute([1]), [ [ 1 ] ]);
+  assert.deepEqual(
+    permute([1,2,3]), 
+    [
+      [ 1, 2, 3 ],
+      [ 1, 3, 2 ],
+      [ 2, 1, 3 ],
+      [ 2, 3, 1 ],
+      [ 3, 1, 2 ],
+      [ 3, 2, 1 ]
+    ]
+  );
 }
 
 module.exports.main = main;

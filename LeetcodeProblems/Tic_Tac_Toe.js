@@ -67,35 +67,20 @@ var main = function() {
 module.exports.main = main;
 
 ticTacToe = new TicTacToe();
-// ticTacToe.isBoardFull();
-// ticTacToe.addToken(0,1,"X");
-// ticTacToe.printBoard();
-// var iter = 0;
-// while(iter < 8) {
-//   ticTacToe.makeMove();
-//   iter++;
-// }
+ticTacToe.isBoardFull();
+ticTacToe.addToken(0,1,"X");
+ticTacToe.printBoard();
+var iter = 0;
+while(iter < 8) {
+  ticTacToe.makeMove();
+  iter++;
+}
 
-// console.log("after 8 moves");
-// ticTacToe.isBoardFull();
-// ticTacToe.printBoard();
-// ticTacToe.makeMove();
+console.log("after 8 moves");
+ticTacToe.isBoardFull();
+ticTacToe.printBoard();
+ticTacToe.makeMove();
 
-// ticTacToe.printBoard();
-// ticTacToe.addToken(0,0,"X");
-// ticTacToe.printBoard();
-
-
-
-// // var readline = require('readline')
-
-// // const rl = readline.createInterface({
-// //   input: process.stdin,
-// //   output: process.stdout
-// // });
-
-// // var response = rl.question('Whats your name : ', answer)
-
-// // function answer(response) {
-// //     console.log(response)
-// // }
+ticTacToe.printBoard();
+ticTacToe.addToken(0,0,"X");
+ticTacToe.printBoard();

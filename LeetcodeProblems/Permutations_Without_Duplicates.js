@@ -17,6 +17,7 @@ Output:
   [3,2,1]
 ]
 */
+const assert = require('assert');
 
 // Permutations wihto
 var subsetWithDuplicates = function(nums) {
@@ -25,7 +26,7 @@ var subsetWithDuplicates = function(nums) {
   }
   var solution = [];
   subsetWithDuplicatesAux(nums, [], solution);
-  console.log(solution);
+  return solution;
 }
 
 var subsetWithDuplicatesAux = function(nums, current, sol) {
@@ -41,7 +42,21 @@ var subsetWithDuplicatesAux = function(nums, current, sol) {
 }
     
 function main() {
-  subsetWithDuplicates([1,2,3])
+  test();
+}
+
+var test = function() {
+  assert.deepEqual(
+    subsetWithDuplicates([1,2,3]),
+    [
+      [ 1, 2, 3 ],
+      [ 1, 3, 2 ],
+      [ 2, 1, 3 ],
+      [ 2, 3, 1 ],
+      [ 3, 1, 2 ],
+      [ 3, 2, 1 ]
+    ]
+  );
 }
 
 module.exports.main = main;

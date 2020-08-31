@@ -17,6 +17,7 @@ Example:
 Given target = 5, return true.
 Given target = 20, return false.
 */
+const assert = require('assert');
 
 /**
 * @param {number[][]} matrix
@@ -51,9 +52,13 @@ const matrix1 = [
 ];
 
 var main = function(n) {
-  console.log(searchMatrix(matrix1, 5));
-  console.log(searchMatrix(matrix1, 0));
-  console.log(searchMatrix(matrix1, 15));
+  test();
+}
+
+var test = function(n) {
+  assert.equal(searchMatrix(matrix1, 5), true);
+  assert.equal(searchMatrix(matrix1, 0), false);
+  assert.equal(searchMatrix(matrix1, 15), true);
 }
 
 module.exports.main = main;

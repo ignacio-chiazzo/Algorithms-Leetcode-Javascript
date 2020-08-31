@@ -2,6 +2,13 @@
 
 Solutions of algorithm problems using Javascript.  https://ignacio-chiazzo.github.io/Algorithms-Leetcode-Javascript/
 
+### Run Scripts
+
+Each problem has a main function exported which prints some cases (Tests are going to be added soon 😉)). 
+To run a  specific problem in your console run  `node <problem_file_path>` (e.g. `node LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree.js`).
+
+You can also run all the problems by running the `Main.js` file.
+
 ### Leetcode Problems
 
 | Name | Level | Link | 

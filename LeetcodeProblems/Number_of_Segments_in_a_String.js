@@ -11,6 +11,7 @@ Example:
 Input: "Hello, my name is John"
 Output: 5
 */
+const assert = require('assert');
 
 /**
  * @param {string} s
@@ -33,12 +34,16 @@ var countSegments = function(s) {
 };
 
 function main() {
-  console.log(countSegments(" "));
-  console.log(countSegments("    "));
-  console.log(countSegments("ab cd ef"));
-  console.log(countSegments("  ab cd ef"));
-  console.log(countSegments("ab cd ef  "));
-  console.log(countSegments(" ab cd ef "));
+  test();
+}
+
+function test() {
+  assert.equal(countSegments(" "), 0);
+  assert.equal(countSegments("    "), 0);
+  assert.equal(countSegments("ab cd ef"), 3);
+  assert.equal(countSegments("  ab cd ef"), 3);
+  assert.equal(countSegments("ab cd ef  "), 3);
+  assert.equal(countSegments(" ab cd ef "), 3);
 }
 
 module.exports.main = main

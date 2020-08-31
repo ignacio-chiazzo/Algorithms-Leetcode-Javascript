@@ -31,6 +31,7 @@ Example 3:
 Input: "9,#,#,1"
 Output: false
 */
+const assert = require('assert');
 
 /**
  * @param {string} preorder
@@ -40,7 +41,7 @@ var isValidSerialization = function(preorder) {
   if(preorder.length === 0)
     return true;
 
-  if(preorder.charAt(0) === "#") 
+  if(preorder.charAt(0) === "#")
     return preorder.length === 1;
 
   var countP = 2;
@@ -64,11 +65,16 @@ var isValidSerialization = function(preorder) {
 };
 
 var main = function() {
-  console.log(isValidSerialization(""));
-  console.log(isValidSerialization("#"));
-  console.log(isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"));
-  console.log(isValidSerialization("9,#,92,#,#"));
-  console.log(isValidSerialization("9,3,4,#,#,1,#,#,#,2,#,6,#,#"));
+  test();
 }
+
+var test = function() {
+  assert.strictEqual(isValidSerialization(""), true);
+  assert.strictEqual(isValidSerialization(""), true);
+  assert.strictEqual(isValidSerialization("#"), true);
+  assert.strictEqual(isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"), true);
+  assert.strictEqual(isValidSerialization("9,#,92,#,#"), true);
+  assert.strictEqual(isValidSerialization("9,3,4,#,#,1,#,#,#,2,#,6,#,#"), false);
+};
 
 module.exports.main = main;

@@ -17,6 +17,7 @@ Output: 2
 
 Note: You should have a better solution than O(N)
 */
+const assert = require('assert');
 
 /**
  * @param {number[]} nums
@@ -45,9 +46,13 @@ var majorityElement = function(nums) {
 };
 
 var main = function() {
-  console.log(majorityElement([2,2,3]));
-  console.log(majorityElement([2,3,2]));
-  console.log(majorityElement([1,1,1,2,3,45,1,2,4,1,1]));
+  test();
+}
+
+function test() {
+  assert.equal(majorityElement([2,2,3]), 2);
+  assert.equal(majorityElement([2,3,2]), 2);
+  assert.equal(majorityElement([1,1,1,2,3,45,1,2,4,1,1]), 1);
 }
 
 module.exports.main = main

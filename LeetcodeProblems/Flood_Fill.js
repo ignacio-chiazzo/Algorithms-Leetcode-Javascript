@@ -28,6 +28,7 @@ The length of image and image[0] will be in the range [1, 50].
 The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
 The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
 */
+const assert = require('assert');
 
 var floodFill = function(image, sr, sc, newColor) {
   var oldColor = image[sr][sc];
@@ -53,7 +54,14 @@ var floodFill = function(image, sr, sc, newColor) {
 };
 
 function main() {
-  console.log(floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2))
+  test();
+}
+
+function test() {
+  assert.deepEqual(
+    [ [ 2, 2, 2 ], [ 2, 2, 0 ], [ 2, 0, 1 ] ],
+    floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)
+  );
 }
 
 module.exports.main = main;

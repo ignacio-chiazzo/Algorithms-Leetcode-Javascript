@@ -28,6 +28,7 @@ enention -> exention (replace 'n' with 'x')
 exention -> exection (replace 'n' with 'c')
 exection -> execution (insert 'u')
 */
+const assert = require('assert');
 
 // Optimal solution
 var minDistance = function(word1, word2) {
@@ -98,15 +99,15 @@ var min = function(a, b, c) {
 }
 
 var main = function() {
-  console.log("-------------");
-  console.log("Approach 1");
-  console.log(minDistance("ros", "horse"));
-  console.log(minDistance("intention", "execution"));
+  test();
+}
 
-  console.log("-------------");
-  console.log("Approach 2");
-  console.log(minDistance2("ros", "horse"));
-  console.log(minDistance2("intention", "execution"));
+function test() {
+  assert.equal(minDistance("ros", "horse"), 3);
+  assert.equal(minDistance("intention", "execution"), 5);
+
+  assert.equal(minDistance2("ros", "horse"), 3);
+  assert.equal(minDistance2("intention", "execution"), 5);
 }
 
 module.exports.main = main;

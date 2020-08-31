@@ -12,8 +12,9 @@ Note:
 Your algorithm should use only constant extra space.
 You may not modify the values in the list's nodes, only nodes itself may be changed.
 */
-
-var ListNode = require('../UtilsClasses/ListNode').ListNode;
+const assert = require('assert');
+const ListNode = require('../UtilsClasses/ListNode').ListNode;
+const ListNodeTestHelper = require('../utilsClasses/ListNodeTestHelper');
 
 /**
  * Definition for singly-linked list.
@@ -49,10 +50,14 @@ var swapPairs = function(head) {
 };
 
 var main = function() {
-  console.log(swapPairs(ListNode.linkenList([1,2,3,4])));
-  console.log(swapPairs(ListNode.linkenList([])));
-  console.log(swapPairs(ListNode.linkenList([1])));
-  console.log(swapPairs(ListNode.linkenList([1,2])));
+  test();
+}
+
+var test = function () {
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1,2,3,4])), [2,1,4,3]);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([])), []);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1])), [1]);
+  ListNodeTestHelper.assertList(swapPairs(ListNode.linkenList([1,2])), [2, 1]);
 }
 
 module.exports.main = main;
