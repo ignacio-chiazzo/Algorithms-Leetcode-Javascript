@@ -36,6 +36,7 @@ Note:
 All points have coordinates with absolute value <= 10000.
 The number of ghosts will not exceed 100.
 */
+const assert = require('assert');
 
 /**
  * @param {number[][]} ghosts
@@ -60,9 +61,13 @@ var getDistance = function(a, b) {
 }
 
 var main = function() {
-  console.log(escapeGhosts([[1, 0], [0, 3]], [0, 1]));
-  console.log(escapeGhosts([[1, 0]], [2, 0]));
-  console.log(escapeGhosts([[2, 0]], [1, 0]));
+  test();
+}
+
+function test() {
+  assert.equal(escapeGhosts([[1, 0], [0, 3]], [0, 1]), true);
+  assert.equal(escapeGhosts([[1, 0]], [2, 0]), false);
+  assert.equal(escapeGhosts([[2, 0]], [1, 0]), true);
 }
 
 module.exports.main = main

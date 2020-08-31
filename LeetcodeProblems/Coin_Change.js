@@ -18,6 +18,7 @@ Output: -1
 Note:
 You may assume that you have an infinite number of each kind of coin.
 */
+const assert = require('assert');
 
 // Solution 3 
 var coinChange = function(coins, amount) {
@@ -102,13 +103,15 @@ var min = function(a, b, c) {
 }
 
 function main() {
-  console.log("-------------");
-  console.log("Solution Optimal")
-  console.log(coinChange([], 3));
-  console.log(coinChange([2], 3));
-  console.log(coinChange([1, 2, 5], 11));
-  console.log(coinChange([3, 7, 405, 436], 8839));
-  console.log(coinChange([370, 417, 408, 156, 143, 434, 168, 83, 177, 280, 117], 9953));
+  test();
+}
+
+function test() {
+  assert.equal(coinChange([], 3), -1);
+  assert.equal(coinChange([2], 3), -1);
+  assert.equal(coinChange([1, 2, 5], 11), 3);
+  assert.equal(coinChange([3, 7, 405, 436], 8839), 25);
+  assert.equal(coinChange([370, 417, 408, 156, 143, 434, 168, 83, 177, 280, 117], 9953), 24);
 }
 
 module.exports.main = main;

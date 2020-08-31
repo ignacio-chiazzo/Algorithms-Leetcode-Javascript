@@ -36,6 +36,7 @@ Explanation:
 8 in binary is 0b1000.
 There aren't any consecutive pairs of 1's in the binary representation of 8, so we return 0.
 */
+const assert = require('assert');
 
 /**
  * @param {number} N
@@ -61,8 +62,12 @@ var binaryGap = function(N) {
 };
 
 var main = function() {
-  console.log(binaryGap(22)); // 10110
-  console.log(binaryGap(8)); // 1000
+  test();
+}
+
+function test() {
+  assert.equal(binaryGap(22), 2); // 10110
+  assert.equal(binaryGap(8), 0); // 1000
 }
 
 module.exports.main = main;

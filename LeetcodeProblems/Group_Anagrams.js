@@ -18,6 +18,7 @@ Note:
 All inputs will be in lowercase.
 The order of your output does not matter.
 */
+const assert = require('assert');
 
 var groupAnagrams = function(strs) {
   var ret = [];
@@ -48,7 +49,14 @@ var sortString = function(str) {
 }
 
 var main = function() {
-  console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+  test();
+}
+
+function test() {
+  assert.deepEqual(
+    groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]),
+    [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+  )
 }
 
 module.exports.main = main;

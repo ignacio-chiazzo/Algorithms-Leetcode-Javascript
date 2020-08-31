@@ -27,6 +27,7 @@ Return the following binary tree:
  *     this.left = this.right = null;
  * }
  */
+const assert = require('assert');
 
 var TreeNode = require('../UtilsClasses/TreeNode').TreeNode;
 
@@ -59,6 +60,10 @@ var buildTreeAux = function(preorder, pl, ph, inorder, il, ih) {
 }
 
 var main = function() {
+  test();
+}
+
+function test() {
   console.log(buildTree([3,9,20,15,7], [9,3,15,20,7]));
 }
 
