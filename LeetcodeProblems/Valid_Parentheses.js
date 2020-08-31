@@ -32,7 +32,7 @@ Input: "{[]}"
 Output: true
 */
 
-const assert = require('assert');
+
 
 var isValid = function(s) {
   var stack = [];

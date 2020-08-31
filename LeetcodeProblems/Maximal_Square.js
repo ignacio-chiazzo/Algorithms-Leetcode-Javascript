@@ -15,7 +15,7 @@ Input:
 
 Output: 4
 */
-const assert = require('assert');
+
 
 /**
  * @param {character[][]} matrix

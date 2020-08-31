@@ -14,7 +14,7 @@ Output:
   [2,1,1]
 ]
 */
-const assert = require('assert');
+
 
 var permuteUnique = function(nums) {
   var map = {};

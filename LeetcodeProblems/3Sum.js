@@ -18,7 +18,6 @@ A solution set is:
   [-1, -1, 2]
 ]
 */
-const assert = require('assert');
 
 /**
  * @param {number[]} nums
@@ -49,26 +48,4 @@ var threeSum = function(nums) {
   return ret;
 };
 
-var main = function() {
-  test();
-}
-
-var test = function () {
-  assert.deepEqual(threeSum([]), []);
-  assert.deepEqual(threeSum([0]), []);
-  assert.deepEqual(threeSum([0, 0]), []);
-  assert.deepEqual(
-    threeSum([0, 0, 0]), 
-    [[0, 0, 0]]
-  );
-  assert.deepEqual(
-    threeSum([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]), 
-    [[0, 0, 0]]
-  );
-  assert.deepEqual(
-    threeSum([-1, 0, 1, 2, -1, -4]), 
-    [ [ -1, 2, -1 ], [ 0, 1, -1 ] ]
-  );
-}
-
-module.exports.main = main;
+module.exports.threeSum = threeSum;

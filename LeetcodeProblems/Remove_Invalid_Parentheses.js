@@ -19,7 +19,7 @@ Example 3:
 Input: ")("
 Output: [""]
 */
-const assert = require('assert');
+
 
 /**
  * @param {string} s

@@ -35,7 +35,6 @@ All values will be in the range of [0, 1000].
 The number of operations will be in the range of [1, 1000].
 Please do not use the built-in Deque library.
 */
-const assert = require('assert');
 
 /**
  * Initialize your data structure here. Set the size of the deque to be k.
@@ -132,21 +131,4 @@ MyCircularDeque.prototype.isFull = function() {
   return this.queue.length === this.maxSize;
 };
 
-var main = function(){
-  test();
-};
-
-var test =  function() {
-  const obj = new MyCircularDeque(3);
-  assert.equal(obj.insertLast(1), true);
-  assert.equal(obj.insertLast(2), true);
-  assert.equal(obj.insertFront(3), true);
-  assert.equal(obj.insertFront(4), false);
-  assert.equal(obj.getRear(), 2);
-  assert.equal(obj.isFull(), true);
-  assert.equal(obj.deleteLast(), true);
-  assert.equal(obj.insertFront(4), true);
-  assert.equal(obj.getFront(), 4);
-}
-
-module.exports.main = main;
+module.exports.MyCircularDeque = MyCircularDeque;

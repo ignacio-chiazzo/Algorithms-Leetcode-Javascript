@@ -14,7 +14,7 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 */
-const assert = require('assert');
+
 const ListNodeTestHelper = require('../utilsClasses/ListNodeTestHelper');
 
 var ListNode = require('../UtilsClasses/ListNode').ListNode;

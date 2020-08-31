@@ -17,7 +17,7 @@ Output: 2
 
 Note: You should have a better solution than O(N)
 */
-const assert = require('assert');
+
 
 /**
  * @param {number[]} nums

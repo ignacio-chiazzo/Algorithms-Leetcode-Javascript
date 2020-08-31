@@ -18,7 +18,7 @@ Output: [
 ]
 Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above.
 */    
-const assert = require('assert');
+
 
 /**
  * @param {number} n

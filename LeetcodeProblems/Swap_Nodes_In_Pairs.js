@@ -12,7 +12,7 @@ Note:
 Your algorithm should use only constant extra space.
 You may not modify the values in the list's nodes, only nodes itself may be changed.
 */
-const assert = require('assert');
+
 const ListNode = require('../UtilsClasses/ListNode').ListNode;
 const ListNodeTestHelper = require('../utilsClasses/ListNodeTestHelper');
 

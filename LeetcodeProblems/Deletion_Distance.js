@@ -18,7 +18,6 @@ output: 9
 input:  str1 = "", str2 = ""
 output: 0
 */
-const assert = require('assert');
 
 // Solution 3 Using DP
 var deletionDistanceDP = function(str1, str2) {
@@ -128,4 +127,7 @@ function test() {
   assert.equal(deletionDistanceDP("", ""), 0);
 }
 
-module.exports.main = main
+module.exports.deletionDistance = deletionDistance;
+module.exports.deletionDistance2 = deletionDistance2;
+module.exports.deletionDistanceDP = deletionDistanceDP;
+

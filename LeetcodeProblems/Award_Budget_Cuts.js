@@ -29,8 +29,6 @@ Constraints:
 
 [output] double
 */
-const assert = require('assert');
-
 var cutAwardBadges = function(nums, newBadge) {
   var currentBadge = 0;
   for(var i = 0; i < nums.length; i++)
@@ -66,19 +64,4 @@ var findCap = function(nums,  currentBadge, newBadge) {
   return nums[iter] + (-diff) / iter;
 }
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.deepEqual(
-    cutAwardBadges([2, 100, 50, 120, 1000], 190),
-    [ 47, 47, 47, 47, 2 ]
-  );
-  assert.deepEqual(
-    cutAwardBadges([2, 100, 50, 120, 1000], 5),
-    [ 1, 1, 1, 1, 1 ]
-  );
-}
-
-module.exports.main = main;
+module.exports.cutAwardBadges = cutAwardBadges;

@@ -21,7 +21,7 @@ Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 
 */
-const assert = require('assert');
+
 
 /**
  * @param {number[]} nums

@@ -14,7 +14,7 @@ Example 2:
 Input: "cbbd"
 Output: "bb"
 */
-const assert = require('assert');
+
 
 /**
  * @param {string} s

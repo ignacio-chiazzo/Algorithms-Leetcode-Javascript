@@ -27,7 +27,7 @@ matrix = [
 target = 13
 Output: false
 */
-const assert = require('assert');
+
 
 /**
  * @param {number[][]} matrix

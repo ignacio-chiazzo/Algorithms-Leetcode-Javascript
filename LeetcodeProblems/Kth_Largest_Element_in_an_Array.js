@@ -15,7 +15,7 @@ Output: 4
 Note: 
 You may assume k is always valid, 1 ≤ k ≤ array's length.
 */
-const assert = require('assert');
+
 
 /**
  * @param {number[]} nums

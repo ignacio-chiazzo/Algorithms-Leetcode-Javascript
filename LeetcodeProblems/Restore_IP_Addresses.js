@@ -9,7 +9,7 @@ Example:
 Input: "25525511135"
 Output: ["255.255.11.135", "255.255.111.35"]
 */
-const assert = require('assert');
+
 
 var restoreIpAddresses = function(s) {
   var restore = restoreInputBits("", s, 4);

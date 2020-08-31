@@ -11,7 +11,7 @@ Example:
 Input: "Hello, my name is John"
 Output: 5
 */
-const assert = require('assert');
+
 
 /**
  * @param {string} s

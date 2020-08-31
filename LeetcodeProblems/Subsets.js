@@ -22,7 +22,7 @@ Output:
 ]
 */
 
-const assert = require('assert');
+
 
 var subsets = function(nums) {
   var ret = [];

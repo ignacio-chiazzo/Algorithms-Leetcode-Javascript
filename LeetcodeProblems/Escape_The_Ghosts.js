@@ -36,7 +36,6 @@ Note:
 All points have coordinates with absolute value <= 10000.
 The number of ghosts will not exceed 100.
 */
-const assert = require('assert');
 
 /**
  * @param {number[][]} ghosts

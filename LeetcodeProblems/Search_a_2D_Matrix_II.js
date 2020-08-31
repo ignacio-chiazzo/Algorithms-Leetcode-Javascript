@@ -17,7 +17,7 @@ Example:
 Given target = 5, return true.
 Given target = 20, return false.
 */
-const assert = require('assert');
+
 
 /**
 * @param {number[][]} matrix

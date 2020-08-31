@@ -18,7 +18,7 @@ Note:
 All inputs will be in lowercase.
 The order of your output does not matter.
 */
-const assert = require('assert');
+
 
 var groupAnagrams = function(strs) {
   var ret = [];

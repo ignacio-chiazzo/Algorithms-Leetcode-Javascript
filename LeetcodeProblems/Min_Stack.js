@@ -19,7 +19,7 @@ minStack.pop();
 minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
 */
-const assert = require('assert');
+
 
 class MinStack {
   constructor() {

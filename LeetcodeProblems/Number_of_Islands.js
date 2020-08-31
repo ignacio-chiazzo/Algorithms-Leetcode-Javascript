@@ -24,7 +24,7 @@ Input:
 
 Output: 3
 */
-const assert = require('assert');
+
 
 /*
  * @param {character[][]} grid

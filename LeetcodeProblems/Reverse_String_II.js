@@ -10,7 +10,7 @@ Restrictions:
 The string consists of lower English letters only.
 Length of the given string and k will in the range [1, 10000]
 */
-const assert = require('assert');
+
 
 var reverseStr = function(s, k) {
   if(k <= 1)

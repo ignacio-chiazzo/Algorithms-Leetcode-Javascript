@@ -17,7 +17,7 @@ Output:
   [3,2,1]
 ]
 */
-const assert = require('assert');
+
 
 var permute = function(nums) {
   return permuteAux(nums, 0, [], new Set());

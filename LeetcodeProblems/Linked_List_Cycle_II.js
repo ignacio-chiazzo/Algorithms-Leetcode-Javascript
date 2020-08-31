@@ -9,7 +9,7 @@ Note: Do not modify the linked list.
 Follow up:
 Can you solve it without using extra space?
 */
-const assert = require('assert');
+
 var ListNode = require('../UtilsClasses/ListNode').ListNode;
 
 // Optimal solution

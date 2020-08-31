@@ -14,7 +14,7 @@ Input: 3
 Output: False
 */
 
-const assert = require('assert');
+
 
 /**
  * @param {number} c

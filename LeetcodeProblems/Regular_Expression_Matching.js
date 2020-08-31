@@ -50,7 +50,7 @@ Output: false
  * @param {*} s 
  * @param {*} p 
  */
-const assert = require('assert');
+
 
 var isMatch = function(s, p) {
   return isMatchAux(s, p, 0, 0);
