@@ -13,6 +13,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 Follow up:
 
 */
+const assert = require('assert');
 
 var maxSubArray = function(nums) {
   if(nums.length == 0) 
@@ -34,10 +35,14 @@ var max = function(i, j) {
 }
 
 var main = function() {
-  console.log(maxSubArray([]));
-  console.log(maxSubArray([-4]));
-  console.log(maxSubArray([2]));
-  console.log(maxSubArray([4,1,-1,4,5,6,7,-200]));
+  test();
+}
+
+function test() {
+  assert.equal(maxSubArray([]), 0);
+  assert.equal(maxSubArray([-4]), -4);
+  assert.equal(maxSubArray([2]), 2);
+  assert.equal(maxSubArray([4,1,-1,4,5,6,7,-200]), 26);
 }
 
 module.exports.main = main;

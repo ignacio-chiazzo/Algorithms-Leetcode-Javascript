@@ -15,6 +15,7 @@ Input:
 
 Output: 4
 */
+const assert = require('assert');
 
 /**
  * @param {character[][]} matrix
@@ -65,11 +66,16 @@ var getCurrentMaxSideLength = function(matrix, i, j) {
 }
 
 var main = function() {
-  console.log(maximalSquare([["1","0"]]));
-  console.log(maximalSquare([["1"]]));
-  console.log(maximalSquare([["0"]]));
-  console.log(
-    maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]])
+  test();
+}
+
+function test() {
+  assert.equal(maximalSquare([["1","0"]]), 1);
+  assert.equal(maximalSquare([["1"]]), 1);
+  assert.equal(maximalSquare([["0"]]), 0);
+  assert.equal(
+    maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]),
+    4
   );
 }
 

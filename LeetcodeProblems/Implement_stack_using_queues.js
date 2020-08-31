@@ -23,7 +23,7 @@ You must use only standard operations of a queue -- which means only push to bac
 Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque (double-ended queue), as long as you use only standard operations of a queue.
 You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 */
-
+const assert = require('assert');
 class MyStack  {
   constructor() {
     this.q1 = [];
@@ -78,19 +78,22 @@ class MyStack  {
 }
 
 var main = function() {
+  test();
+}
 
-var myStack = new MyStack();
+var test = function () {
+  var myStack = new MyStack();
   myStack.push(4);
   myStack.push(3);
   myStack.push(2);
   myStack.push(1);
-  console.log(myStack.pop());
-  console.log(myStack.top());
-  console.log(myStack.push(1));
-  console.log(myStack.top());
-  console.log(myStack.pop());
-  console.log(myStack.pop());
-  console.log(myStack.pop());
+  assert.equal(myStack.pop(), 1);
+  assert.equal(myStack.top(), 2);
+  myStack.push(1);
+  assert.equal(myStack.top(), 1);
+  assert.equal(myStack.pop(), 1);
+  assert.equal(myStack.pop(), 2);
+  assert.equal(myStack.pop(), 3);
 }
 
 module.exports.main = main;

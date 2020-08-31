@@ -12,6 +12,7 @@ Input: [100, 4, 200, 1, 3, 2]
 Output: 4
 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 */
+const assert = require('assert');
 
 /**
  * @param {number[]} nums
@@ -54,11 +55,15 @@ var longestConsecutive = function(nums) {
 };
 
 var main = function() {
-  console.log(longestConsecutive([100, 1, 200, 3, 2, 400, 201]));
-  console.log(longestConsecutive([1,2,3,4, 100, 1, 200, 3, 2, 400, 201]));
-  console.log(longestConsecutive([1, 400, 201, 403, 398]));
-  console.log(longestConsecutive([]));
-  console.log(longestConsecutive([2]));
+  test();
+}
+
+function test() {
+  assert.equal(longestConsecutive([100, 1, 200, 3, 2, 400, 201]), 3);
+  assert.equal(longestConsecutive([1,2,3,4, 100, 1, 200, 3, 2, 400, 201]), 4);
+  assert.equal(longestConsecutive([1, 400, 201, 403, 398]), 1);
+  assert.equal(longestConsecutive([]), 0);
+  assert.equal(longestConsecutive([2]), 1);
 }
 
 module.exports.main

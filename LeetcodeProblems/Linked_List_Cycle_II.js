@@ -9,7 +9,7 @@ Note: Do not modify the linked list.
 Follow up:
 Can you solve it without using extra space?
 */
-
+const assert = require('assert');
 var ListNode = require('../UtilsClasses/ListNode').ListNode;
 
 // Optimal solution
@@ -58,8 +58,14 @@ var detectCycle2 = function(head) {
 };
 
 var main = function() {
-  const head = buildCycle();
-  console.log(detectCycle(head));
+  test();
+}
+
+var test = function() {
+  const cycle = buildCycle();
+  var list = cycle.list;
+  var nodeCycle = cycle.nodeCycle;
+  assert.equal(detectCycle(list), nodeCycle);
 }
 
 function buildCycle() {
@@ -73,8 +79,12 @@ function buildCycle() {
   node2.next = node3;
   node3.next = node4;
   node4.next = node5;
-  node5.next = node2; 
-  return node1;
+  node5.next = node2;
+
+  return {
+    list: node1,
+    nodeCycle: node2,
+  };
 }
 
 module.exports.main = main;

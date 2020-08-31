@@ -15,6 +15,7 @@ Output: 4
 Note: 
 You may assume k is always valid, 1 ≤ k ≤ array's length.
 */
+const assert = require('assert');
 
 /**
  * @param {number[]} nums
@@ -57,10 +58,14 @@ var swap = function(nums, a, b) {
 }
 
 var main = function(nums) {
-  console.log(findKthLargest([3,2,1,5,6,4], 2));
-  console.log(findKthLargest([3,2,3,1,2,4,5,5,6], 4));
-  console.log(findKthLargest([0], 1));
-  console.log(findKthLargest([], 1));
+  test();
+}
+
+function test() {
+  assert.equal(findKthLargest([3,2,1,5,6,4], 2), 5);
+  assert.equal(findKthLargest([3,2,3,1,2,4,5,5,6], 4), 4);
+  assert.equal(findKthLargest([0], 1), 0);
+  assert.equal(findKthLargest([], 1), undefined);
 }
 
 module.exports.main = main;
