@@ -77,18 +77,4 @@ var insertAt = function(str, position, value) {
   return str.slice(0, position) + value + str.slice(position);
 }
 
-function main() {
-  console.log("Approach 1");
-  [0, 1, 2, 3].forEach(function(elem) {
-    console.log(`${elem}: ${generateParenthesisApproach2(elem)}`);
-  })
-
-  console.log("-------------");
-
-  console.log("Approach 2");
-  [0, 1, 2, 3].forEach(function(elem) {
-    console.log(`${elem}: ${generateParenthesisApproach2(elem)}`);
-  })
-}
-
-module.exports.main = main
+module.exports.generateParenthesisApproach2 = generateParenthesisApproach2;

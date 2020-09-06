@@ -94,7 +94,7 @@ var main = function(){
   test();
 }
 
-var test = function(n) {
+var test = function() {
   assert.equal(isMatch("aa", "a"), false);
   assert.equal(isMatch("aa", "a*"), true);
   assert.equal(isMatch("a","ab*"), true);

@@ -53,15 +53,4 @@ var floodFill = function(image, sr, sc, newColor) {
   return image;
 };
 
-function main() {
-  test();
-}
-
-function test() {
-  assert.deepEqual(
-    [ [ 2, 2, 2 ], [ 2, 2, 0 ], [ 2, 0, 1 ] ],
-    floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)
-  );
-}
-
-module.exports.main = main;
+module.exports.floodFill = floodFill;

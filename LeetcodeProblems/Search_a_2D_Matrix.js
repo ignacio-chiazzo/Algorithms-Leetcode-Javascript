@@ -63,7 +63,7 @@ var main = function(){
   test();
 }
 
-var test = function(n) {
+var test = function() {
   assert.equal(searchMatrix([], 0), false);
   assert.equal(searchMatrix([[1], [3]], 3), true);
   assert.equal(searchMatrix([[1], [3]], 1), true);

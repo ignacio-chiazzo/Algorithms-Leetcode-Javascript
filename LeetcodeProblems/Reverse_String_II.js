@@ -43,7 +43,7 @@ var main = function(){
   test();
 }
 
-var test = function(n) {
+var test = function() {
   assert.equal(reverseStr("abcdefg", 2), "bacdfeg");
   assert.equal(reverseStr("abcdefg", 3), "cbadefg");
   assert.equal(reverseStr("abcdefg", 1), "abcdefg");

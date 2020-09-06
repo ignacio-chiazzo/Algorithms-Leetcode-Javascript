@@ -74,7 +74,7 @@ var main = function() {
   test();
 }
 
-var test = function(n) {
+var test = function() {
   assert.equal(removeInvalidParentheses("))))(()"), "()");
   assert.equal(removeInvalidParentheses("(()"), "()");
   assert.equal(removeInvalidParentheses("(d))()"), "(d)()");
