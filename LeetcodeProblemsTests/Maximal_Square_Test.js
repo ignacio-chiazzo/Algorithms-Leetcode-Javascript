@@ -1,4 +1,5 @@
 const assert = require('assert');
+const maximalSquare = require('../LeetcodeProblems/Maximal_Square').maximalSquare;
 
 function test() {
   assert.equal(maximalSquare([["1","0"]]), 1);

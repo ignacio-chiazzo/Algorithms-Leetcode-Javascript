@@ -1,4 +1,5 @@
 const assert = require('assert');
+const majorityElement = require('../LeetcodeProblems/Majority_Element').majorityElement;
 
 function test() {
   assert.equal(majorityElement([2,2,3]), 2);

@@ -1,5 +1,7 @@
 const assert = require('assert');
 var TreeNode = require('../UtilsClasses/TreeNode').TreeNode;
+const lowestCommonAncestor = require('../LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree').lowestCommonAncestor;
+const lowestCommonAncestor2 = require('../LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree').lowestCommonAncestor2;
 
 var test = function() {
   var root = new TreeNode(3);

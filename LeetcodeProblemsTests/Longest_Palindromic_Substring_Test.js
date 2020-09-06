@@ -1,4 +1,5 @@
 const assert = require('assert');
+const longestPalindrome = require('../LeetcodeProblems/Longest_Palindromic_Substring').longestPalindrome;
 
 function test() {
   assert.equal(longestPalindrome("pabcdcbte"), "bcdcb");

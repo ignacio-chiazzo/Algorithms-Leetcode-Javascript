@@ -1,4 +1,7 @@
 const assert = require('assert');
+const solveNQueens = require('../LeetcodeProblems/NQueens').solveNQueens;
+
+// TODO: Add assertions
 
 var test = function() {
   printMatrixes(solveNQueens(4), 4);
