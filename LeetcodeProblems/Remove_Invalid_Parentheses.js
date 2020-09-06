@@ -20,7 +20,6 @@ Input: ")("
 Output: [""]
 */
 
-
 /**
  * @param {string} s
  * @return {string[]}
@@ -70,15 +69,4 @@ var isValid = function(s) {
   return leftCount === 0;
 }
 
-var main = function() {
-  test();
-}
-
-var test = function() {
-  assert.equal(removeInvalidParentheses("))))(()"), "()");
-  assert.equal(removeInvalidParentheses("(()"), "()");
-  assert.equal(removeInvalidParentheses("(d))()"), "(d)()");
-  assert.equal(removeInvalidParentheses("(())"), "(())");
-}
-
-module.exports.main = main;
+module.exports.removeInvalidParentheses = removeInvalidParentheses;

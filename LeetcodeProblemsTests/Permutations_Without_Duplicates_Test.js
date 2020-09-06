@@ -1,8 +1,9 @@
 const assert = require('assert');
+const subsetWithoutDuplicates = require('../LeetcodeProblems/Permutations_Without_Duplicates').subsetWithoutDuplicates;
 
 var test = function() {
   assert.deepEqual(
-    subsetWithDuplicates([1,2,3]),
+    subsetWithoutDuplicates([1,2,3]),
     [
       [ 1, 2, 3 ],
       [ 1, 3, 2 ],

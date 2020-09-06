@@ -1,4 +1,5 @@
 const assert = require('assert');
+const isMatch = require('../LeetcodeProblems/Regular_Expression_Matching').isMatch;
 
 var test = function() {
   assert.equal(isMatch("aa", "a"), false);

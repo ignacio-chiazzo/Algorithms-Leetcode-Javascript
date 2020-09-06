@@ -33,17 +33,4 @@ var countSegments = function(s) {
   return count;
 };
 
-function main() {
-  test();
-}
-
-function test() {
-  assert.equal(countSegments(" "), 0);
-  assert.equal(countSegments("    "), 0);
-  assert.equal(countSegments("ab cd ef"), 3);
-  assert.equal(countSegments("  ab cd ef"), 3);
-  assert.equal(countSegments("ab cd ef  "), 3);
-  assert.equal(countSegments(" ab cd ef "), 3);
-}
-
-module.exports.main = main
+module.exports.countSegments = countSegments;

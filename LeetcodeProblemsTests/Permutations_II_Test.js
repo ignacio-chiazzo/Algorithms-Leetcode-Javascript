@@ -1,4 +1,5 @@
 const assert = require('assert');
+const permuteUnique = require('../LeetcodeProblems/Permutations_II').permuteUnique;
 
 function test() {
   assert.deepEqual(

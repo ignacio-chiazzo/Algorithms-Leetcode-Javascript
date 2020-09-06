@@ -1,4 +1,5 @@
 const assert = require('assert');
+const removeInvalidParentheses = require('../LeetcodeProblems/Remove_Invalid_Parentheses').removeInvalidParentheses;
 
 var test = function() {
   assert.equal(removeInvalidParentheses("))))(()"), "()");

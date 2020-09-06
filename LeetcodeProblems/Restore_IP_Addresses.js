@@ -10,7 +10,6 @@ Input: "25525511135"
 Output: ["255.255.11.135", "255.255.111.35"]
 */
 
-
 var restoreIpAddresses = function(s) {
   var restore = restoreInputBits("", s, 4);
 
@@ -41,13 +40,4 @@ var restoreInputBits = function(partial, s, num) {
   return [...oneNum, ...twoNums, ...threeNums];
 }
 
-var main = function() {
-  test();
-}
-
-var test = function() {
-  assert.deepEqual(restoreIpAddresses("010010"), [ '0.10.0.10', '0.100.1.0']);
-  assert.deepEqual(restoreIpAddresses("25525511135"), [ '255.255.11.135', '255.255.111.35' ]);
-}
-
-module.exports.main = main
+module.exports.restoreIpAddresses = restoreIpAddresses;

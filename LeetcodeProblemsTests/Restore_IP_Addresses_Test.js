@@ -1,4 +1,5 @@
 const assert = require('assert');
+const restoreIpAddresses = require('../LeetcodeProblems/Restore_IP_Addresses').restoreIpAddresses;
 
 var test = function() {
   assert.deepEqual(restoreIpAddresses("010010"), [ '0.10.0.10', '0.100.1.0']);

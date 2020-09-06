@@ -1,4 +1,5 @@
 const assert = require('assert');
+const reverseStr = require('../LeetcodeProblems/Reverse_String_II').reverseStr;
 
 var test = function() {
   assert.equal(reverseStr("abcdefg", 2), "bacdfeg");

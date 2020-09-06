@@ -18,18 +18,17 @@ Output:
 ]
 */
 
-
-// Permutations wihto
-var subsetWithDuplicates = function(nums) {
+// Permutations without Duplicates
+var subsetWithoutDuplicates = function(nums) {
   if(nums.lenght == 0){
     return;
   }
   var solution = [];
-  subsetWithDuplicatesAux(nums, [], solution);
+  subsetWithoutDuplicatesAux(nums, [], solution);
   return solution;
 }
 
-var subsetWithDuplicatesAux = function(nums, current, sol) {
+var subsetWithoutDuplicatesAux = function(nums, current, sol) {
   if(nums.length == 0){
     sol.push(current);
   }
@@ -37,26 +36,8 @@ var subsetWithDuplicatesAux = function(nums, current, sol) {
   for(var i = 0; i < nums.length; i++) {
     var newCurrent = [...current, nums[i]]
     var newNums = nums.filter(function(num, index) { return index !== i });
-    subsetWithDuplicatesAux(newNums, newCurrent, sol);
+    subsetWithoutDuplicatesAux(newNums, newCurrent, sol);
   }
 }
-    
-function main() {
-  test();
-}
 
-var test = function() {
-  assert.deepEqual(
-    subsetWithDuplicates([1,2,3]),
-    [
-      [ 1, 2, 3 ],
-      [ 1, 3, 2 ],
-      [ 2, 1, 3 ],
-      [ 2, 3, 1 ],
-      [ 3, 1, 2 ],
-      [ 3, 2, 1 ]
-    ]
-  );
-}
-
-module.exports.main = main;
+module.exports.subsetWithoutDuplicates = subsetWithoutDuplicates;
