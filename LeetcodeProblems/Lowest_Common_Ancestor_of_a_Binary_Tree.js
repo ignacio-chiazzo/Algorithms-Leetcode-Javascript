@@ -33,7 +33,7 @@ Note:
 All of the nodes' values will be unique.
 p and q are different and both values will exist in the binary tree.
 */
-const assert = require('assert');
+
 
 var TreeNode = require('../UtilsClasses/TreeNode').TreeNode;
 
@@ -93,37 +93,5 @@ var pathTo = function(root, value) {
   return [];
 }
 
-var main = function() {
-  var root = new TreeNode(3);
-  
-  var right = new TreeNode(1);
-  right.left = new TreeNode(0);
-  right.right = new TreeNode(8);
-  root.right = right;
-
-  var left = new TreeNode(5);
-  left.left = new TreeNode(6);
-  
-  var tempRight = new TreeNode(2);
-  tempRight.left = new TreeNode(7);
-  tempRight.right = new TreeNode(4);
-  left.right = tempRight;
-
-  root.left = left;
-
-  //         _______3______
-  //        /              \
-  //     ___5__          ___1__
-  //    /      \        /      \
-  //    6      _2       0       8
-  //          /  \
-  //          7   4
-
-  console.log(lowestCommonAncestor(root, left, tempRight.right));
-  console.log(lowestCommonAncestor(root, left, right));
-
-  console.log(lowestCommonAncestor2(root, left, tempRight.right));
-  console.log(lowestCommonAncestor2(root, left, right));
-}
-
-module.exports.main = main;
+module.exports.lowestCommonAncestor = lowestCommonAncestor;
+module.exports.lowestCommonAncestor2 = lowestCommonAncestor2;

@@ -31,7 +31,6 @@ Follow up:
 
 Can you solve it in O(N) time and O(1) space?
 */
-const assert = require('assert');
 
 /**
  * @param {string} S
@@ -106,20 +105,5 @@ var backspaceCompare2 = function(S, T) {
   return stackS.length === 0 && stackT.length === 0;
 };
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.equal(backspaceCompare("ab#c", "ad#c"), true); // true
-  assert.equal(backspaceCompare("ab##", "c#d#"), true); // true
-  assert.equal(backspaceCompare("a##c", "#a#c"), true); // true
-  assert.equal(backspaceCompare("a#c", "b"), false); // false
-
-  assert.equal(backspaceCompare2("ab#c", "ad#c"), true); // true
-  assert.equal(backspaceCompare2("ab##", "c#d#"), true); // true
-  assert.equal(backspaceCompare2("a##c", "#a#c"), true); // true
-  assert.equal(backspaceCompare2("a#c", "b"), false); // false
-}
-
-module.exports.main = main;
+module.exports.backspaceCompare = backspaceCompare;
+module.exports.backspaceCompare2 = backspaceCompare2;

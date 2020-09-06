@@ -14,7 +14,7 @@ Output:
   [2,1,1]
 ]
 */
-const assert = require('assert');
+
 
 var permuteUnique = function(nums) {
   var map = {};
@@ -46,35 +46,4 @@ var permuteUniqueAux = function(n, map, currentSol) {
   return ret;
 };
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.deepEqual(
-    permuteUnique([1,1,2]),
-    [ [ '1', '1', '2' ], [ '1', '2', '1' ], [ '2', '1', '1' ] ]
-  );
-  assert.deepEqual(
-    permuteUnique([1,3,2,1]),
-    [
-      [ '1', '1', '2', '3' ],
-      [ '1', '1', '3', '2' ],
-      [ '1', '2', '1', '3' ],
-      [ '1', '2', '3', '1' ],
-      [ '1', '3', '1', '2' ],
-      [ '1', '3', '2', '1' ],
-      [ '2', '1', '1', '3' ],
-      [ '2', '1', '3', '1' ],
-      [ '2', '3', '1', '1' ],
-      [ '3', '1', '1', '2' ],
-      [ '3', '1', '2', '1' ],
-      [ '3', '2', '1', '1' ]
-    ]
-  );
-  assert.deepEqual(permuteUnique([]), [ [] ]);
-
-  assert.deepEqual(permuteUnique([1,1]), [ [ '1', '1' ] ]);
-}
-
-module.exports.main = main;
+module.exports.permuteUnique = permuteUnique;

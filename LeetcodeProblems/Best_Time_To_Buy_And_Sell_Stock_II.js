@@ -27,7 +27,6 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 */
-const assert = require('assert');
 
 /**
  * @param {number[]} prices
@@ -56,13 +55,4 @@ var maxProfit = function(prices) {
   return profit;
 };
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.equal(maxProfit([7,1,5,3,6,4]), 7);
-  assert.equal(maxProfit([7,1,5,3320,6,4]), 3319);
-}
-
-module.exports.main = main;
+module.exports.maxProfit = maxProfit;

@@ -32,8 +32,6 @@ Input: "{[]}"
 Output: true
 */
 
-const assert = require('assert');
-
 var isValid = function(s) {
   var stack = [];
   for(var i = 0; i < s.length; i++) {
@@ -58,16 +56,4 @@ var valid = function(parOpen, parClose) {
       parOpen === "{" && parClose === "}";
 }
 
-var main = function(){
-  test();
-}
-
-var test = function () {
-  assert.strictEqual(isValid(""), true);
-  assert.strictEqual(isValid("()"), true);
-  assert.strictEqual(isValid("([)]"), false);
-  assert.strictEqual(isValid("{[()]}{[()]}"), true);
-  assert.strictEqual(isValid("{[())()]}"), false);
-}
-
-module.exports.main = main
+module.exports.isValid = isValid;

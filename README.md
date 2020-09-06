@@ -2,12 +2,14 @@
 
 Solutions of algorithm problems using Javascript.  https://ignacio-chiazzo.github.io/Algorithms-Leetcode-Javascript/
 
+### Structure
+The solutions are located under /LeetcodeProblems. Each solutions exports the main function(s) which to be tested. Each problem has a test file located under /LeetcodeProblemsTest.
+
+
 ### Run Scripts
+To run all the test run `node Main.js` in the console.
 
-Each problem has a main function exported which prints some cases (Tests are going to be added soon 😉)). 
-To run a  specific problem in your console run  `node <problem_file_path>` (e.g. `node LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree.js`).
-
-You can also run all the problems by running the `Main.js` file.
+To run a specific problem in your console, go to the file test, add the call to the test function (`test()` ) and run in the console  `node <problem_file_path>` (e.g. `node LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree.js`).
 
 ### Leetcode Problems
 
@@ -80,3 +82,10 @@ You can also run all the problems by running the `Main.js` file.
 
 Other languages provides built-in classes (e.g Linked List, Tree, etc). This module contains util classes to use in your problems. 
 
+### Contributions
+
+If you want to contribute to this repo by adding a problem you should:
+
+1) Add the description of the problem at the top of the file.
+2) Add a test file with some test cases. The test file must export a `test()` function which should run all the tests of the file.
+3) Add your problem to the Readme so that your problem shows up in the list of solutions.

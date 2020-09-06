@@ -26,11 +26,13 @@ class TicTacToe {
   };
 
   printBoard() {
+    console.log("-------");
     for(var row = 0; row < 3; row ++) {
       console.log(this.matrix[row][0] + "|" 
       + this.matrix[row][1] + "|" 
       + this.matrix[row][2]); // Check new line;
     }
+    console.log("------- \n");
   }
 
   isBoardFull() {
@@ -46,41 +48,19 @@ class TicTacToe {
     return true;
   }
 
-  makeMove() {
+  makeMove(str) {
     if(this.isBoardFull()) {
       throw "Error Board is Full";
     }
     for(var row = 0; row < 3; row ++) {
       for(var col = 0; col < 3; col ++) { 
         if(this.matrix[row][col] === "-") {
-          this.addToken(row, col, "0");
+          this.addToken(row, col, str);
+          return true;
         }
-      }  
+      }
     }
   }
 }
 
-var main = function() {
-  console.log("TBD");
-}
-
-module.exports.main = main;
-
-ticTacToe = new TicTacToe();
-ticTacToe.isBoardFull();
-ticTacToe.addToken(0,1,"X");
-ticTacToe.printBoard();
-var iter = 0;
-while(iter < 8) {
-  ticTacToe.makeMove();
-  iter++;
-}
-
-console.log("after 8 moves");
-ticTacToe.isBoardFull();
-ticTacToe.printBoard();
-ticTacToe.makeMove();
-
-ticTacToe.printBoard();
-ticTacToe.addToken(0,0,"X");
-ticTacToe.printBoard();
+module.exports.TicTacToe = TicTacToe;

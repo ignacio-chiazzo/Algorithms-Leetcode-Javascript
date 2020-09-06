@@ -14,7 +14,6 @@ Example 2:
 Input: "cbbd"
 Output: "bb"
 */
-const assert = require('assert');
 
 /**
  * @param {string} s
@@ -64,17 +63,4 @@ var longestPalindrome = function(str) {
   return str.slice(posPalStart, posPalStart + maxPal);
 }
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.equal(longestPalindrome("pabcdcbte"), "bcdcb");
-  assert.equal(longestPalindrome("bb"), "bb");
-  assert.equal(longestPalindrome(""), "");
-  assert.equal(longestPalindrome("bbb"), "bbb");
-  assert.equal(longestPalindrome("bbbb"), "bbbb");
-  assert.equal(longestPalindrome("ptabbbbat"), "tabbbbat");
-}
-
-module.exports.main = main
+module.exports.longestPalindrome = longestPalindrome

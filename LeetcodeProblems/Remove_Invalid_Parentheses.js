@@ -19,7 +19,6 @@ Example 3:
 Input: ")("
 Output: [""]
 */
-const assert = require('assert');
 
 /**
  * @param {string} s
@@ -70,15 +69,4 @@ var isValid = function(s) {
   return leftCount === 0;
 }
 
-var main = function() {
-  test();
-}
-
-var test = function(n) {
-  assert.equal(removeInvalidParentheses("))))(()"), "()");
-  assert.equal(removeInvalidParentheses("(()"), "()");
-  assert.equal(removeInvalidParentheses("(d))()"), "(d)()");
-  assert.equal(removeInvalidParentheses("(())"), "(())");
-}
-
-module.exports.main = main;
+module.exports.removeInvalidParentheses = removeInvalidParentheses;

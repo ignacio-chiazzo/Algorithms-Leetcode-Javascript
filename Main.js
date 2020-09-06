@@ -1,20 +1,20 @@
 const fs = require('fs');
 
-const PROBLEMS_FOLDER = './LeetcodeProblems/';
+const TESTS_FOLDER = './LeetcodeProblemsTests/';
 const REGEX_PATTERN_HIDDEN_FILES = /(^|\/)\.[^\/\.]/g;
 
 var main = async function() {
   try {
     const problems = await loadProblems();
-    for(i in problems) { 
-      console.log("Solving: " + problems[i] + ":");
-      const problem = require(PROBLEMS_FOLDER + problems[i]);
+    for(i in problems) {
+      console.log("Solving: " + problems[i]);
+      const problem = require(TESTS_FOLDER + problems[i]);
 
-      if (typeof(problem.main) !=='undefined') {
-        problem.main();
-        console.log("End of the solution for : " + problems[i] + ",\n\n");
+      if (typeof(problem.test) !=='undefined') {
+        problem.test();
+        console.log("End of the solution for : " + problems[i] + " \n\n");
       } else {
-        console.warn(problem, "The problem " + problems[i] +  " doesn't have a main method implemented.");
+        console.warn(problem, "The problem " + problems[i] +  " doesn't have a test method implemented.");
       }
     }
   } catch (error) {
@@ -24,7 +24,7 @@ var main = async function() {
 
 var loadProblems = () => {
   return new Promise(function (resolve, reject) {
-    fs.readdir(PROBLEMS_FOLDER, (error, files) => {
+    fs.readdir(TESTS_FOLDER, (error, files) => {
       if (error) {
         reject(error);
       } else {

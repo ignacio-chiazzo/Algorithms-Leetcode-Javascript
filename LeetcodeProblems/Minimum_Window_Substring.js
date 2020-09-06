@@ -14,7 +14,7 @@ Note:
 If there is no such window in S that covers all characters in T, return the empty string "".
 If there is such window, you are guaranteed that there will always be only one unique minimum window in S.
 */
-const assert = require('assert');
+
 
 var minWindow = function(s, t) {
   if(t.length === 0 || s.length < t.length)
@@ -64,17 +64,4 @@ var getHash = function(t) {
   return hash;
 }
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.equal(minWindow("ADOBECODEBANC", "ABC"), "BANC");
-  assert.equal(minWindow("caaec", "cae"), "aec");
-  assert.equal(minWindow("bbacbb", "ab"), "ba");
-  assert.equal(minWindow("abba", "b"), "b");
-  assert.equal(minWindow("abba", "a"), "a");
-  assert.equal(minWindow("abba", ""), "");
-}
-
-module.exports.main
+module.exports.minWindow = minWindow;

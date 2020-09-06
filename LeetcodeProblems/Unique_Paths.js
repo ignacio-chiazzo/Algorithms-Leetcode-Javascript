@@ -26,8 +26,6 @@ Output: 28
 
 // Solution 1
 // This solution is a naive solution implementing a binary tree and visiting each node.
-const assert = require('assert');
-
 var uniquePaths1 = function(m, n) {
   return uniquePathsAux(0, 0, m, n)
 };
@@ -96,13 +94,6 @@ var uniquePaths3 = function(m, n) {
   return matrix[m - 1][n - 1];
 };
 
-var main = function() {
-  test();
-}
-
-var test = function() {
-  assert.strictEqual(uniquePaths1(10,4), 220);
-  assert.strictEqual(uniquePaths1(3,2), 3);
-}
-
-module.exports.main = main;
+module.exports.uniquePaths1 = uniquePaths1;
+module.exports.uniquePaths2 = uniquePaths1;
+module.exports.uniquePaths3 = uniquePaths3;

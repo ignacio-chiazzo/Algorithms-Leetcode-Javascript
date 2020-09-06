@@ -12,7 +12,7 @@ Note:
 The length of the array is in range [1, 20,000].
 The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].
 */
-const assert = require('assert');
+
 
 /**
  * @param {number[]} nums
@@ -60,15 +60,4 @@ var subarraySum2 = function(nums, k) {
   return ret;
 };
 
-var main = function() {
-  test();
-}
-
-var test  = function() {
-  assert.strictEqual(subarraySum([1,1,1], 2), 2);
-  assert.strictEqual(subarraySum([1], 0), 0);
-  assert.strictEqual(subarraySum([0], 0), 1);
-  assert.strictEqual(subarraySum([0,0,0,0,0], 0), 15);
-}
-
-module.exports.main = main;
+module.exports.subarraySum = subarraySum;

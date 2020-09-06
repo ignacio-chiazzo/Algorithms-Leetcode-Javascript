@@ -24,7 +24,7 @@ Input:
 
 Output: 3
 */
-const assert = require('assert');
+
 
 /*
  * @param {character[][]} grid
@@ -61,23 +61,4 @@ var colorIsland = function(grid, i, j, rowsCount, columnsCount) {
   colorIsland(grid, i, j + 1, rowsCount, columnsCount);
 }
 
-var main = function() {  
-  test();
-}
-
-function test() {
-  assert.equal(numIslands([[1]]), 1);
-  assert.equal(numIslands([]), 0);
-  assert.equal(numIslands(
-    [
-      ["1","1","1","1","0"],
-      ["1","1","0","1","0"],
-      ["1","1","0","0","0"],
-      ["0","0","0","0","0"]
-    ],
-  ),
-  1
-  );
-}
-
-module.exports.main = main;
+module.exports.numIslands = numIslands;

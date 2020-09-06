@@ -40,7 +40,6 @@ You don't need to understand the serialization to solve the problem.
  * }
  */
 
-
 // SOLUTION 1 Using DFS
 /**
  * @param {UndirectedGraphNode} graph

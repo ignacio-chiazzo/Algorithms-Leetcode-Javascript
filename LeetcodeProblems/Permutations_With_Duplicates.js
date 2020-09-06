@@ -1,4 +1,4 @@
-const assert = require('assert');
+
 
 // Permutations without
 var subsetWithoutDuplicates = function(nums) {
@@ -29,28 +29,4 @@ var subsetWithoutDuplicatesAux = function(nums, current, sol) {
   })
 }
 
-function main() {
-  test();
-}
-
-var test = function() {
-  assert.deepEqual(
-    subsetWithoutDuplicates([1,1,2,3]),
-    [
-      [ 1, 1, 2, 3 ],
-      [ 1, 1, 3, 2 ],
-      [ 1, 2, 1, 3 ],
-      [ 1, 2, 3, 1 ],
-      [ 1, 3, 1, 2 ],
-      [ 1, 3, 2, 1 ],
-      [ 2, 1, 1, 3 ],
-      [ 2, 1, 3, 1 ],
-      [ 2, 3, 1, 1 ],
-      [ 3, 1, 1, 2 ],
-      [ 3, 1, 2, 1 ],
-      [ 3, 2, 1, 1 ]
-    ]
-  );
-}
-main();
-module.exports.main = main;
+module.exports.subsetWithoutDuplicates = subsetWithoutDuplicates;
