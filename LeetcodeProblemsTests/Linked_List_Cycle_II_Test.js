@@ -1,5 +1,6 @@
 const assert = require('assert');
 var ListNode = require('../UtilsClasses/ListNode').ListNode;
+const detectCycle = require('../LeetcodeProblems/Linked_List_Cycle_II').detectCycle;
 
 var test = function() {
   const cycle = buildCycle();

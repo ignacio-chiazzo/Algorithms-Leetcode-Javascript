@@ -1,4 +1,5 @@
 const assert = require('assert');
+const groupAnagrams = require('../LeetcodeProblems/Group_Anagrams').groupAnagrams;
 
 function test() {
   assert.deepEqual(

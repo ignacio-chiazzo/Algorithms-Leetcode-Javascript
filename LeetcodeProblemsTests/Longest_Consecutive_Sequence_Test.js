@@ -1,4 +1,5 @@
 const assert = require('assert');
+const longestConsecutive = require('../LeetcodeProblems/Longest_Consecutive_Sequence').longestConsecutive;
 
 function test() {
   assert.equal(longestConsecutive([100, 1, 200, 3, 2, 400, 201]), 3);

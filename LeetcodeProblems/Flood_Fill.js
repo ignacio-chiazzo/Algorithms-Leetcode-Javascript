@@ -29,7 +29,6 @@ The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image
 The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
 */
 
-
 var floodFill = function(image, sr, sc, newColor) {
   var oldColor = image[sr][sc];
   

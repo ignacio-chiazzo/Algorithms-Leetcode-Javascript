@@ -1,4 +1,5 @@
 const assert = require('assert');
+const MyStack = require('../LeetcodeProblems/Implement_stack_using_queues').MyStack;
 
 var test = function () {
   var myStack = new MyStack();
