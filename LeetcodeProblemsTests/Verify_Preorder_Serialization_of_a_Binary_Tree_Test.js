@@ -1,4 +1,5 @@
 const assert = require('assert');
+const isValidSerialization = require('../LeetcodeProblems/Verify_Preorder_Serialization_of_a_Binary_Tree').isValidSerialization;
 
 var test = function() {
   assert.strictEqual(isValidSerialization(""), true);

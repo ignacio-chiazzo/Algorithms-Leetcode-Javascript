@@ -18,7 +18,6 @@ Given target = 5, return true.
 Given target = 20, return false.
 */
 
-
 /**
 * @param {number[][]} matrix
 * @param {number} target
@@ -43,22 +42,4 @@ var searchMatrix = function(matrix, target) {
   return false;
 };
 
-const matrix1 = [
-  [1,4,7,    11,15],
-  [2,5,8,    12,19],
-  [3,6,9,    16,22],
-  [10,13,14, 17,24],
-  [18,21,23, 26,30]
-];
-
-var main = function(n) {
-  test();
-}
-
-var test = function() {
-  assert.equal(searchMatrix(matrix1, 5), true);
-  assert.equal(searchMatrix(matrix1, 0), false);
-  assert.equal(searchMatrix(matrix1, 15), true);
-}
-
-module.exports.main = main;
+module.exports.searchMatrix = searchMatrix;

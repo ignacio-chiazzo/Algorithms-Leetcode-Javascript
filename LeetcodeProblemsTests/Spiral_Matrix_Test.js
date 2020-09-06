@@ -1,4 +1,5 @@
 const assert = require('assert');
+const spiralOrder = require('../LeetcodeProblems/Spiral_Matrix').spiralOrder;
 
 var test = function() {
   const matrix = [

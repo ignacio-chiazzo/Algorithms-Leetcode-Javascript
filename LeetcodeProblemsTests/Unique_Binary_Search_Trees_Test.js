@@ -1,4 +1,7 @@
 const assert = require('assert');
+const numTrees1 = require('../LeetcodeProblems/Unique_Binary_Search_Trees').numTrees1;
+const numTrees2 = require('../LeetcodeProblems/Unique_Binary_Search_Trees').numTrees2;
+const numTrees3 = require('../LeetcodeProblems/Unique_Binary_Search_Trees').numTrees3;
 
 var test = function () {
   assert.strictEqual(numTrees1(1), 1);

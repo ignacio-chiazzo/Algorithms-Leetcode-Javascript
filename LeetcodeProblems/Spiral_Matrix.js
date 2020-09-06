@@ -67,17 +67,4 @@ var printRect = function(matrix, i, rowLength, colLength, retArray) {
   }
 }
 
-var main = function() {
-  const matrix = [
-   [ 1, 2, 3 ],
-   [ 4, 5, 6 ],
-   [ 7, 8, 9 ]
-  ]
-
-  assert.deepEqual(
-    spiralOrder(matrix),
-    [1, 2, 3, 6, 9, 8, 7, 4, 5]
-  )
-}
-
-module.exports.main = main;
+module.exports.spiralOrder = spiralOrder;

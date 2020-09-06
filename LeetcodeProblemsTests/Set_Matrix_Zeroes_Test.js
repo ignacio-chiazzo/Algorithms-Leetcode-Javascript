@@ -1,4 +1,5 @@
 const assert = require('assert');
+const setZeroes = require('../LeetcodeProblems/Set_Matrix_Zeroes').setZeroes;
 
 var test = function() {
   assert.deepEqual(

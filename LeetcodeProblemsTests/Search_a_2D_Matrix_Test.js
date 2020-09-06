@@ -1,4 +1,5 @@
 const assert = require('assert');
+const searchMatrix = require('../LeetcodeProblems/Search_a_2D_Matrix').searchMatrix;
 
 var test = function() {
   assert.equal(searchMatrix([], 0), false);

@@ -1,4 +1,5 @@
 const assert = require('assert');
+const subarraySum = require('../LeetcodeProblems/Subarray_Sum_Equals_K').subarraySum;
 
 var test  = function() {
   assert.strictEqual(subarraySum([1,1,1], 2), 2);

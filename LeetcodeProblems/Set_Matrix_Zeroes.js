@@ -39,8 +39,6 @@ A simple improvement uses O(m + n) space, but still not the best solution.
 Could you devise a constant space solution?
 */
 
-
-
 /**
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
@@ -110,15 +108,4 @@ var fillCol = function(matrix, col) {
     matrix[i][col] = 0;
 }
 
-var main = function() {
-  test();
-}
-
-var test = function() {
-  assert.deepEqual(
-    setZeroes([[1,1,1],[1,0,1],[1,1,1]]),
-    [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
-  );
-}
-
-module.exports.main = main;
+module.exports.setZeroes = setZeroes;

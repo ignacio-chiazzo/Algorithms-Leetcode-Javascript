@@ -64,17 +64,4 @@ var isValidSerialization = function(preorder) {
   return countP === 0 && iter >= preorder.length;    
 };
 
-var main = function() {
-  test();
-}
-
-var test = function() {
-  assert.strictEqual(isValidSerialization(""), true);
-  assert.strictEqual(isValidSerialization(""), true);
-  assert.strictEqual(isValidSerialization("#"), true);
-  assert.strictEqual(isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"), true);
-  assert.strictEqual(isValidSerialization("9,#,92,#,#"), true);
-  assert.strictEqual(isValidSerialization("9,3,4,#,#,1,#,#,#,2,#,6,#,#"), false);
-};
-
-module.exports.main = main;
+module.exports.isValidSerialization = isValidSerialization;

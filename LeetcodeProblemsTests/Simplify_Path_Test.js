@@ -1,4 +1,5 @@
 const assert = require('assert');
+const simplifyPath = require('../LeetcodeProblems/Simplify_Path').simplifyPath;
 
 var test = function() { 
   assert.equal(simplifyPath("/../c"), "/c");

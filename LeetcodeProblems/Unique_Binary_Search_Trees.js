@@ -22,8 +22,6 @@ Given n = 3, there are a total of 5 unique BST's:
 DP Solution: https://www.programcreek.com/2014/05/leetcode-unique-binary-search-trees-java/
 */
 
-
-
 // Solution 3 using DP
 var numTrees3 = function (n) {
   if (n == 0)
@@ -109,25 +107,6 @@ var numTreesAux1 = function(leftMin, leftMax) {
   return count;
 }
 
-var main = function() {
-  test();
-}
-
-var test = function () {
-  assert.strictEqual(numTrees1(1), 1);
-  assert.strictEqual(numTrees1(2), 2);
-  assert.strictEqual(numTrees1(3), 5);
-  assert.strictEqual(numTrees1(5), 42);
-
-  assert.strictEqual(numTrees2(1), 1);
-  assert.strictEqual(numTrees2(2), 2);
-  assert.strictEqual(numTrees2(3), 5);
-  assert.strictEqual(numTrees2(5), 42);
-
-  assert.strictEqual(numTrees3(1), 1);
-  assert.strictEqual(numTrees3(2), 2);
-  assert.strictEqual(numTrees3(3), 5);
-  assert.strictEqual(numTrees3(5), 42); 
-}
-
-module.exports.main = main
+module.exports.numTrees1 = numTrees1;
+module.exports.numTrees2 = numTrees2;
+module.exports.numTrees3 = numTrees3;

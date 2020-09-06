@@ -59,14 +59,4 @@ var getDistance = function(a, b) {
   return horizontalMoves + verticalMoves;
 }
 
-var main = function() {
-  test();
-}
-
-function test() {
-  assert.equal(escapeGhosts([[1, 0], [0, 3]], [0, 1]), true);
-  assert.equal(escapeGhosts([[1, 0]], [2, 0]), false);
-  assert.equal(escapeGhosts([[2, 0]], [1, 0]), true);
-}
-
-module.exports.main = main
+module.exports.escapeGhosts = escapeGhosts;

@@ -1,4 +1,5 @@
 const assert = require('assert');
+const judgeSquareSum = require('../LeetcodeProblems/Sum_Of_Square_Numbers').judgeSquareSum;
 
 var test = function() {
   assert.strictEqual(judgeSquareSum(0), true);

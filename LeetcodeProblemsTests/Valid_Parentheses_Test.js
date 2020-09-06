@@ -1,4 +1,5 @@
 const assert = require('assert');
+const isValid = require('../LeetcodeProblems/Valid_Parentheses').isValid;
 
 var test = function () {
   assert.strictEqual(isValid(""), true);
