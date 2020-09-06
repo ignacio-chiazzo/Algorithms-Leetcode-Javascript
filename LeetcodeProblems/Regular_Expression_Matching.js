@@ -90,4 +90,4 @@ var canBeZero = function(pattern, posPat) {
   return posPat == pattern.length;
 }
 
-module.exports.isMatch = isM.isMatch;
+module.exports.isMatch = isMatch;
