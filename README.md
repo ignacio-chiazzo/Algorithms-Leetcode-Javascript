@@ -90,3 +90,5 @@ If you want to contribute to this repo by adding a problem you should:
 1) Add the description of the problem at the top of the file.
 2) Add a test file with some test cases. The test file must export a `test()` function which should run all the tests of the file.
 3) Add your problem to the Readme so that your problem shows up in the list of solutions.
+
+PR Example: https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript/pull/39
