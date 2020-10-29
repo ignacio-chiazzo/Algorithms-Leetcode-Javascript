@@ -36,7 +36,8 @@ To run a specific problem in your console, go to the file test, add the call to 
 | [Group Anagrams ](/LeetcodeProblems/Group_Anagrams.js)                                               | Medium | https://leetcode.com/problems/group-anagrams/
 | [Kth Largest Element in an Array ](/LeetcodeProblems/Kth_Largest_Element_in_an_Array.js)             | Medium | https://leetcode.com/problems/kth-largest-element-in-an-array/ |
 | [Linked List Cycle II ](/LeetcodeProblems/Linked_List_Cycle_II.js)                                   | Medium | https://leetcode.com/problems/linked-list-cycle-ii/ |
-| [Longest Palindromic Substring ](/LeetcodeProblems/Longest_Palindromic_Substring.js)                 | Medium | https://leetcode.com/problems/longest-palindromic-substring/ |
+| [Longest Palindromic Substring ](/LeetcodeProblems/Longest_Palindromic_Substring.js)                 | Medium | https://leetcode.com/problems/longest-palindromic-substring/|
+| [Max Area Of Island](https://leetcode.com/problems/max-area-of-island/)                              | Medium | https://leetcode.com/problems/max-area-of-island/ |
 | [Maximal Square ](/LeetcodeProblems/Maximal_Square.js)                                               | Medium | https://leetcode.com/problems/maximal-square/ |
 | [Permutations ](/LeetcodeProblems/Permutations.js)                                                   | Medium | https://leetcode.com/problems/permutations/ |
 | [Permutations II ](/LeetcodeProblems/Permutations_II.js)                                             | Medium | https://leetcode.com/problems/permutations-ii/ |
