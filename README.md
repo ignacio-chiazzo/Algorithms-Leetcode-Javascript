@@ -89,6 +89,7 @@ To run a specific problem in your console, go to the file test, add the call to 
 | [Second Highest Salary](/LeetcodeProblems/Databases/Second_highest_salary.sql)| Easy   | https://leetcode.com/problems/second-highest-salary |
 | [Customers Who Never Order](/LeetcodeProblems/Databases/Customers_Who_Never_Order.sql)| Easy |  https://leetcode.com/problems/customers-who-never-order |
 | [Reformat Department Table](/LeetcodeProblems/Databases/Reformat_Department_Table.sql) | Easy | https://leetcode.com/problems/reformat-department-table |
+| [Employees Earning More Than Their Managers](/LeetcodeProblems/Databases/Employees_Earning_More_Than_Their_Managers.sql) | Easy | https://leetcode.com/problems/employees-earning-more-than-their-managers/ |
 
 ### UtilsClasses
 
