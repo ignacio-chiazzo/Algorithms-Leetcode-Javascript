@@ -91,6 +91,7 @@ To run a specific problem in your console, go to the file test, add the call to 
 | [Reformat Department Table](/LeetcodeProblems/Databases/Reformat_Department_Table.sql) | Easy | https://leetcode.com/problems/reformat-department-table |
 | [Employees Earning More Than Their Managers](/LeetcodeProblems/Databases/Employees_Earning_More_Than_Their_Managers.sql) | Easy | https://leetcode.com/problems/employees-earning-more-than-their-managers/ |
 | [Delete Duplicate Emails](LeetcodeProblems/Databases/Delete_Duplicate_Emails.sql) | Easy | https://leetcode.com/problems/delete-duplicate-emails |
+| [Rising Temperature](LeetcodeProblems/Databases/Rising_Temperature.sql) | Easy | https://leetcode.com/problems/rising-temperature |
 
 ### UtilsClasses
 
