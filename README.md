@@ -81,10 +81,17 @@ To run a specific problem in your console, go to the file test, add the call to 
 ### Databases
 | Problems | Level | Link |
 |-|-|-|
+| [Consecutive Numbers](/LeetcodeProblems/Databases/Consecutive_Numbers.sql) | Medium | https://leetcode.com/problems/consecutive-numbers |
+| [Department Highest Salary](/LeetcodeProblems/Databases/Department_Highest_Salary.sql) | Medium | https://leetcode.com/problems/department-highest-salary |
+| [Exchange Seats](/LeetcodeProblems/Databases/Exchange_Seats.sql) | Medium | https://leetcode.com/problems/exchange-seats |
+| [Nth Highest Salary](/LeetcodeProblems/Databases/nth_Highest_Salary.sql) | Medium | https://leetcode.com/problems/nth-highest-salary |
 | [Combine Two Tables](/LeetcodeProblems/Databases/Combine_Two_Tables.sql) | Easy   | https://leetcode.com/problems/combine-two-tables |
 | [Second Highest Salary](/LeetcodeProblems/Databases/Second_highest_salary.sql)| Easy   | https://leetcode.com/problems/second-highest-salary |
-| [Nth Highest Salary](/LeetcodeProblems/Databases/nth_Highest_Salary.sql) | Medium | https://leetcode.com/problems/nth-highest-salary |
-
+| [Customers Who Never Order](/LeetcodeProblems/Databases/Customers_Who_Never_Order.sql)| Easy |  https://leetcode.com/problems/customers-who-never-order |
+| [Reformat Department Table](/LeetcodeProblems/Databases/Reformat_Department_Table.sql) | Easy | https://leetcode.com/problems/reformat-department-table |
+| [Employees Earning More Than Their Managers](/LeetcodeProblems/Databases/Employees_Earning_More_Than_Their_Managers.sql) | Easy | https://leetcode.com/problems/employees-earning-more-than-their-managers/ |
+| [Delete Duplicate Emails](LeetcodeProblems/Databases/Delete_Duplicate_Emails.sql) | Easy | https://leetcode.com/problems/delete-duplicate-emails |
+| [Rising Temperature](LeetcodeProblems/Databases/Rising_Temperature.sql) | Easy | https://leetcode.com/problems/rising-temperature |
 
 ### UtilsClasses
 
