@@ -77,6 +77,7 @@ To run a specific problem in your console, go to the file test, add the call to 
 | Algoritmhs |
 |      -     |
 | [Heap Sort](/SortingAlgorithms/heapSort.js)  |
+| [Quick Sort](/SortingAlgorithms/QuickSort.js) |
 
 ### Databases
 | Problems | Level | Link |
