@@ -81,6 +81,7 @@ To run a specific problem in your console, go to the file test, add the call to 
 ### Databases
 | Problems | Level | Link |
 |-|-|-|
+| [Rank Scores](/LeetcodeProblems/Databases/Rank_Scores.sql) | Medium | https://leetcode.com/problems/rank-scores/ |
 | [Consecutive Numbers](/LeetcodeProblems/Databases/Consecutive_Numbers.sql) | Medium | https://leetcode.com/problems/consecutive-numbers |
 | [Department Highest Salary](/LeetcodeProblems/Databases/Department_Highest_Salary.sql) | Medium | https://leetcode.com/problems/department-highest-salary |
 | [Exchange Seats](/LeetcodeProblems/Databases/Exchange_Seats.sql) | Medium | https://leetcode.com/problems/exchange-seats |
