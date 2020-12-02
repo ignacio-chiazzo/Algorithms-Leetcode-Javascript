@@ -3,8 +3,7 @@
 Solutions of algorithm problems using Javascript.  https://ignacio-chiazzo.github.io/Algorithms-Leetcode-Javascript/
 
 ### Structure
-The solutions are located under /LeetcodeProblems. Each solutions exports the main function(s) which to be tested. Each problem has a test file located under /LeetcodeProblemsTest.
-
+The solutions are located under `/LeetcodeProblems`. Each problem has a test file located under `/LeetcodeProblemsTest`.
 
 ### Run Scripts
 To run all the test run `node Main.js` in the console.
