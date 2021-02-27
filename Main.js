@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const TESTS_FOLDER = './LeetcodeProblemsTests/';
+const TESTS_FOLDER = './LeetcodeProblemsTests/Algorithms/';
 const REGEX_PATTERN_HIDDEN_FILES = /(^|\/)\.[^\/\.]/g;
 
 var main = async function() {
