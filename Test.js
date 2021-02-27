@@ -3,7 +3,7 @@ const fs = require('fs');
 const TESTS_FOLDER = './LeetcodeProblemsTests/Algorithms/';
 const REGEX_PATTERN_HIDDEN_FILES = /(^|\/)\.[^\/\.]/g;
 
-var main = async function() {
+var test_all = async function() {
   try {
     const problems = await loadProblems();
     for(i in problems) {
@@ -35,4 +35,4 @@ var loadProblems = () => {
   });
 }
 
-main();
+test_all();
