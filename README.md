@@ -102,10 +102,12 @@ Other languages provides built-in classes (e.g Linked List, Tree, etc). This mod
 
 ### Contributions
 
-If you want to contribute to this repo by adding a problem you should:
+I'd be pleased to accept contributions. I'd be happy to discuss problems and solutions over a Pull Request or an Issue.
 
-1) Add the description of the problem at the top of the file.
-2) Add a test file with some test cases. The test file must export a `test()` function which should run all the tests of the file.
-3) Add your problem to the Readme so that your problem shows up in the list of solutions.
+Each problem should have:
+
+1) A description of the problem at the top of the file.
+2) A test file with some test cases. The test file must export a `test()` function which should run all the tests of the file.
+3) An entry of the problem in the list of solutions within the README file.
 
 PR Example: https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript/pull/39
