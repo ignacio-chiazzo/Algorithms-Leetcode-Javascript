@@ -24,9 +24,10 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
+          DEFAULT_BRANCH: master
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JAVASCRIPT_ES: true
-          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
-          DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          LINTER_RULES_PATH: /
           FILTER_REGEX_INCLUDE: .*LeetcodeProblems/.*
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
