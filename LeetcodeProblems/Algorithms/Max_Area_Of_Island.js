@@ -27,26 +27,37 @@ Note: The length of each dimension in the given grid does not exceed 50.
  * @param {number[][]} grid
  * @return {number}
  */
-var maxAreaOfIsland = function(grid) {
+var maxAreaOfIsland = function (grid) {
   var maxArea = 0;
 
-  for(var i = 0; i < grid.length; i++) {
-      for(var j = 0; j < grid[0].length; j++) {
-          maxArea = Math.max(markIsland(i, j, grid), maxArea);
-      }
+  for (var i = 0; i < grid.length; i++) {
+    for (var j = 0; j < grid[0].length; j++) {
+      maxArea = Math.max(markIsland(i, j, grid), maxArea);
+    }
   }
 
   return maxArea;
 };
 
-var markIsland = function(row, col, grid) {
-  if(row < 0 || row >= grid.length || col < 0 || col >= grid[0].length || grid[row][col] == 0) {
-      return 0;
+var markIsland = function (row, col, grid) {
+  if (
+    row < 0 ||
+    row >= grid.length ||
+    col < 0 ||
+    col >= grid[0].length ||
+    grid[row][col] == 0
+  ) {
+    return 0;
   }
 
   grid[row][col] = 0;
-  return 1 + markIsland(row + 1, col, grid) + markIsland(row - 1, col, grid) 
-          + markIsland(row, col +1, grid) + markIsland(row, col - 1, grid);
-}
+  return (
+    1 +
+    markIsland(row + 1, col, grid) +
+    markIsland(row - 1, col, grid) +
+    markIsland(row, col + 1, grid) +
+    markIsland(row, col - 1, grid)
+  );
+};
 
 module.exports.maxAreaOfIsland = maxAreaOfIsland;

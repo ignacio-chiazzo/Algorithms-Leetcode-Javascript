@@ -14,24 +14,21 @@ Follow up:
 
 */
 
-
-var maxSubArray = function(nums) {
-  if(nums.length == 0) 
-    return 0;
+var maxSubArray = function (nums) {
+  if (nums.length == 0) return 0;
   var maxSub = nums[0];
   var currentMax = nums[0];
-  
-  for(var i = 1; i < nums.length; i++) {
+
+  for (var i = 1; i < nums.length; i++) {
     currentMax = max(nums[i], currentMax + nums[i]);
-    if(currentMax > maxSub)
-      maxSub = currentMax;
+    if (currentMax > maxSub) maxSub = currentMax;
   }
 
   return maxSub;
 };
 
-var max = function(i, j) {
-  return (i > j) ? i : j;
-}
+var max = function (i, j) {
+  return i > j ? i : j;
+};
 
 module.exports.maxSubArray = maxSubArray;

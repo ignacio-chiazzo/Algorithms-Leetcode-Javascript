@@ -16,45 +16,43 @@ Note:
 You may assume k is always valid, 1 ≤ k ≤ array's length.
 */
 
-
 /**
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
  */
-var findKthLargest = function(nums, k) {
-  for(var i = Math.floor(nums.length/2) - 1; i >= 0; i--) {
+var findKthLargest = function (nums, k) {
+  for (var i = Math.floor(nums.length / 2) - 1; i >= 0; i--) {
     heapify(nums, nums.length, i);
   }
-  
-  for(var i = nums.length -1; i >= nums.length - k - 1 && i >= 0; i--) {
+
+  for (var i = nums.length - 1; i >= nums.length - k - 1 && i >= 0; i--) {
     swap(nums, 0, i);
     heapify(nums, i, 0);
   }
-  
-  return nums[nums.length - k];
-}
 
-var heapify = function(nums, length, i) {
+  return nums[nums.length - k];
+};
+
+var heapify = function (nums, length, i) {
   var left = 2 * i + 1;
   var right = 2 * i + 2;
-  
-  if(left >= length)
-    return;
-  
-  if(nums[i] < nums[left] && (right >= length || nums[left] > nums[right])) { 
+
+  if (left >= length) return;
+
+  if (nums[i] < nums[left] && (right >= length || nums[left] > nums[right])) {
     swap(nums, left, i);
     heapify(nums, length, left);
-  } else if(right < length && nums[right] > nums[i]) {
-    swap(nums, right, i)
-    heapify(nums, length, right)
+  } else if (right < length && nums[right] > nums[i]) {
+    swap(nums, right, i);
+    heapify(nums, length, right);
   }
-}
+};
 
-var swap = function(nums, a, b) {
+var swap = function (nums, a, b) {
   const temp = nums[a];
   nums[a] = nums[b];
   nums[b] = temp;
-}
+};
 
 module.exports.findKthLargest = findKthLargest;

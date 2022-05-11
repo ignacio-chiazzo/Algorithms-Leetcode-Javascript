@@ -10,27 +10,26 @@ Follow up:
 Can you solve it without using extra space?
 */
 
-var ListNode = require('../../UtilsClasses/ListNode').ListNode;
+var ListNode = require("../../UtilsClasses/ListNode").ListNode;
 
 // Optimal solution
 /**
-* @param {ListNode} head
-* @return {ListNode}
-*/
-var detectCycle = function(head) {
-  if (head === null)
-    return null;
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var detectCycle = function (head) {
+  if (head === null) return null;
 
   var slow = head;
   var fast = head;
 
-  while(fast.next !== null && fast.next.next !== null) {
+  while (fast.next !== null && fast.next.next !== null) {
     slow = slow.next;
     fast = fast.next.next;
-    if(fast == slow) {
+    if (fast == slow) {
       var a = head;
       var b = slow;
-      while(a !== b) {
+      while (a !== b) {
         a = a.next;
         b = b.next;
       }
@@ -41,18 +40,18 @@ var detectCycle = function(head) {
 };
 
 // Naiver solution using a Set
-var detectCycle2 = function(head) {
-  if(head === null || head.next === null) {
+var detectCycle2 = function (head) {
+  if (head === null || head.next === null) {
     return null;
   }
   var setNodes = new Set();
   var iter = head;
-  while(iter !== null) {
-    if(setNodes.has(iter)) {
+  while (iter !== null) {
+    if (setNodes.has(iter)) {
       return iter;
     }
     setNodes.add(iter);
-    iter = iter.next
+    iter = iter.next;
   }
   return null;
 };

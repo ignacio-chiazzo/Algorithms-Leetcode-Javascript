@@ -12,24 +12,22 @@ Input: "Hello, my name is John"
 Output: 5
 */
 
-
 /**
  * @param {string} s
  * @return {number}
  */
-var countSegments = function(s) {
+var countSegments = function (s) {
   var count = 0;
   var i = 0;
 
-  while(i < s.length) {
-    if(s[i] !== " ") {
+  while (i < s.length) {
+    if (s[i] !== " ") {
       count++;
-      while(i < s.length && s[i] !== " ")
-        i++;
+      while (i < s.length && s[i] !== " ") i++;
     }
     i++;
   }
-  
+
   return count;
 };
 
