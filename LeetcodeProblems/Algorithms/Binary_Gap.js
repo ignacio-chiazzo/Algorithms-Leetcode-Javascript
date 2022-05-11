@@ -41,20 +41,19 @@ There aren't any consecutive pairs of 1's in the binary representation of 8, so 
  * @param {number} N
  * @return {number}
  */
-var binaryGap = function(N) {
+var binaryGap = function (N) {
   var maxDist = 0;
   var currentDist = 0;
-  while(N > 0) {
+  while (N > 0) {
     const bit = N % 2;
     N >>= 1;
-    if(bit === 1) {
+    if (bit === 1) {
       currentDist = 1;
-      while(N > 0 && N % 2 === 0 ) {
+      while (N > 0 && N % 2 === 0) {
         currentDist++;
-        N >>= 1; 
+        N >>= 1;
       }
-      if(N !== 0 && currentDist > maxDist)
-        maxDist = currentDist;
+      if (N !== 0 && currentDist > maxDist) maxDist = currentDist;
     }
   }
   return maxDist;

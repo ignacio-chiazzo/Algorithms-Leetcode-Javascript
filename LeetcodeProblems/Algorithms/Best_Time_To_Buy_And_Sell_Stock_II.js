@@ -32,26 +32,26 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+var maxProfit = function (prices) {
   var profit = 0;
   var iter = 0;
-  
-  while(iter < prices.length) {
-    while(iter < prices.length - 1 && prices[iter] > prices[iter + 1]) {
+
+  while (iter < prices.length) {
+    while (iter < prices.length - 1 && prices[iter] > prices[iter + 1]) {
       iter++;
     }
     const buy = prices[iter];
     iter++;
-    while(iter < prices.length - 1 && prices[iter] < prices[iter + 1]) {
+    while (iter < prices.length - 1 && prices[iter] < prices[iter + 1]) {
       iter++;
     }
-    
-    if(iter < prices.length) {
+
+    if (iter < prices.length) {
       const sell = prices[iter];
       profit = profit + sell - buy;
     }
   }
-  
+
   return profit;
 };
 

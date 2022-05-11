@@ -23,28 +23,33 @@ A solution set is:
  * @param {number[]} nums
  * @return {number[][]}
  */
-var threeSum = function(nums) {
+var threeSum = function (nums) {
   var ret = [];
-  nums.sort(function(a, b) { return a - b });
-  for(var i = 0; i < nums.length; i++) {
-      if(i === 0 || i > 0 && nums[i] !== nums[i - 1]) {
-          var left = i + 1;
-          var right = nums.length - 1;
-          while(left < right) {
-              const sum = nums[left] + nums[right] + nums[i];
-              if(left > i + 1 && nums[left] === nums[left - 1] || sum < 0) {
-                  left++
-              } else if(right < nums.length - 1 && nums[right] === nums[right + 1] || sum > 0) {
-                  right--;
-              } else if(sum === 0) { 
-                  ret.push([nums[left], nums[right], nums[i]]);
-                  left++;
-                  right--;   
-              }
-          } 
+  nums.sort(function (a, b) {
+    return a - b;
+  });
+  for (var i = 0; i < nums.length; i++) {
+    if (i === 0 || (i > 0 && nums[i] !== nums[i - 1])) {
+      var left = i + 1;
+      var right = nums.length - 1;
+      while (left < right) {
+        const sum = nums[left] + nums[right] + nums[i];
+        if ((left > i + 1 && nums[left] === nums[left - 1]) || sum < 0) {
+          left++;
+        } else if (
+          (right < nums.length - 1 && nums[right] === nums[right + 1]) ||
+          sum > 0
+        ) {
+          right--;
+        } else if (sum === 0) {
+          ret.push([nums[left], nums[right], nums[i]]);
+          left++;
+          right--;
+        }
       }
+    }
   }
-  
+
   return ret;
 };
 
