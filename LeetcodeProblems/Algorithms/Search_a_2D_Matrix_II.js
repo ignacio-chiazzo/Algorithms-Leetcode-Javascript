@@ -19,26 +19,25 @@ Given target = 20, return false.
 */
 
 /**
-* @param {number[][]} matrix
-* @param {number} target
-* @return {boolean}
-*/
-var searchMatrix = function(matrix, target) {
-  if (matrix.length == 0)
-    return false
+ * @param {number[][]} matrix
+ * @param {number} target
+ * @return {boolean}
+ */
+var searchMatrix = function (matrix, target) {
+  if (matrix.length == 0) return false;
   var lastCol = matrix[0].length - 1;
   var firstRow = 0;
-  
-  while(lastCol >= 0 && firstRow < matrix.length) {
-    if(matrix[firstRow][lastCol] == target) {
+
+  while (lastCol >= 0 && firstRow < matrix.length) {
+    if (matrix[firstRow][lastCol] == target) {
       return true;
-    } else if(matrix[firstRow][lastCol] > target) {
+    } else if (matrix[firstRow][lastCol] > target) {
       lastCol--;
     } else {
       firstRow++;
     }
   }
-  
+
   return false;
 };
 

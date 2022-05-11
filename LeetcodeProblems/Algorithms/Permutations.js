@@ -18,24 +18,24 @@ Output:
 ]
 */
 
-var permute = function(nums) {
+var permute = function (nums) {
   return permuteAux(nums, 0, [], new Set());
 };
 
-var permuteAux = function(nums, pos, currentSol, set) {
-  if(pos === nums.length) {
+var permuteAux = function (nums, pos, currentSol, set) {
+  if (pos === nums.length) {
     return [currentSol];
   }
   var ret = [];
-  for(var i = 0; i < nums.length; i++) {
-    if(!set.has(nums[i])) {
-      set.add(nums[i])
+  for (var i = 0; i < nums.length; i++) {
+    if (!set.has(nums[i])) {
+      set.add(nums[i]);
       var sol = permuteAux(nums, pos + 1, currentSol.concat(nums[i]), set);
       ret = [...ret, ...sol];
       set.delete(nums[i]);
     }
   }
   return ret;
-}
+};
 
 module.exports.permute = permute;

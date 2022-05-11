@@ -24,44 +24,42 @@ Depending on your language, queue may not be supported natively. You may simulat
 You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 */
 
-class MyStack  {
+class MyStack {
   constructor() {
     this.q1 = [];
     this.q2 = [];
-  };
+  }
 
   push(elem) {
-    if(this.q1.length > 0) {
+    if (this.q1.length > 0) {
       this.q1.push(elem);
     } else {
-      this.q2.push(elem); 
+      this.q2.push(elem);
     }
-  };
+  }
 
   pop() {
-    if(this.q1.length === 0 && this.q2.length === 0)
-      return null;
+    if (this.q1.length === 0 && this.q2.length === 0) return null;
 
-    if(this.q1.length > 0) {
-      while(this.q1.length > 1) {
+    if (this.q1.length > 0) {
+      while (this.q1.length > 1) {
         var elem = this.q1.shift();
         this.q2.push(elem);
       }
       return this.q1.shift();
     } else {
-      while(this.q2.length > 1) {
+      while (this.q2.length > 1) {
         var elem = this.q2.shift();
         this.q1.push(elem);
       }
       return this.q2.shift();
     }
-  };
+  }
 
   top() {
-    if(this.q1.length === 0 && this.q2.length === 0)
-      return null;
+    if (this.q1.length === 0 && this.q2.length === 0) return null;
 
-    if(this.q1.length > 0) {
+    if (this.q1.length > 0) {
       var elem = this.pop();
       this.q2.push(elem);
       return elem;
@@ -70,11 +68,11 @@ class MyStack  {
       this.q1.push(elem);
       return elem;
     }
-  };
+  }
 
   empty() {
     return this.q1.length == 0 && this.q2.length === 0;
-  };
+  }
 }
 
 module.exports.MyStack = MyStack;

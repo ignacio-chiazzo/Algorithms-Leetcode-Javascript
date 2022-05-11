@@ -17,36 +17,33 @@ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefor
  * @param {number[]} nums
  * @return {number}
  */
-var longestConsecutive = function(nums) {
-  if(nums.length === 0) 
-    return 0;
+var longestConsecutive = function (nums) {
+  if (nums.length === 0) return 0;
   var setNums = new Set();
-  for(var i = 0; i < nums.length; i++)
-    setNums.add(nums[i]);
-  
+  for (var i = 0; i < nums.length; i++) setNums.add(nums[i]);
+
   var cons = 1;
   var currentCons = 1;
-  for(var i = 0; i < nums.length; i++) {
+  for (var i = 0; i < nums.length; i++) {
     var number = nums[i];
-    if(setNums.has(number)) {
+    if (setNums.has(number)) {
       setNums.delete(number);
-      
+
       var prevNum = number - 1;
-      while(setNums.has(prevNum)){
+      while (setNums.has(prevNum)) {
         currentCons++;
         setNums.delete(prevNum);
         prevNum--;
       }
-      
+
       var nextNum = number + 1;
-      while(setNums.has(nextNum)){
+      while (setNums.has(nextNum)) {
         currentCons++;
         setNums.delete(nextNum);
         nextNum++;
       }
-      
-      if(currentCons > cons)
-        cons = currentCons    
+
+      if (currentCons > cons) cons = currentCons;
     }
     currentCons = 1;
   }

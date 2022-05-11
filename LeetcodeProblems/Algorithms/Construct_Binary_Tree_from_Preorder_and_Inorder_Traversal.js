@@ -27,34 +27,57 @@ Return the following binary tree:
  *     this.left = this.right = null;
  * }
  */
-var TreeNode = require('../../UtilsClasses/TreeNode').TreeNode;
+var TreeNode = require("../../UtilsClasses/TreeNode").TreeNode;
 
 /**
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode}
  */
-var buildTree = function(preorder, inorder) {
-  if(preorder === null || inorder === null || preorder.length !== inorder.length)
+var buildTree = function (preorder, inorder) {
+  if (
+    preorder === null ||
+    inorder === null ||
+    preorder.length !== inorder.length
+  )
     return nil;
-  
-  return buildTreeAux(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+
+  return buildTreeAux(
+    preorder,
+    0,
+    preorder.length - 1,
+    inorder,
+    0,
+    inorder.length - 1
+  );
 };
 
-var buildTreeAux = function(preorder, pl, ph, inorder, il, ih) {
-  if(pl > ph || il > ih)
-    return null;
-  
+var buildTreeAux = function (preorder, pl, ph, inorder, il, ih) {
+  if (pl > ph || il > ih) return null;
+
   const rootValue = preorder[pl];
   var countElementsLeft = 0;
-  while(inorder[il + countElementsLeft] !== rootValue)
-    countElementsLeft++;
-    
-  var ret = new TreeNode(rootValue);
-  ret.left = buildTreeAux(preorder, pl + 1, pl + countElementsLeft, inorder, il, il + countElementsLeft - 1);
-  ret.right = buildTreeAux(preorder, pl + countElementsLeft + 1, ph, inorder, il + countElementsLeft + 1, ih);
-  
-  return ret;
-}
+  while (inorder[il + countElementsLeft] !== rootValue) countElementsLeft++;
 
-module.exports.buildTree = buildTree
+  var ret = new TreeNode(rootValue);
+  ret.left = buildTreeAux(
+    preorder,
+    pl + 1,
+    pl + countElementsLeft,
+    inorder,
+    il,
+    il + countElementsLeft - 1
+  );
+  ret.right = buildTreeAux(
+    preorder,
+    pl + countElementsLeft + 1,
+    ph,
+    inorder,
+    il + countElementsLeft + 1,
+    ih
+  );
+
+  return ret;
+};
+
+module.exports.buildTree = buildTree;

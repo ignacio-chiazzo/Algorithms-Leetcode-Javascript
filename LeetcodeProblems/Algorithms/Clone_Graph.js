@@ -45,54 +45,51 @@ You don't need to understand the serialization to solve the problem.
  * @param {UndirectedGraphNode} graph
  * @return {UndirectedGraphNode}
  */
-var cloneGraph = function(graph) {
-  if(!graph)
-      return graph;
-  
+var cloneGraph = function (graph) {
+  if (!graph) return graph;
+
   return dfs(graph, {});
 };
 
-var dfs = function(graph, visited) {
-  if(visited[graph.label]) 
-      return visited[graph.label];
-  
+var dfs = function (graph, visited) {
+  if (visited[graph.label]) return visited[graph.label];
+
   var newNode = new UndirectedGraphNode(graph.label);
   visited[newNode.label] = newNode;
-  
-  for(var i = 0; i < graph.neighbors.length; i++) {
-      const neighbor = dfs(graph.neighbors[i], visited);
-      newNode.neighbors.push(neighbor);
+
+  for (var i = 0; i < graph.neighbors.length; i++) {
+    const neighbor = dfs(graph.neighbors[i], visited);
+    newNode.neighbors.push(neighbor);
   }
-  
+
   return newNode;
-}
+};
 
 // SOLUTION 2 Using DFS
-var cloneGraphBFS = function(graph) {
-    if(graph === null)
-        return graph;
-    
-    var visitedMap = {};
-    var queue = [graph];
-    var copyReturn = new UndirectedGraphNode(graph.label);
-    visitedMap[graph.label] = copyReturn;
-    
-    while(queue.length > 0) {
-        var node = queue.shift();
-        var nodeCopied = visitedMap[node.label];
-        
-        for(var i = 0; i < node.neighbors.length; i++) {
-            var neighbor = node.neighbors[i];
-            
-            if(!visitedMap[neighbor.label]) {
-                var copyNeighbor = new UndirectedGraphNode(neighbor.label);
-                visitedMap[neighbor.label] = copyNeighbor;
-                queue.push(neighbor);
-            }
-            
-            nodeCopied.neighbors.push(visitedMap[neighbor.label]);
-        }
+var cloneGraphBFS = function (graph) {
+  if (graph === null) return graph;
+
+  var visitedMap = {};
+  var queue = [graph];
+  var copyReturn = new UndirectedGraphNode(graph.label);
+  visitedMap[graph.label] = copyReturn;
+
+  while (queue.length > 0) {
+    var node = queue.shift();
+    var nodeCopied = visitedMap[node.label];
+
+    for (var i = 0; i < node.neighbors.length; i++) {
+      var neighbor = node.neighbors[i];
+
+      if (!visitedMap[neighbor.label]) {
+        var copyNeighbor = new UndirectedGraphNode(neighbor.label);
+        visitedMap[neighbor.label] = copyNeighbor;
+        queue.push(neighbor);
+      }
+
+      nodeCopied.neighbors.push(visitedMap[neighbor.label]);
     }
-    
-    return copyReturn;
-}
+  }
+
+  return copyReturn;
+};

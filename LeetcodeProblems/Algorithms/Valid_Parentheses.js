@@ -32,28 +32,28 @@ Input: "{[]}"
 Output: true
 */
 
-var isValid = function(s) {
+var isValid = function (s) {
   var stack = [];
-  for(var i = 0; i < s.length; i++) {
+  for (var i = 0; i < s.length; i++) {
     var elem = s.charAt(i);
-    if(elem === ")" || elem === "]" || elem === "}") {
-      if(stack.length === 0)
-        return false; 
+    if (elem === ")" || elem === "]" || elem === "}") {
+      if (stack.length === 0) return false;
       var lasPar = stack.shift();
-      if(!valid(lasPar, elem))
-          return false;
+      if (!valid(lasPar, elem)) return false;
     } else {
       stack.unshift(elem);
     }
   }
-  
+
   return stack.length === 0;
 };
 
-var valid = function(parOpen, parClose) {
-  return parOpen === "(" && parClose === ")" || 
-      parOpen === "[" && parClose === "]" || 
-      parOpen === "{" && parClose === "}";
-}
+var valid = function (parOpen, parClose) {
+  return (
+    (parOpen === "(" && parClose === ")") ||
+    (parOpen === "[" && parClose === "]") ||
+    (parOpen === "{" && parClose === "}")
+  );
+};
 
 module.exports.isValid = isValid;

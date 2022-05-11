@@ -19,25 +19,27 @@ Output:
 */
 
 // Permutations without Duplicates
-var subsetWithoutDuplicates = function(nums) {
-  if(nums.lenght == 0){
+var subsetWithoutDuplicates = function (nums) {
+  if (nums.lenght == 0) {
     return;
   }
   var solution = [];
   subsetWithoutDuplicatesAux(nums, [], solution);
   return solution;
-}
+};
 
-var subsetWithoutDuplicatesAux = function(nums, current, sol) {
-  if(nums.length == 0){
+var subsetWithoutDuplicatesAux = function (nums, current, sol) {
+  if (nums.length == 0) {
     sol.push(current);
   }
 
-  for(var i = 0; i < nums.length; i++) {
-    var newCurrent = [...current, nums[i]]
-    var newNums = nums.filter(function(num, index) { return index !== i });
+  for (var i = 0; i < nums.length; i++) {
+    var newCurrent = [...current, nums[i]];
+    var newNums = nums.filter(function (num, index) {
+      return index !== i;
+    });
     subsetWithoutDuplicatesAux(newNums, newCurrent, sol);
   }
-}
+};
 
 module.exports.subsetWithoutDuplicates = subsetWithoutDuplicates;

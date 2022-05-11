@@ -42,21 +42,20 @@ The number of ghosts will not exceed 100.
  * @param {number[]} target
  * @return {boolean}
  */
-var escapeGhosts = function(ghosts, target) {
-  var distancePacman = getDistance([0,0], target);
-  for(ghost in ghosts) {
+var escapeGhosts = function (ghosts, target) {
+  var distancePacman = getDistance([0, 0], target);
+  for (ghost in ghosts) {
     const distanceGhost = getDistance(ghosts[ghost], target);
-    if(distancePacman > distanceGhost)
-      return false
+    if (distancePacman > distanceGhost) return false;
   }
-    
+
   return true;
 };
 
-var getDistance = function(a, b) {
+var getDistance = function (a, b) {
   const horizontalMoves = Math.abs(a[0] - b[0]);
   const verticalMoves = Math.abs(a[1] - b[1]);
   return horizontalMoves + verticalMoves;
-}
+};
 
 module.exports.escapeGhosts = escapeGhosts;

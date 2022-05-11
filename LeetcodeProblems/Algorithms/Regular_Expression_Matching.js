@@ -51,43 +51,51 @@ Output: false
  * @param {*} p 
  */
 
-
-var isMatch = function(s, p) {
+var isMatch = function (s, p) {
   return isMatchAux(s, p, 0, 0);
 };
 
-var isMatchAux = function(str, pattern, posStr, posPat) {
-  if(posStr == str.length)
+var isMatchAux = function (str, pattern, posStr, posPat) {
+  if (posStr == str.length)
     return posPat == pattern.length || canBeZero(pattern, posPat);
 
-  if(posPat < pattern.length - 1 && pattern.charAt(posPat + 1) == "*") {
+  if (posPat < pattern.length - 1 && pattern.charAt(posPat + 1) == "*") {
     const valuePattern = pattern.charAt(posPat);
     posPat = posPat + 2;
 
-    if (isMatchAux(str, pattern, posStr, posPat)) { // 0 matches
-      return true
+    if (isMatchAux(str, pattern, posStr, posPat)) {
+      // 0 matches
+      return true;
     }
-    
-    while(posStr < str.length && (str.charAt(posStr) === valuePattern || valuePattern === ".")) {
-      if(isMatchAux(str, pattern, posStr + 1, posPat)) {
+
+    while (
+      posStr < str.length &&
+      (str.charAt(posStr) === valuePattern || valuePattern === ".")
+    ) {
+      if (isMatchAux(str, pattern, posStr + 1, posPat)) {
         return true;
       }
       posStr++;
     }
-  } else if(str.charAt(posStr) === pattern.charAt(posPat) || pattern.charAt(posPat) === ".") {
+  } else if (
+    str.charAt(posStr) === pattern.charAt(posPat) ||
+    pattern.charAt(posPat) === "."
+  ) {
     return isMatchAux(str, pattern, posStr + 1, posPat + 1);
   }
-  
-  return false;
-}
 
-var canBeZero = function(pattern, posPat) {
-  while(posPat < pattern.length && pattern.charAt(posPat) == "*" || 
-    posPat < pattern.length - 1 && pattern.charAt(posPat + 1) == "*") {
+  return false;
+};
+
+var canBeZero = function (pattern, posPat) {
+  while (
+    (posPat < pattern.length && pattern.charAt(posPat) == "*") ||
+    (posPat < pattern.length - 1 && pattern.charAt(posPat + 1) == "*")
+  ) {
     posPat++;
   }
-  
+
   return posPat == pattern.length;
-}
+};
 
 module.exports.isMatch = isMatch;

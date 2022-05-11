@@ -19,48 +19,55 @@ Output: "bb"
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function(str) {
-	if(str.length == 0)
-		return "";
-	
-  var maxPal = 1; 
-	var posPalStart = 0;
+var longestPalindrome = function (str) {
+  if (str.length == 0) return "";
+
+  var maxPal = 1;
+  var posPalStart = 0;
   var currentPalStart = 0;
 
-	for(var i = 1; i < str.length; i++) {
-    if(str.charAt(i - 1) == str.charAt(i)) { 
+  for (var i = 1; i < str.length; i++) {
+    if (str.charAt(i - 1) == str.charAt(i)) {
       currentPalStart = i - 1;
-      var currentPal = 2; 
+      var currentPal = 2;
       var iter = 1;
-      while(i - iter - 1  >= 0 && i + iter < str.length && str.charAt(i - iter - 1) == str.charAt(i + iter)) {
+      while (
+        i - iter - 1 >= 0 &&
+        i + iter < str.length &&
+        str.charAt(i - iter - 1) == str.charAt(i + iter)
+      ) {
         currentPalStart = i - iter - 1;
         iter++;
         currentPal += 2;
       }
-    } 
-    if(currentPal > maxPal) {
+    }
+    if (currentPal > maxPal) {
       maxPal = currentPal;
       posPalStart = currentPalStart;
     }
   }
-  
-  for(var i = 1; i < str.length - 1; i++) {
-    if(str.charAt(i - 1) == str.charAt(i + 1)) {
+
+  for (var i = 1; i < str.length - 1; i++) {
+    if (str.charAt(i - 1) == str.charAt(i + 1)) {
       currentPal = 1;
       var iter = 1;
-      while(i - iter >= 0 && i + iter < str.length && str.charAt(i - iter) == str.charAt(i + iter)) {
+      while (
+        i - iter >= 0 &&
+        i + iter < str.length &&
+        str.charAt(i - iter) == str.charAt(i + iter)
+      ) {
         currentPalStart = i - iter;
         iter++;
         currentPal += 2;
       }
     }
-    if(currentPal > maxPal) {
+    if (currentPal > maxPal) {
       maxPal = currentPal;
       posPalStart = currentPalStart;
     }
   }
-  
-  return str.slice(posPalStart, posPalStart + maxPal);
-}
 
-module.exports.longestPalindrome = longestPalindrome
+  return str.slice(posPalStart, posPalStart + maxPal);
+};
+
+module.exports.longestPalindrome = longestPalindrome;

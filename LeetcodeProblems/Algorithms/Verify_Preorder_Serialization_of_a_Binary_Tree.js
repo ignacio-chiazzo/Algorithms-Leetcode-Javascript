@@ -32,36 +32,32 @@ Input: "9,#,#,1"
 Output: false
 */
 
-
 /**
  * @param {string} preorder
  * @return {boolean}
  */
-var isValidSerialization = function(preorder) {
-  if(preorder.length === 0)
-    return true;
+var isValidSerialization = function (preorder) {
+  if (preorder.length === 0) return true;
 
-  if(preorder.charAt(0) === "#")
-    return preorder.length === 1;
+  if (preorder.charAt(0) === "#") return preorder.length === 1;
 
   var countP = 2;
   var iter = 1;
-  while(iter <= preorder.length && preorder.charAt(iter - 1) !== ",")
-    iter++;
+  while (iter <= preorder.length && preorder.charAt(iter - 1) !== ",") iter++;
 
-  while(countP > 0 && iter < preorder.length) {
-    if(preorder.charAt(iter) === "#") {
+  while (countP > 0 && iter < preorder.length) {
+    if (preorder.charAt(iter) === "#") {
       countP--;
       iter += 2;
     } else {
       countP++;
       iter += 2;
-      while(iter <= preorder.length && preorder.charAt(iter - 1) !== ",")
+      while (iter <= preorder.length && preorder.charAt(iter - 1) !== ",")
         iter++;
     }
   }
 
-  return countP === 0 && iter >= preorder.length;    
+  return countP === 0 && iter >= preorder.length;
 };
 
 module.exports.isValidSerialization = isValidSerialization;

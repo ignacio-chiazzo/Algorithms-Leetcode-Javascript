@@ -37,15 +37,15 @@ Can you solve it in O(N) time and O(1) space?
  * @param {string} T
  * @return {boolean}
  */
-var backspaceCompare = function(S, T) {
+var backspaceCompare = function (S, T) {
   var iterS = S.length - 1;
   var iterT = T.length - 1;
-  
-  while(iterS >= 0 || iterT >= 0) {
-    if(iterS >= 0 && S.charAt(iterS) === "#") {
+
+  while (iterS >= 0 || iterT >= 0) {
+    if (iterS >= 0 && S.charAt(iterS) === "#") {
       var countBack = 0;
-      while(iterS >= 0 && (countBack > 0 || S[iterS] === "#")) {
-        if(iterS >= 0 && S[iterS] === "#") {
+      while (iterS >= 0 && (countBack > 0 || S[iterS] === "#")) {
+        if (iterS >= 0 && S[iterS] === "#") {
           countBack++;
         } else {
           countBack--;
@@ -53,55 +53,49 @@ var backspaceCompare = function(S, T) {
 
         iterS--;
       }
-    } else if(iterT >= 0 && T.charAt(iterT) === "#") {
-    var countBack = 0;
-    while(iterT >= 0 && (countBack > 0 || T[iterT] === "#")) {
-      if(iterT >= 0 && T[iterT] === "#") {
-        countBack++;
-      } else {
-        countBack--;
+    } else if (iterT >= 0 && T.charAt(iterT) === "#") {
+      var countBack = 0;
+      while (iterT >= 0 && (countBack > 0 || T[iterT] === "#")) {
+        if (iterT >= 0 && T[iterT] === "#") {
+          countBack++;
+        } else {
+          countBack--;
+        }
+
+        iterT--;
       }
-      
-      iterT--;
-    }
     } else {
-      if(iterS < 0 || iterT < 0 || S.charAt(iterS) !== T.charAt(iterT))
+      if (iterS < 0 || iterT < 0 || S.charAt(iterS) !== T.charAt(iterT))
         return false;
-      
+
       iterS--;
       iterT--;
     }
   }
-  
-  return iterS < 0 && iterT < 0;  
+
+  return iterS < 0 && iterT < 0;
 };
 
-// Naive Aproach 
-var backspaceCompare2 = function(S, T) {
+// Naive Aproach
+var backspaceCompare2 = function (S, T) {
   var stackS = [];
-  for(var i = 0; i < S.length; i++) {
-    if(S.charAt(i) === "#") 
-      stackS.shift();
-    else 
-      stackS.unshift(S.charAt(i));
+  for (var i = 0; i < S.length; i++) {
+    if (S.charAt(i) === "#") stackS.shift();
+    else stackS.unshift(S.charAt(i));
   }
-  
+
   var stackT = [];
-  for(var i = 0; i < T.length; i++) {
-    if(T.charAt(i) === "#") 
-      stackT.shift();
-    else 
-      stackT.unshift(T.charAt(i));
+  for (var i = 0; i < T.length; i++) {
+    if (T.charAt(i) === "#") stackT.shift();
+    else stackT.unshift(T.charAt(i));
   }
-  
-  while(stackS.length > 0 && stackT.length > 0) {
+
+  while (stackS.length > 0 && stackT.length > 0) {
     var elemS = stackS.shift();
     var elemT = stackT.shift();
-    if(elemS !== elemT)
-        return false;
-      
+    if (elemS !== elemT) return false;
   }
-  
+
   return stackS.length === 0 && stackT.length === 0;
 };
 

@@ -21,7 +21,7 @@ Explanation: 342 + 465 = 807.
  *     this.next = null;
  * }
  */
-var ListNode = require('../../UtilsClasses/ListNode').ListNode;
+var ListNode = require("../../UtilsClasses/ListNode").ListNode;
 
 /**
  * @param {ListNode} l1
@@ -29,36 +29,33 @@ var ListNode = require('../../UtilsClasses/ListNode').ListNode;
  * @return {ListNode}
  */
 
-var addTwoNumbers = function(l1, l2) {
-  if(l1 === null)
-    return (l2 === null) ? new ListNode(0) : l2;
-  else if(l2 === null)
-    return l1;  
-  
+var addTwoNumbers = function (l1, l2) {
+  if (l1 === null) return l2 === null ? new ListNode(0) : l2;
+  else if (l2 === null) return l1;
+
   var elem = l1.val + l2.val;
   var number = new ListNode(elem % 10);
-  var carry = (elem >= 10) ? 1 : 0;
+  var carry = elem >= 10 ? 1 : 0;
   l1 = l1.next;
   l2 = l2.next;
-  
+
   const head = number;
-  while(l1 !== null || l2 !== null) {
+  while (l1 !== null || l2 !== null) {
     var elem = carry;
-    if(l1 !== null) {
+    if (l1 !== null) {
       elem += l1.val;
       l1 = l1.next;
     }
-    if(l2 !== null) {
+    if (l2 !== null) {
       elem += l2.val;
       l2 = l2.next;
     }
-    
-    number.next = new ListNode((elem % 10));
+
+    number.next = new ListNode(elem % 10);
     number = number.next;
-    carry = (elem >= 10) ? 1 : 0;
+    carry = elem >= 10 ? 1 : 0;
   }
-  if(carry === 1)
-    number.next = new ListNode(1);
+  if (carry === 1) number.next = new ListNode(1);
   return head;
 };
 

@@ -20,91 +20,95 @@ output: 0
 */
 
 // Solution 3 Using DP
-var deletionDistanceDP = function(str1, str2) {
-  if(str1.length === 0)
-    return str2.length;
-  if(str2.length === 0)
-    return str1.length;
+var deletionDistanceDP = function (str1, str2) {
+  if (str1.length === 0) return str2.length;
+  if (str2.length === 0) return str1.length;
 
   var matrix = [];
-  for(var i = 0; i <= str1.length; i++) {
+  for (var i = 0; i <= str1.length; i++) {
     matrix[i] = [];
-    for(var j = 0; j <= str2.length; j++) {
-      if(i === 0) {
+    for (var j = 0; j <= str2.length; j++) {
+      if (i === 0) {
         matrix[i][j] = j;
-      } else if(j == 0) {
+      } else if (j == 0) {
         matrix[i][j] = i;
-      } else if(str1[i - 1] === str2[j - 1]) {
-          matrix[i][j] = matrix[i - 1][j - 1];
+      } else if (str1[i - 1] === str2[j - 1]) {
+        matrix[i][j] = matrix[i - 1][j - 1];
       } else {
         matrix[i][j] = 1 + min(matrix[i - 1][j], matrix[i][j - 1]);
       }
     }
   }
-  
+
   return matrix[str1.length][str2.length];
-}
+};
 
 // Solution 2  Using memoization
-var deletionDistance2 = function(str1, str2) {
+var deletionDistance2 = function (str1, str2) {
   var memo = {};
   return deletionDistanceAux2(str1, str2, 0, 0, memo);
-}
+};
 
-var deletionDistanceAux2 = function(str1, str2, pos1, pos2, memo) {
+var deletionDistanceAux2 = function (str1, str2, pos1, pos2, memo) {
   const valueCashed = getValue(pos1, pos2, memo);
-  if(valueCashed !== undefined)
-    return valueCashed;
+  if (valueCashed !== undefined) return valueCashed;
   var result;
 
-  if(str1.length === pos1)
-    result = str2.length - pos2;
-  else if(str2.length === pos2)
-    result = str1.length - pos1;
-  else if(str1[pos1] === str2[pos2])
+  if (str1.length === pos1) result = str2.length - pos2;
+  else if (str2.length === pos2) result = str1.length - pos1;
+  else if (str1[pos1] === str2[pos2])
     result = deletionDistanceAux2(str1, str2, pos1 + 1, pos2 + 1, memo);
-  else 
-    result = 1 + min(deletionDistanceAux2(str1, str2, pos1, pos2 + 1, memo), deletionDistanceAux2(str1, str2, pos1 + 1, pos2, memo))
+  else
+    result =
+      1 +
+      min(
+        deletionDistanceAux2(str1, str2, pos1, pos2 + 1, memo),
+        deletionDistanceAux2(str1, str2, pos1 + 1, pos2, memo)
+      );
 
   return setValue(pos1, pos2, result, memo);
-}
+};
 
-var getMemoKey = function(pos1, pos2) {
+var getMemoKey = function (pos1, pos2) {
   return pos1 + "-" + pos2;
-}
+};
 
-var getValue = function(pos1, pos2, memo) {
+var getValue = function (pos1, pos2, memo) {
   const memoKey = getMemoKey(pos1, pos2);
   return memo[memoKey];
-}
+};
 
-var setValue = function(pos1, pos2, value, memo) {
+var setValue = function (pos1, pos2, value, memo) {
   const memoKey = getMemoKey(pos1, pos2);
   memo[memoKey] = value;
   return value;
-}
+};
 
 // Solution 1 naive
-var deletionDistance = function(str1, str2) {
+var deletionDistance = function (str1, str2) {
   return deletionDistanceAux(str1, str2, 0, 0);
-}
+};
 
-var deletionDistanceAux = function(str1, str2, pos1, pos2) {
-  if(str1.length === pos1)
-    return str2.length - pos2;
-  
-  if(str2.length === pos2)
-    return str1.length - pos1;
-  
-  if(str1[pos1] === str2[pos2]) 
+var deletionDistanceAux = function (str1, str2, pos1, pos2) {
+  if (str1.length === pos1) return str2.length - pos2;
+
+  if (str2.length === pos2) return str1.length - pos1;
+
+  if (str1[pos1] === str2[pos2])
     return deletionDistanceAux(str1, str2, pos1 + 1, pos2 + 1);
 
-  return 1 + min(deletionDistanceAux(str1, str2, pos1, pos2 + 1), deletionDistanceAux(str1, str2, pos1 + 1, pos2));
-}
+  return (
+    1 +
+    min(
+      deletionDistanceAux(str1, str2, pos1, pos2 + 1),
+      deletionDistanceAux(str1, str2, pos1 + 1, pos2)
+    )
+  );
+};
 
-var min = function(a, b) {
-  return (a < b) ? a : b;
-}
+var min = function (a, b) {
+  return a < b ? a : b;
+};
 
 module.exports.deletionDistance = deletionDistance;
 module.exports.deletionDistance2 = deletionDistance2;

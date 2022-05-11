@@ -29,39 +29,39 @@ Constraints:
 
 [output] double
 */
-var cutAwardBadges = function(nums, newBadge) {
+var cutAwardBadges = function (nums, newBadge) {
   var currentBadge = 0;
-  for(var i = 0; i < nums.length; i++)
-    currentBadge += nums[i];
+  for (var i = 0; i < nums.length; i++) currentBadge += nums[i];
 
-  if(currentBadge < newBadge)
-    return;
+  if (currentBadge < newBadge) return;
 
   const cap = findCap(nums, currentBadge, newBadge);
 
   var iter = 0;
-  while(iter >= 0 && nums[iter] > cap) {
+  while (iter >= 0 && nums[iter] > cap) {
     nums[iter] = cap;
     iter++;
   }
 
   return nums;
-}
+};
 
-var findCap = function(nums,  currentBadge, newBadge) {
-  nums.sort(function(a, b) { return b - a });
-  if(nums[nums.length - 1] * nums.length > newBadge)
+var findCap = function (nums, currentBadge, newBadge) {
+  nums.sort(function (a, b) {
+    return b - a;
+  });
+  if (nums[nums.length - 1] * nums.length > newBadge)
     return newBadge / nums.length;
 
   var diff = currentBadge - newBadge;
   var iter = 0;
-  while(iter < nums.length - 1 && diff > 0) {
-    const substraction = nums[iter] - nums[iter + 1]
-    diff -= (iter + 1)  * substraction;
+  while (iter < nums.length - 1 && diff > 0) {
+    const substraction = nums[iter] - nums[iter + 1];
+    diff -= (iter + 1) * substraction;
     iter++;
   }
 
-  return nums[iter] + (-diff) / iter;
-}
+  return nums[iter] + -diff / iter;
+};
 
 module.exports.cutAwardBadges = cutAwardBadges;
