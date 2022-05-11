@@ -22,36 +22,36 @@ Output: -1
 
 */
 
-
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
-  return searchAux(nums, target, 0, nums.length -1);
+var search = function (nums, target) {
+  return searchAux(nums, target, 0, nums.length - 1);
 };
 
-var searchAux = function(nums, target, start, end) {
-  if (start > end)
-    return - 1;
-  var middle =  Math.trunc((start + end) /2);
-  
-  if(nums[middle] == target) {
+var searchAux = function (nums, target, start, end) {
+  if (start > end) return -1;
+  var middle = Math.trunc((start + end) / 2);
+
+  if (nums[middle] == target) {
     return middle;
   }
-  
-  if(nums[middle] < nums[nums.length - 1]) { // right part sorted
-    if(nums[middle] < target && nums[nums.length - 1] >= target) {
+
+  if (nums[middle] < nums[nums.length - 1]) {
+    // right part sorted
+    if (nums[middle] < target && nums[nums.length - 1] >= target) {
       return searchAux(nums, target, middle + 1, end);
     }
     return searchAux(nums, target, start, middle - 1);
-  } else { // left part sorted
-    if(nums[0] <= target && nums[middle] > target) {
+  } else {
+    // left part sorted
+    if (nums[0] <= target && nums[middle] > target) {
       return searchAux(nums, target, start, middle - 1);
     }
     return searchAux(nums, target, middle + 1, end);
   }
-}
+};
 
 module.exports.search = search;

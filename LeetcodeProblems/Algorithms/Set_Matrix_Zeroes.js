@@ -43,22 +43,21 @@ Could you devise a constant space solution?
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
-var setZeroes = function(matrix) {
-  if(matrix.length === 0)
-      return;
-  
+var setZeroes = function (matrix) {
+  if (matrix.length === 0) return;
+
   var pivotRow = -1;
   var pivotCol = -1;
   var iterRow = 0;
   var iterCol = 0;
   var found = false;
-  
+
   // Find a pivot
-  while(!found && iterRow < matrix.length) {
+  while (!found && iterRow < matrix.length) {
     iterCol = 0;
-    while(!found && iterCol < matrix[0].length) {
-      if(matrix[iterRow][iterCol] === 0) {
-        found = true
+    while (!found && iterCol < matrix[0].length) {
+      if (matrix[iterRow][iterCol] === 0) {
+        found = true;
         pivotRow = iterRow;
         pivotCol = iterCol;
       }
@@ -66,46 +65,39 @@ var setZeroes = function(matrix) {
     }
     iterRow++;
   }
-  
-  if (!found)
-    return;
-  
+
+  if (!found) return;
+
   // Update the Column value
-  for(var i = 0; i < matrix.length; i++) {
-    if(i == pivotRow)
-      continue
-    for(var j = 0; j < matrix[0].length; j++) {
-      if(j == pivotCol)
-        continue;
-      if(matrix[i][j] === 0) {
+  for (var i = 0; i < matrix.length; i++) {
+    if (i == pivotRow) continue;
+    for (var j = 0; j < matrix[0].length; j++) {
+      if (j == pivotCol) continue;
+      if (matrix[i][j] === 0) {
         matrix[i][pivotCol] = 0;
         matrix[pivotRow][j] = 0;
       }
     }
   }
-  
-  for(var i = 0; i < matrix.length; i++)
-    if(matrix[i][pivotCol] === 0 && i !== pivotRow)
-      fillRow(matrix, i);
-  
-  for(var i = 0; i < matrix[0].length; i++)
-    if(matrix[pivotRow][i] === 0 && i !== pivotCol)
-      fillCol(matrix, i);
-  
+
+  for (var i = 0; i < matrix.length; i++)
+    if (matrix[i][pivotCol] === 0 && i !== pivotRow) fillRow(matrix, i);
+
+  for (var i = 0; i < matrix[0].length; i++)
+    if (matrix[pivotRow][i] === 0 && i !== pivotCol) fillCol(matrix, i);
+
   fillCol(matrix, pivotCol);
   fillRow(matrix, pivotRow);
 
   return matrix;
 };
 
-var fillRow = function(matrix, row) {
-  for(var i = 0; i < matrix[0].length; i++)
-      matrix[row][i] = 0;
-}
+var fillRow = function (matrix, row) {
+  for (var i = 0; i < matrix[0].length; i++) matrix[row][i] = 0;
+};
 
-var fillCol = function(matrix, col) {
-  for(var i = 0; i < matrix.length; i++)
-    matrix[i][col] = 0;
-}
+var fillCol = function (matrix, col) {
+  for (var i = 0; i < matrix.length; i++) matrix[i][col] = 0;
+};
 
 module.exports.setZeroes = setZeroes;
