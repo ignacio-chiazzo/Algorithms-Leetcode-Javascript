@@ -12,10 +12,10 @@ var test_all = async function() {
 
       if (typeof(problem.test) !=='undefined') {
         problem.test();
-        console.log("End of the solution for : " + problems[i] + " \n\n");
+        console.log("✅ Tests for " + problems[i] + " run successfully \n");
       } else {
-        console.warn(problem, "The problem " + problems[i] +  " doesn't have a test method implemented.");
-      }
+        console.warn(problem, "🔴 The problem " + problems[i] +  " doesn't have a test method implemented.\n");
+      } 
     }
   } catch (error) {
     throw new Error(error);

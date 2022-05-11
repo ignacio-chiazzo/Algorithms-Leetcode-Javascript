@@ -8,13 +8,11 @@ var test = function() {
   var iter = 0;
 
   while(iter < 8) {
-    console.log(iter);
     const str = (iter % 2 == 0) ? "0" : "X"
     ticTacToe.makeMove(str);
     iter++;
   }
 
-  console.log("after 8 moves");
   ticTacToe.isBoardFull();
   ticTacToe.printBoard();
 

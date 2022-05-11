@@ -5,10 +5,10 @@ Solutions of algorithm problems using Javascript.  https://ignacio-chiazzo.githu
 ### Structure
 The solutions are located under `/LeetcodeProblems`. Each problem has a test file located under `/LeetcodeProblemsTest`.
 
-### Run Scripts
+### Run Tests Scripts
 To run all the test run `node Test.js` in the console.
 
-To run a specific problem in your console, go to the file test, add the call to the test function (`test()` ) and run in the console  `node <problem_file_path>` (e.g. `node LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree.js`).
+To run a specific problem in your console run  `node <problem_file_path>` (e.g. `node LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree.js`).
 
 ### Leetcode Problems
 
