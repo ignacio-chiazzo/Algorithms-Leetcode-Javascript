@@ -33,7 +33,7 @@ var groupAnagrams = function (strs) {
     }
   }
 
-  for (key in hashMap) ret.push(hashMap[key]);
+  for (var key in hashMap) ret.push(hashMap[key]);
 
   return ret;
 };

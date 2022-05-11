@@ -50,3 +50,5 @@ var isSymetricAux = function (root1, root2) {
     isSymetricAux(root1.right, root2.left)
   );
 };
+
+module.exports.isSymmetric = isSymmetric;

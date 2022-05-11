@@ -15,14 +15,12 @@ Input:
 Output: 1->1->2->3->4->4->5->6
 */
 
-const ListNodeTestHelper = require("../../utilsClasses/ListNodeTestHelper");
-
-var ListNode = require("../../utilsClasses/ListNode").ListNode;
-
 var mergeKLists = function (lists) {
   if (lists.length === 0) return null;
 
   var queue = [];
+  var list1;
+  var list2;
   for (var i = 0; i < lists.length; i++) queue.push(lists[i]);
 
   while (queue.length > 1) {

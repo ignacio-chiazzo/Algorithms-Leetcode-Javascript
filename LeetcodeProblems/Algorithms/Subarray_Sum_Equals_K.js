@@ -45,7 +45,7 @@ var subarraySum2 = function (nums, k) {
   }
 
   var ret = 0;
-  for (var i = 0; i < sums.length - 1; i++) {
+  for (i = 0; i < sums.length - 1; i++) {
     for (var j = i + 1; j < sums.length; j++) {
       if (sums[j] - sums[i] === k) ret++;
     }
@@ -55,3 +55,4 @@ var subarraySum2 = function (nums, k) {
 };
 
 module.exports.subarraySum = subarraySum;
+module.exports.subarraySum2 = subarraySum2;

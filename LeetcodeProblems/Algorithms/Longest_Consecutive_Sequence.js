@@ -24,7 +24,7 @@ var longestConsecutive = function (nums) {
 
   var cons = 1;
   var currentCons = 1;
-  for (var i = 0; i < nums.length; i++) {
+  for (i = 0; i < nums.length; i++) {
     var number = nums[i];
     if (setNums.has(number)) {
       setNums.delete(number);

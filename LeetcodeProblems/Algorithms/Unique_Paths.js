@@ -98,5 +98,5 @@ var uniquePaths3 = function (m, n) {
 };
 
 module.exports.uniquePaths1 = uniquePaths1;
-module.exports.uniquePaths2 = uniquePaths1;
+module.exports.uniquePaths2 = uniquePaths2;
 module.exports.uniquePaths3 = uniquePaths3;

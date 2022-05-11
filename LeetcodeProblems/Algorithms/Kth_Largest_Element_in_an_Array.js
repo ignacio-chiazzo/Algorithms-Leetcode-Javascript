@@ -26,7 +26,7 @@ var findKthLargest = function (nums, k) {
     heapify(nums, nums.length, i);
   }
 
-  for (var i = nums.length - 1; i >= nums.length - k - 1 && i >= 0; i--) {
+  for (i = nums.length - 1; i >= nums.length - k - 1 && i >= 0; i--) {
     swap(nums, 0, i);
     heapify(nums, i, 0);
   }

@@ -25,12 +25,13 @@ var longestPalindrome = function (str) {
   var maxPal = 1;
   var posPalStart = 0;
   var currentPalStart = 0;
+  var iter = 1;
 
   for (var i = 1; i < str.length; i++) {
     if (str.charAt(i - 1) == str.charAt(i)) {
       currentPalStart = i - 1;
       var currentPal = 2;
-      var iter = 1;
+      iter = 1;
       while (
         i - iter - 1 >= 0 &&
         i + iter < str.length &&
@@ -47,10 +48,10 @@ var longestPalindrome = function (str) {
     }
   }
 
-  for (var i = 1; i < str.length - 1; i++) {
+  for (i = 1; i < str.length - 1; i++) {
     if (str.charAt(i - 1) == str.charAt(i + 1)) {
       currentPal = 1;
-      var iter = 1;
+      iter = 1;
       while (
         i - iter >= 0 &&
         i + iter < str.length &&

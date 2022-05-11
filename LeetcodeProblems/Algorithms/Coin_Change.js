@@ -25,7 +25,7 @@ var coinChange = function (coins, amount) {
   for (var i = 0; i <= amount; i++) memo[i] = Number.POSITIVE_INFINITY;
 
   memo[0] = 0;
-  for (var i = 0; i < coins.length; i++) {
+  for (i = 0; i < coins.length; i++) {
     const coin = coins[i];
     for (var j = coin; j < memo.length; j++)
       memo[j] = min2(memo[j], memo[j - coin] + 1);
@@ -105,3 +105,5 @@ var min = function (a, b, c) {
 };
 
 module.exports.coinChange = coinChange;
+module.exports.coinChange1 = coinChange1;
+module.exports.coinChange2 = coinChange2;

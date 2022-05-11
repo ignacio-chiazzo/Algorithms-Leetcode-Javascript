@@ -45,6 +45,7 @@ var simplifyPath = function (path) {
     }
   }
   var ret = "";
+  var elem;
 
   while (queue.length > 0) {
     elem = queue.shift();

@@ -23,9 +23,7 @@ Output:
 */
 
 var subsets = function (nums) {
-  var ret = [];
-
-  subsetByPosition = function (nums, position, current) {
+  var subsetByPosition = function (nums, position, current) {
     if (position == nums.length) {
       return [current];
     }

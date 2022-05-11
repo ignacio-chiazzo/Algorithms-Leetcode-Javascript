@@ -57,10 +57,10 @@ var printRect = function (matrix, i, rowLength, colLength, retArray) {
   if (firstRow === lastRow || firstCol === lastCol) {
     return;
   }
-  for (var col = lastCol - 1; col >= firstCol; col--) {
+  for (col = lastCol - 1; col >= firstCol; col--) {
     retArray.push(matrix[lastRow][col]);
   }
-  for (var row = lastRow - 1; row > firstRow; row--) {
+  for (row = lastRow - 1; row > firstRow; row--) {
     retArray.push(matrix[row][firstCol]);
   }
 };

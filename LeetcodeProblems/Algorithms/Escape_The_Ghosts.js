@@ -44,7 +44,7 @@ The number of ghosts will not exceed 100.
  */
 var escapeGhosts = function (ghosts, target) {
   var distancePacman = getDistance([0, 0], target);
-  for (ghost in ghosts) {
+  for (var ghost in ghosts) {
     const distanceGhost = getDistance(ghosts[ghost], target);
     if (distancePacman > distanceGhost) return false;
   }

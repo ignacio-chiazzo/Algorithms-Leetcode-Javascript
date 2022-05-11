@@ -20,7 +20,7 @@ var generateParenthesisApproach1 = function (n) {
   if (n === 0) return [];
 
   var str = "(".repeat(n);
-  sol = [];
+  var sol = [];
 
   genParAux(str, 0, 0, sol);
   return sol;
@@ -93,4 +93,5 @@ var insertAt = function (str, position, value) {
   return str.slice(0, position) + value + str.slice(position);
 };
 
+module.exports.generateParenthesisApproach1 = generateParenthesisApproach1;
 module.exports.generateParenthesisApproach2 = generateParenthesisApproach2;

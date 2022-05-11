@@ -40,6 +40,8 @@ You don't need to understand the serialization to solve the problem.
  * }
  */
 
+class UndirectedGraphNode {} //TODO: Define me
+
 // SOLUTION 1 Using DFS
 /**
  * @param {UndirectedGraphNode} graph
@@ -93,3 +95,6 @@ var cloneGraphBFS = function (graph) {
 
   return copyReturn;
 };
+
+module.exports.cloneGraph = cloneGraph;
+module.exports.cloneGraphBFS = cloneGraphBFS;

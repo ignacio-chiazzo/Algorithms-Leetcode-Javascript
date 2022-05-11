@@ -80,10 +80,10 @@ var setZeroes = function (matrix) {
     }
   }
 
-  for (var i = 0; i < matrix.length; i++)
+  for (i = 0; i < matrix.length; i++)
     if (matrix[i][pivotCol] === 0 && i !== pivotRow) fillRow(matrix, i);
 
-  for (var i = 0; i < matrix[0].length; i++)
+  for (i = 0; i < matrix[0].length; i++)
     if (matrix[pivotRow][i] === 0 && i !== pivotCol) fillCol(matrix, i);
 
   fillCol(matrix, pivotCol);

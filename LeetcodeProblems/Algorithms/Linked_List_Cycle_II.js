@@ -10,8 +10,6 @@ Follow up:
 Can you solve it without using extra space?
 */
 
-var ListNode = require("../../UtilsClasses/ListNode").ListNode;
-
 // Optimal solution
 /**
  * @param {ListNode} head
@@ -57,3 +55,4 @@ var detectCycle2 = function (head) {
 };
 
 module.exports.detectCycle = detectCycle;
+module.exports.detectCycle2 = detectCycle2;

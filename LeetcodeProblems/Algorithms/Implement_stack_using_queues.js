@@ -42,14 +42,15 @@ class MyStack {
     if (this.q1.length === 0 && this.q2.length === 0) return null;
 
     if (this.q1.length > 0) {
+      var elem;
       while (this.q1.length > 1) {
-        var elem = this.q1.shift();
+        elem = this.q1.shift();
         this.q2.push(elem);
       }
       return this.q1.shift();
     } else {
       while (this.q2.length > 1) {
-        var elem = this.q2.shift();
+        elem = this.q2.shift();
         this.q1.push(elem);
       }
       return this.q2.shift();
@@ -58,13 +59,13 @@ class MyStack {
 
   top() {
     if (this.q1.length === 0 && this.q2.length === 0) return null;
-
+    var elem;
     if (this.q1.length > 0) {
-      var elem = this.pop();
+      elem = this.pop();
       this.q2.push(elem);
       return elem;
     } else {
-      var elem = this.pop();
+      elem = this.pop();
       this.q1.push(elem);
       return elem;
     }

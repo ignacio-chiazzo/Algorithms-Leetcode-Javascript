@@ -41,7 +41,7 @@ var addTwoNumbers = function (l1, l2) {
 
   const head = number;
   while (l1 !== null || l2 !== null) {
-    var elem = carry;
+    elem = carry;
     if (l1 !== null) {
       elem += l1.val;
       l1 = l1.next;

@@ -40,10 +40,11 @@ Can you solve it in O(N) time and O(1) space?
 var backspaceCompare = function (S, T) {
   var iterS = S.length - 1;
   var iterT = T.length - 1;
-
+  var countBack = 0;
+      
   while (iterS >= 0 || iterT >= 0) {
     if (iterS >= 0 && S.charAt(iterS) === "#") {
-      var countBack = 0;
+      countBack = 0;
       while (iterS >= 0 && (countBack > 0 || S[iterS] === "#")) {
         if (iterS >= 0 && S[iterS] === "#") {
           countBack++;
@@ -54,7 +55,7 @@ var backspaceCompare = function (S, T) {
         iterS--;
       }
     } else if (iterT >= 0 && T.charAt(iterT) === "#") {
-      var countBack = 0;
+      countBack = 0;
       while (iterT >= 0 && (countBack > 0 || T[iterT] === "#")) {
         if (iterT >= 0 && T[iterT] === "#") {
           countBack++;
@@ -85,7 +86,7 @@ var backspaceCompare2 = function (S, T) {
   }
 
   var stackT = [];
-  for (var i = 0; i < T.length; i++) {
+  for (i = 0; i < T.length; i++) {
     if (T.charAt(i) === "#") stackT.shift();
     else stackT.unshift(T.charAt(i));
   }

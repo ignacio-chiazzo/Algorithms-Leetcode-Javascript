@@ -40,7 +40,7 @@ var buildTree = function (preorder, inorder) {
     inorder === null ||
     preorder.length !== inorder.length
   )
-    return nil;
+    return null;
 
   return buildTreeAux(
     preorder,

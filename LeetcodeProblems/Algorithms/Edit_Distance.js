@@ -41,8 +41,8 @@ var minDistance = function (word1, word2) {
     }
   }
 
-  for (var i = 1; i <= word1.length; i++) {
-    for (var j = 1; j <= word2.length; j++) {
+  for (i = 1; i <= word1.length; i++) {
+    for (j = 1; j <= word2.length; j++) {
       if (word1.charAt(i - 1) === word2.charAt(j - 1)) {
         matrix[i][j] = matrix[i - 1][j - 1];
       } else {
@@ -90,7 +90,7 @@ var minDistanceAux = function (word1, word2, iter1, iter2) {
   );
 };
 
-var min = function (a, b, c) {
+min = function (a, b, c) {
   if (a < b) return a < c ? a : c;
 
   return b < c ? b : c;
