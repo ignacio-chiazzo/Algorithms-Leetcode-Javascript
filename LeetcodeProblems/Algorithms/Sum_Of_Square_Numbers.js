@@ -18,18 +18,17 @@ Output: False
  * @param {number} c
  * @return {boolean}
  */
-var judgeSquareSum = function(c) {
+var judgeSquareSum = function (c) {
   var iter = 0;
   var set = new Set();
-  while(iter ** 2 <= c) {
+  while (iter ** 2 <= c) {
     var square = iter * iter;
-    if(square * 2 === c || set.has(c - square))
-      return true;
+    if (square * 2 === c || set.has(c - square)) return true;
 
     set.add(square);
     iter++;
   }
-  
+
   return false;
 };
 
