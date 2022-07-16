@@ -36,7 +36,8 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Kth Largest Element in an Array ](/LeetcodeProblems/Algorithms/Kth_Largest_Element_in_an_Array.js)             | Medium | https://leetcode.com/problems/kth-largest-element-in-an-array/ |
 | [Linked List Cycle II ](/LeetcodeProblems/Algorithms/Linked_List_Cycle_II.js)                                   | Medium | https://leetcode.com/problems/linked-list-cycle-ii/ |
 | [Longest Palindromic Substring ](/LeetcodeProblems/Algorithms/Longest_Palindromic_Substring.js)                 | Medium | https://leetcode.com/problems/longest-palindromic-substring/|
-| [Max Area Of Island ](/LeetcodeProblems/Algorithms/Max_Area_Of_Island.js)                                        | Medium | https://leetcode.com/problems/max-area-of-island/ |
+| [Longest Substring Without Reapeating Characters](/LeetcodeProblems/Algorithms/Longest_Substring.js)            | Medium | https://leetcode.com/problems/longest-substring-without-repeating-characters|
+| [Max Area Of Island ](/LeetcodeProblems/Algorithms/Max_Area_Of_Island.js)                                       | Medium | https://leetcode.com/problems/max-area-of-island/ |
 | [Maximal Square ](/LeetcodeProblems/Algorithms/Maximal_Square.js)                                               | Medium | https://leetcode.com/problems/maximal-square/ |
 | [Permutations ](/LeetcodeProblems/Algorithms/Permutations.js)                                                   | Medium | https://leetcode.com/problems/permutations/ |
 | [Permutations II ](/LeetcodeProblems/Algorithms/Permutations_II.js)                                             | Medium | https://leetcode.com/problems/permutations-ii/ |
