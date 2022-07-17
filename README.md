@@ -39,11 +39,12 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Longest Palindromic Substring ](/LeetcodeProblems/Algorithms/Longest_Palindromic_Substring.js)                 | Medium | https://leetcode.com/problems/longest-palindromic-substring/|
 | [Longest Substring Without Reapeating Characters](/LeetcodeProblems/Algorithms/Longest_Substring.js)            | Medium | https://leetcode.com/problems/longest-substring-without-repeating-characters|
 | [Max Area Of Island ](/LeetcodeProblems/Algorithms/Max_Area_Of_Island.js)                                       | Medium | https://leetcode.com/problems/max-area-of-island/ |
-| [Max Consecutive Ones III ](/LeetcodeProblems/Algorithms/Max_Consecutive_Ones_III.js)                                       | Medium | https://leetcode.com/problems/max-consecutive-ones-iii |
+| [Max Consecutive Ones III ](/LeetcodeProblems/Algorithms/Max_Consecutive_Ones_III.js)                           | Medium | https://leetcode.com/problems/max-consecutive-ones-iii |
 | [Maximal Square ](/LeetcodeProblems/Algorithms/Maximal_Square.js)                                               | Medium | https://leetcode.com/problems/maximal-square/ |
 | [Minimum Size Subarray](/LeetcodeProblems/Algorithms/Minimum_Size_Subarray.js)                                  | Medium | https://leetcode.com/problems/minimum-size-subarray-sum |
 | [Permutations ](/LeetcodeProblems/Algorithms/Permutations.js)                                                   | Medium | https://leetcode.com/problems/permutations/ |
 | [Permutations II ](/LeetcodeProblems/Algorithms/Permutations_II.js)                                             | Medium | https://leetcode.com/problems/permutations-ii/ |
+| [Permutation in String](/LeetcodeProblems/Algorithms/Permutations_In_String.js)                                 | Medium | https://leetcode.com/problems/permutation-in-string/ |
 | [Permutations Without Duplicates ](/LeetcodeProblems/Algorithms/Permutations_Without_Duplicates.js)             | Medium | https://leetcode.com/problems/permutations/ |
 | [Restore IP Addresses ](/LeetcodeProblems/Algorithms/Restore_IP_Addresses.js)                                   | Medium | https://leetcode.com/problems/restore-ip-addresses/ |
 | [SearchIng Rotated Sorted Array ](/LeetcodeProblems/Algorithms/SearchIng_Rotated_Sorted_Array.js)               | Medium | https://leetcode.com/problems/search-in-rotated-sorted-array/ |
