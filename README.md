@@ -30,7 +30,8 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Clone Graph ](/LeetcodeProblems/Algorithms/Clone_Graph.js)                                                     | Medium | https://leetcode.com/problems/clone-graph/ |
 | [Coin Change ](/LeetcodeProblems/Algorithms/Coin_Change.js)                                                     | Medium | https://leetcode.com/problems/coin-change/ |
 | [Design Circular Deque ](/LeetcodeProblems/Algorithms/Design_Circular_Deque.js)                                 | Medium | https://leetcode.com/problems/design-circular-deque/
-| [Escape The Ghosts ](/LeetcodeProblems/Algorithms/Escape_The_Ghosts.js)                                         | Medium | https://leetcode.com/problems/escape-the-ghosts/ |
+| [Escape The Ghosts](/LeetcodeProblems/Algorithms/Escape_The_Ghosts.js)                                          | Medium | https://leetcode.com/problems/escape-the-ghosts/ |
+| [Find All Anagrams in a String](/LeetcodeProblems/Algorithms/Find_Anagrams.js)                                  | Medium | https://leetcode.com/problems/find-all-anagrams-in-a-string/ |
 | [Generate Parenthesis ](/LeetcodeProblems/Algorithms/Generate_Parenthesis.js)                                   | Medium | https://leetcode.com/problems/generate-parentheses | 
 | [Group Anagrams ](/LeetcodeProblems/Algorithms/Group_Anagrams.js)                                               | Medium | https://leetcode.com/problems/group-anagrams/
 | [Kth Largest Element in an Array ](/LeetcodeProblems/Algorithms/Kth_Largest_Element_in_an_Array.js)             | Medium | https://leetcode.com/problems/kth-largest-element-in-an-array/ |
