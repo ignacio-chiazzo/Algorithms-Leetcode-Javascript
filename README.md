@@ -23,6 +23,7 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [merge k sorted lists ](/LeetcodeProblems/Algorithms/merge_k_sorted_lists.js)                                   | Hard   | https://leetcode.com/problems/merge-k-sorted-lists/ |
 | [Set Matrix Zeroes](/LeetcodeProblems/Algorithms/Set_Matrix_Zeroes.js)                                          | Hard   | https://leetcode.com/problems/set-matrix-zeroes/ |
 | [Subarray Sum Equals K ](/LeetcodeProblems/Algorithms/Subarray_Sum_Equals_K.js)                                 | Medium | https://leetcode.com/problems/subarray-sum-equals-k/ | 
+| [3Sum Closest](/LeetcodeProblems/Algorithms/3SumClosest.js)                                                     | Medium | https://leetcode.com/problems/3sum-closest/ | 
 | [3Sum ](/LeetcodeProblems/Algorithms/3Sum.js)                                                                   | Medium | https://leetcode.com/problems/3sum/ | 
 | [NumberOfIslands ](/LeetcodeProblems/Algorithms/Number_of_Islands.js)                                           | Medium | https://leetcode.com/problems/number-of-islands/ | 
 | [Swap Nodes in Pairs](/LeetcodeProblems/Algorithms/Swap_Nodes_in_Pairs.js)                                      | Medium | https://leetcode.com/problems/swap-nodes-in-pairs/ | 
