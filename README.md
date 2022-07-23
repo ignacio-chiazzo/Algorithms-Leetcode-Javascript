@@ -43,6 +43,7 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Max Area Of Island ](/LeetcodeProblems/Algorithms/Max_Area_Of_Island.js)                                       | Medium | https://leetcode.com/problems/max-area-of-island/ |
 | [Max Consecutive Ones III ](/LeetcodeProblems/Algorithms/Max_Consecutive_Ones_III.js)                           | Medium | https://leetcode.com/problems/max-consecutive-ones-iii |
 | [Maximal Square ](/LeetcodeProblems/Algorithms/Maximal_Square.js)                                               | Medium | https://leetcode.com/problems/maximal-square/ |
+| [Minimum Add to Make Parentheses Valid ](/LeetcodeProblems/Algorithms/Minimum_Add_To_Make_Parentheses_Valid.js) | Medium | https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/ |
 | [Minimum Size Subarray](/LeetcodeProblems/Algorithms/Minimum_Size_Subarray.js)                                  | Medium | https://leetcode.com/problems/minimum-size-subarray-sum |
 | [Permutations ](/LeetcodeProblems/Algorithms/Permutations.js)                                                   | Medium | https://leetcode.com/problems/permutations/ |
 | [Permutations II ](/LeetcodeProblems/Algorithms/Permutations_II.js)                                             | Medium | https://leetcode.com/problems/permutations-ii/ |
