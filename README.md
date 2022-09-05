@@ -23,23 +23,31 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [merge k sorted lists ](/LeetcodeProblems/Algorithms/merge_k_sorted_lists.js)                                   | Hard   | https://leetcode.com/problems/merge-k-sorted-lists/ |
 | [Set Matrix Zeroes](/LeetcodeProblems/Algorithms/Set_Matrix_Zeroes.js)                                          | Hard   | https://leetcode.com/problems/set-matrix-zeroes/ |
 | [Subarray Sum Equals K ](/LeetcodeProblems/Algorithms/Subarray_Sum_Equals_K.js)                                 | Medium | https://leetcode.com/problems/subarray-sum-equals-k/ | 
+| [3Sum Closest](/LeetcodeProblems/Algorithms/3SumClosest.js)                                                     | Medium | https://leetcode.com/problems/3sum-closest/ | 
 | [3Sum ](/LeetcodeProblems/Algorithms/3Sum.js)                                                                   | Medium | https://leetcode.com/problems/3sum/ | 
 | [NumberOfIslands ](/LeetcodeProblems/Algorithms/Number_of_Islands.js)                                           | Medium | https://leetcode.com/problems/number-of-islands/ | 
 | [Swap Nodes in Pairs](/LeetcodeProblems/Algorithms/Swap_Nodes_in_Pairs.js)                                      | Medium | https://leetcode.com/problems/swap-nodes-in-pairs/ | 
 | [Add Two Numbers ](/LeetcodeProblems/Algorithms/Add_Two_Numbers.js)                                             | Medium | https://leetcode.com/problems/add-two-numbers/  |
 | [Clone Graph ](/LeetcodeProblems/Algorithms/Clone_Graph.js)                                                     | Medium | https://leetcode.com/problems/clone-graph/ |
 | [Coin Change ](/LeetcodeProblems/Algorithms/Coin_Change.js)                                                     | Medium | https://leetcode.com/problems/coin-change/ |
+| [Container With Most Water](/LeetcodeProblems/Algorithms/Container_With_Most_Water.js)                          | Medium | https://leetcode.com/problems/container-with-most-water/ |
 | [Design Circular Deque ](/LeetcodeProblems/Algorithms/Design_Circular_Deque.js)                                 | Medium | https://leetcode.com/problems/design-circular-deque/
-| [Escape The Ghosts ](/LeetcodeProblems/Algorithms/Escape_The_Ghosts.js)                                         | Medium | https://leetcode.com/problems/escape-the-ghosts/ |
+| [Escape The Ghosts](/LeetcodeProblems/Algorithms/Escape_The_Ghosts.js)                                          | Medium | https://leetcode.com/problems/escape-the-ghosts/ |
+| [Find All Anagrams in a String](/LeetcodeProblems/Algorithms/Find_Anagrams.js)                                  | Medium | https://leetcode.com/problems/find-all-anagrams-in-a-string/ |
 | [Generate Parenthesis ](/LeetcodeProblems/Algorithms/Generate_Parenthesis.js)                                   | Medium | https://leetcode.com/problems/generate-parentheses | 
 | [Group Anagrams ](/LeetcodeProblems/Algorithms/Group_Anagrams.js)                                               | Medium | https://leetcode.com/problems/group-anagrams/
 | [Kth Largest Element in an Array ](/LeetcodeProblems/Algorithms/Kth_Largest_Element_in_an_Array.js)             | Medium | https://leetcode.com/problems/kth-largest-element-in-an-array/ |
 | [Linked List Cycle II ](/LeetcodeProblems/Algorithms/Linked_List_Cycle_II.js)                                   | Medium | https://leetcode.com/problems/linked-list-cycle-ii/ |
 | [Longest Palindromic Substring ](/LeetcodeProblems/Algorithms/Longest_Palindromic_Substring.js)                 | Medium | https://leetcode.com/problems/longest-palindromic-substring/|
-| [Max Area Of Island ](/LeetcodeProblems/Algorithms/Max_Area_Of_Island.js)                                        | Medium | https://leetcode.com/problems/max-area-of-island/ |
+| [Longest Substring Without Reapeating Characters](/LeetcodeProblems/Algorithms/Longest_Substring.js)            | Medium | https://leetcode.com/problems/longest-substring-without-repeating-characters|
+| [Max Area Of Island ](/LeetcodeProblems/Algorithms/Max_Area_Of_Island.js)                                       | Medium | https://leetcode.com/problems/max-area-of-island/ |
+| [Max Consecutive Ones III ](/LeetcodeProblems/Algorithms/Max_Consecutive_Ones_III.js)                           | Medium | https://leetcode.com/problems/max-consecutive-ones-iii |
 | [Maximal Square ](/LeetcodeProblems/Algorithms/Maximal_Square.js)                                               | Medium | https://leetcode.com/problems/maximal-square/ |
+| [Minimum Add to Make Parentheses Valid ](/LeetcodeProblems/Algorithms/Minimum_Add_To_Make_Parentheses_Valid.js) | Medium | https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/ |
+| [Minimum Size Subarray](/LeetcodeProblems/Algorithms/Minimum_Size_Subarray.js)                                  | Medium | https://leetcode.com/problems/minimum-size-subarray-sum |
 | [Permutations ](/LeetcodeProblems/Algorithms/Permutations.js)                                                   | Medium | https://leetcode.com/problems/permutations/ |
 | [Permutations II ](/LeetcodeProblems/Algorithms/Permutations_II.js)                                             | Medium | https://leetcode.com/problems/permutations-ii/ |
+| [Permutation in String](/LeetcodeProblems/Algorithms/Permutations_In_String.js)                                 | Medium | https://leetcode.com/problems/permutation-in-string/ |
 | [Permutations Without Duplicates ](/LeetcodeProblems/Algorithms/Permutations_Without_Duplicates.js)             | Medium | https://leetcode.com/problems/permutations/ |
 | [Restore IP Addresses ](/LeetcodeProblems/Algorithms/Restore_IP_Addresses.js)                                   | Medium | https://leetcode.com/problems/restore-ip-addresses/ |
 | [SearchIng Rotated Sorted Array ](/LeetcodeProblems/Algorithms/SearchIng_Rotated_Sorted_Array.js)               | Medium | https://leetcode.com/problems/search-in-rotated-sorted-array/ |
