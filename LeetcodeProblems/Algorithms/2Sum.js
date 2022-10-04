@@ -39,3 +39,5 @@ Output: [0,1]
       }
   }
 };
+
+module.exports.twoSum = twoSum;
