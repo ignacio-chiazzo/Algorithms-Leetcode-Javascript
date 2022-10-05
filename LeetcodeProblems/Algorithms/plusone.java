@@ -1,17 +1,11 @@
-class Solution {
-    public int[] plusOne(int[] digits) {
-
-        for(int i = digits.length-1; i>=0; i--){
-            if (digits[i]<9){
-                digits[i]++;
-              return digits;
-            }       
-             digits[i]=0;
-
-           }
-       digits = new int[digits.length+1];
-        digits[0] = 1;
-        return digits; 
- 
+var plusOne = function(digits) {
+    result=[]; carry=1; n=digits.length-1;
+    for(i=n; i>=0; i--){
+        sum=(carry+digits[i])%10;
+        carry=Math.floor((carry+digits[i])/10); 
+        result[n]=sum;
+        n--;
     }
-}
+    if(carry!==0) {result.unshift(carry);} 
+    return result;
+};
