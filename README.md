@@ -85,6 +85,7 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Permutations With Duplicates ](/LeetcodeProblems/Algorithms/Permutations_With_Duplicates.js)                   |        | |
 | [Deletion Distance](/LeetcodeProblems/Algorithms/Deletion_Distance.js)                                          |        | |
 | [Award Budget Cuts](/LeetcodeProblems/Algorithms/Award_Budget_Cuts.js)                                          |        | |
+| [Happy Number](https://leetcode.com/problems/happy-number/)                                                     | Easy   | https://leetcode.com/problems/happy-number/ |
 
 ### Sorting Algorithms
 | Algoritmhs |
