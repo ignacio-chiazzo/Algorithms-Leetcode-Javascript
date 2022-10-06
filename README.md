@@ -79,6 +79,7 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Binary Gap ](/LeetcodeProblems/Algorithms/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
 | [Binary Gap ](/LeetcodeProblems/Algorithms/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
 | [Majority Element](/LeetcodeProblems/Algorithms/Majority_Element.js)                                            | Easy   | https://leetcode.com/problems/majority-element/ |
+| [Longest Common Prefix](/LeetcodeProblems/Algorithms/Longest_Common_Prefix.js)                                  | Easy   | https://leetcode.com/problems/longest-common-prefix/ |
 | [Two Sum](/LeetcodeProblems/Algorithms/2Sum.js)                                                                 | Easy   | https://leetcode.com/problems/two-sum/ |
 | [Tic Tac Toe ](/LeetcodeProblems/Algorithms/Tic_Tac_Toe.js)                                                     |        | |
 | [Permutations With Duplicates ](/LeetcodeProblems/Algorithms/Permutations_With_Duplicates.js)                   |        | |
