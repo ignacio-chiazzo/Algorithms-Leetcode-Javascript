@@ -45,9 +45,7 @@ Output: [1,5,1]
   
   for (let l = nums.length - 1; l > k; l--) {
       if (nums[l] > nums[k]) {
-          let temp = nums[k];
-          nums[k] = nums[l];
-          nums[l] = temp;
+          swap(nums, k, l);
           break;
       }
   }
@@ -55,11 +53,15 @@ Output: [1,5,1]
   reverse(nums, k + 1, nums.length -1);
 };
 
+function swap(arr, a, b) {
+    let temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+
 function reverse(nums, start ,end) {
   while(start < end) {
-      let temp = nums[start];
-      nums[start] = nums[end];
-      nums[end] = temp;
+      swap(nums, start, end);
       start++;
       end--;
   }
