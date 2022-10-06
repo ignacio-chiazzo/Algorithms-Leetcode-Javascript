@@ -62,8 +62,9 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Construct Binary Tree from Preorder and Inorder Traversal ](/LeetcodeProblems/Algorithms/Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.js)   | Medium | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ | 
 | [Lowest Common Ancestor of a Binary Tree ](/LeetcodeProblems/Algorithms/Lowest_Common_Ancestor_of_a_Binary_Tree.js) | Medium | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ |
 | [Maximum Sum of an Hourglass](/LeetcodeProblems/Algorithms/Maximise_Hour_Glass_Sum.js)                          | Medium | https://leetcode.com/problems/maximum-sum-of-an-hourglass/ |
-| [Time Needed to Rearrange a Binary String](/LeetcodeProblems/Algorithms/Time_Needed_Rearrange_Binary_String.js)| Medium | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/ |
-| [Find Subarrays With Equal Sum ](/LeetcodeProblems/Algorithms/Find_Subarrays_With_Equal_Sums.js)                                                                   | Medium | https://leetcode.com/problems/find-subarrays-with-equal-sum/ | 
+| [Reverse Integer](/LeetcodeProblems/Algorithms/Reverse_Integer.js)                                              | Medium | https://leetcode.com/problems/reverse-integer/ |
+| [Time Needed to Rearrange a Binary String](/LeetcodeProblems/Algorithms/Time_Needed_Rearrange_Binary_String.js) | Medium | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/ |
+| [Find Subarrays With Equal Sum ](/LeetcodeProblems/Algorithms/Find_Subarrays_With_Equal_Sums.js)                | Medium | https://leetcode.com/problems/find-subarrays-with-equal-sum/ | 
 | [Flood Fill ](/LeetcodeProblems/Algorithms/Flood_Fill.js)                                                       | Easy   | https://leetcode.com/problems/flood-fill/ |
 | [Implement stack using queues ](/LeetcodeProblems/Algorithms/Implement_stack_using_queues.js)                   | Easy   | https://leetcode.com/problems/implement-stack-using-queues/ |
 | [Number of Segments in a String ](/LeetcodeProblems/Algorithms/Number_of_Segments_in_a_String.js)               | Easy   | https://leetcode.com/problems/number-of-segments-in-a-string/ |
