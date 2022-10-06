@@ -64,7 +64,8 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Maximum Sum of an Hourglass](/LeetcodeProblems/Algorithms/Maximise_Hour_Glass_Sum.js)                          | Medium | https://leetcode.com/problems/maximum-sum-of-an-hourglass/ |
 | [Next Permutation](/LeetcodeProblems/Algorithms/Next_Permutation.js)                                            | Medium | https://leetcode.com/problems/next-permutation/ |
 | [Time Needed to Rearrange a Binary String](/LeetcodeProblems/Algorithms/Time_Needed_Rearrange_Binary_String.js)| Medium | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/ |
-| [Find Subarrays With Equal Sum ](/LeetcodeProblems/Algorithms/Find_Subarrays_With_Equal_Sums.js)                                                                   | Medium | https://leetcode.com/problems/find-subarrays-with-equal-sum/ | 
+| [Find Subarrays With Equal Sum ](/LeetcodeProblems/Algorithms/Find_Subarrays_With_Equal_Sums.js)                | Medium | https://leetcode.com/problems/find-subarrays-with-equal-sum/ | 
+| [Reverse Integer](/LeetcodeProblems/Algorithms/Reverse_Integer.js)                                              | Medium | https://leetcode.com/problems/reverse-integer/ |
 | [Flood Fill ](/LeetcodeProblems/Algorithms/Flood_Fill.js)                                                       | Easy   | https://leetcode.com/problems/flood-fill/ |
 | [Implement stack using queues ](/LeetcodeProblems/Algorithms/Implement_stack_using_queues.js)                   | Easy   | https://leetcode.com/problems/implement-stack-using-queues/ |
 | [Number of Segments in a String ](/LeetcodeProblems/Algorithms/Number_of_Segments_in_a_String.js)               | Easy   | https://leetcode.com/problems/number-of-segments-in-a-string/ |
@@ -79,6 +80,8 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Binary Gap ](/LeetcodeProblems/Algorithms/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
 | [Binary Gap ](/LeetcodeProblems/Algorithms/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
 | [Majority Element](/LeetcodeProblems/Algorithms/Majority_Element.js)                                            | Easy   | https://leetcode.com/problems/majority-element/ |
+| [Longest Common Prefix](/LeetcodeProblems/Algorithms/Longest_Common_Prefix.js)                                  | Easy   | https://leetcode.com/problems/longest-common-prefix/ |
+| [Two Sum](/LeetcodeProblems/Algorithms/2Sum.js)                                                                 | Easy   | https://leetcode.com/problems/two-sum/ |
 | [Tic Tac Toe ](/LeetcodeProblems/Algorithms/Tic_Tac_Toe.js)                                                     |        | |
 | [Permutations With Duplicates ](/LeetcodeProblems/Algorithms/Permutations_With_Duplicates.js)                   |        | |
 | [Deletion Distance](/LeetcodeProblems/Algorithms/Deletion_Distance.js)                                          |        | |
