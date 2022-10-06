@@ -32,7 +32,7 @@ Output: [0,1]
   let map ={};
   for(let i=0;i<nums.length;i++){
       const sum = target-nums[i];
-      if(map[parseInt(sum)] != void 0){
+      if(map[parseInt(sum)] != 0){
           return [map[sum], i];
       } else{
           map[nums[i]] = i;
