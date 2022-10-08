@@ -1,5 +1,5 @@
-const assert = require('assert');
-const cutAwardBadges = require('../../LeetcodeProblems/Algorithms/Award_Budget_Cuts').cutAwardBadges;
+const assert = require("assert");
+const cutAwardBadges = require("../../LeetcodeProblems/Algorithms/Award_Budget_Cuts").cutAwardBadges;
 
 function test() {
   assert.deepEqual(
