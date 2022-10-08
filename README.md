@@ -88,6 +88,7 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Award Budget Cuts](/LeetcodeProblems/Algorithms/Award_Budget_Cuts.js)                                          |        | |
 | [Happy Number](https://leetcode.com/problems/happy-number/)                                                     | Easy   | https://leetcode.com/problems/happy-number/ |
 | [Shuffle String](https://leetcode.com/problems/shuffle-string/)                                                 | Easy   | https://leetcode.com/problems/shuffle-string/ |
+| [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                   | Easy   | https://leetcode.com/problems/binary-tree-inorder-traversal/ |
 
 ### Sorting Algorithms
 | Algoritmhs |
