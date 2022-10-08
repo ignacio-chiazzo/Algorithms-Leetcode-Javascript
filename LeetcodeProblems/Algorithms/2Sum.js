@@ -38,9 +38,10 @@ var twoSum = function (nums, target) {
       map[nums[i]] = i;
     }
   }
+};
 
-  //Another method
-
+//Another method
+var twoSum2 = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; i++) {
       if (nums[1] + nums[j] === target) {
@@ -51,3 +52,4 @@ var twoSum = function (nums, target) {
 };
 
 module.exports.twoSum = twoSum;
+module.exports.twoSum2 = twoSum2;
