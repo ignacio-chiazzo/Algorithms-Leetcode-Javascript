@@ -1,7 +1,6 @@
-const assert = require('assert');
-const addTwoNumbers = require('../../LeetcodeProblems/Algorithms/Add_Two_Numbers').addTwoNumbers;
-const ListNodeTestHelper = require('../../UtilsClasses/ListNodeTestHelper');
-var ListNode = require('../../UtilsClasses/ListNode').ListNode;
+const addTwoNumbers = require("../../LeetcodeProblems/Algorithms/Add_Two_Numbers").addTwoNumbers;
+const ListNodeTestHelper = require("../../UtilsClasses/ListNodeTestHelper");
+var ListNode = require("../../UtilsClasses/ListNode").ListNode;
 
 function test() {
   const list1 = ListNode.linkenList([1,2,3,4]);

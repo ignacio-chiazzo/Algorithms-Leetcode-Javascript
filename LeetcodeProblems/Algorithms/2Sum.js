@@ -28,15 +28,25 @@ Output: [0,1]
  * @param {number} target
  * @return {number[]}
  */
- var twoSum = function(nums, target) {
-  let map ={};
-  for(let i=0;i<nums.length;i++){
-      const sum = target-nums[i];
-      if(map[parseInt(sum)] != 0){
-          return [map[sum], i];
-      } else{
-          map[nums[i]] = i;
+var twoSum = function (nums, target) {
+  let map = {};
+  for (let i = 0; i < nums.length; i++) {
+    const sum = target - nums[i];
+    if (map[parseInt(sum)] != 0) {
+      return [map[sum], i];
+    } else {
+      map[nums[i]] = i;
+    }
+  }
+
+  //Another method
+
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; i++) {
+      if (nums[1] + nums[j] === target) {
+        return [i, j];
       }
+    }
   }
 };
 
