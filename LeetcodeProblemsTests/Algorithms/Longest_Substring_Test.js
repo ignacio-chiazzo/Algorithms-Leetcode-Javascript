@@ -1,5 +1,5 @@
-const assert = require('assert');
-const lengthOfLongestSubstring = require('../../LeetcodeProblems/Algorithms/Longest_Substring').lengthOfLongestSubstring;
+const assert = require("assert");
+const lengthOfLongestSubstring = require("../../LeetcodeProblems/Algorithms/Longest_Substring").lengthOfLongestSubstring;
 
 function test() {
   assert.equal(4, lengthOfLongestSubstring("abcdbcd"));

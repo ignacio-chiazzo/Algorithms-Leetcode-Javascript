@@ -1,7 +1,7 @@
-const assert = require('assert');
-var deletionDistance = require('../../LeetcodeProblems/Algorithms/Deletion_Distance').deletionDistance;
-var deletionDistance2 = require('../../LeetcodeProblems/Algorithms/Deletion_Distance').deletionDistance2;
-var deletionDistanceDP = require('../../LeetcodeProblems/Algorithms/Deletion_Distance').deletionDistanceDP;
+const assert = require("assert");
+var deletionDistance = require("../../LeetcodeProblems/Algorithms/Deletion_Distance").deletionDistance;
+var deletionDistance2 = require("../../LeetcodeProblems/Algorithms/Deletion_Distance").deletionDistance2;
+var deletionDistanceDP = require("../../LeetcodeProblems/Algorithms/Deletion_Distance").deletionDistanceDP;
 
 function test() {
   assert.equal(deletionDistance("dog", "frog"), 3);

@@ -1,6 +1,6 @@
 
-const assert = require('assert');
-const longestCommonPrefix = require('../../LeetcodeProblems/Algorithms/Longest_Common_Prefix').longestCommonPrefix;
+const assert = require("assert");
+const longestCommonPrefix = require("../../LeetcodeProblems/Algorithms/Longest_Common_Prefix").longestCommonPrefix;
 
 function test() {
   assert.equal(longestCommonPrefix(["flower","flow","flight"]), "fl");

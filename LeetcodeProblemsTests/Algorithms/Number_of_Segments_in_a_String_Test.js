@@ -1,5 +1,5 @@
-const assert = require('assert');
-const countSegments = require('../../LeetcodeProblems/Algorithms/Number_of_Segments_in_a_String').countSegments;
+const assert = require("assert");
+const countSegments = require("../../LeetcodeProblems/Algorithms/Number_of_Segments_in_a_String").countSegments;
 
 function test() {
   assert.equal(countSegments(" "), 0);

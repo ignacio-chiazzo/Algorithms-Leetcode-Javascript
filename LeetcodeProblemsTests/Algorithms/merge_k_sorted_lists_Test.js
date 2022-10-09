@@ -1,7 +1,7 @@
-const assert = require('assert');
-const ListNodeTestHelper = require('../../UtilsClasses/ListNodeTestHelper');
-var ListNode = require('../../UtilsClasses/ListNode').ListNode;
-const mergeKLists = require('../../LeetcodeProblems/Algorithms/merge_k_sorted_lists').mergeKLists;
+const assert = require("assert");
+const ListNodeTestHelper = require("../../UtilsClasses/ListNodeTestHelper");
+var ListNode = require("../../UtilsClasses/ListNode").ListNode;
+const mergeKLists = require("../../LeetcodeProblems/Algorithms/merge_k_sorted_lists").mergeKLists;
 
 function test() {
   assert.deepEqual(mergeKLists([]), null);

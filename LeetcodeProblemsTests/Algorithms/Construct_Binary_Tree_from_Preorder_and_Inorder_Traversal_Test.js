@@ -1,5 +1,5 @@
-const assert = require('assert');
-var buildTree = require('../../LeetcodeProblems/Algorithms/Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal').buildTree;
+// const assert = require("assert");
+var buildTree = require("../../LeetcodeProblems/Algorithms/Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal").buildTree;
 
 function test() {
   // TODO

@@ -30,51 +30,51 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
  * @param {string} p
  * @return {number[]}
  */
- var findAnagrams = function(s, p) {
-  if(s.length < p.length) { return [] }
+var findAnagrams = function(s, p) {
+  if(s.length < p.length) { return []; }
   
   let start = 0;
   let end = p.length - 1;
   let hashBuild = {};
   let countLeft = p.length;
-  let anagrams = []
+  let anagrams = [];
   
   for(let e = 0; e < p.length; e++) {
-      hashBuild[p[e]] = hashBuild[p[e]] !== undefined ? hashBuild[p[e]] + 1 : 1;  
+    hashBuild[p[e]] = hashBuild[p[e]] !== undefined ? hashBuild[p[e]] + 1 : 1;  
   }
 
   for(let i = start; i < end; i++) {
-      if(hashBuild[s[i]]  !== undefined) {
-          hashBuild[s[i]] = hashBuild[s[i]] - 1;
-          if(hashBuild[s[i]] >= 0) {
-              countLeft--;
-          }
+    if(hashBuild[s[i]]  !== undefined) {
+      hashBuild[s[i]] = hashBuild[s[i]] - 1;
+      if(hashBuild[s[i]] >= 0) {
+        countLeft--;
       }
+    }
   }
   
   while(end < s.length) {
-      // check left
-      if(hashBuild[s[end]] !== undefined) {
-          hashBuild[s[end]] = hashBuild[s[end]] - 1;
-          if(hashBuild[s[end]] >= 0) {
-              countLeft--;
-          }
-          if(countLeft == 0) {
-              anagrams.push(start);
-          } 
+    // check left
+    if(hashBuild[s[end]] !== undefined) {
+      hashBuild[s[end]] = hashBuild[s[end]] - 1;
+      if(hashBuild[s[end]] >= 0) {
+        countLeft--;
       }
+      if(countLeft == 0) {
+        anagrams.push(start);
+      } 
+    }
       
-      // check right
-      if(hashBuild[s[start]] !== undefined) {
-          hashBuild[s[start]] = hashBuild[s[start]] + 1;
-          if(hashBuild[s[start]] >= 1) {
-              countLeft++;
-          }
+    // check right
+    if(hashBuild[s[start]] !== undefined) {
+      hashBuild[s[start]] = hashBuild[s[start]] + 1;
+      if(hashBuild[s[start]] >= 1) {
+        countLeft++;
       }
+    }
       
-      // slide window
-      end++;
-      start++;
+    // slide window
+    end++;
+    start++;
   }
   
   return anagrams;

@@ -1,5 +1,5 @@
-const assert = require('assert');
-const MyStack = require('../../LeetcodeProblems/Algorithms/Implement_stack_using_queues').MyStack;
+const assert = require("assert");
+const MyStack = require("../../LeetcodeProblems/Algorithms/Implement_stack_using_queues").MyStack;
 
 var test = function () {
   var myStack = new MyStack();
@@ -14,6 +14,6 @@ var test = function () {
   assert.equal(myStack.pop(), 1);
   assert.equal(myStack.pop(), 2);
   assert.equal(myStack.pop(), 3);
-}
+};
 
 module.exports.test = test;

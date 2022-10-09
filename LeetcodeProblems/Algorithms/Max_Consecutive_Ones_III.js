@@ -24,18 +24,18 @@ var longestOnes = function(nums, k) {
   let end = 0; 
   let maxWindow = 0;
   while(start < nums.length && end < nums.length) {
-      if(k > 0 || nums[end] == 1) {
-          if(nums[end] == 0) { k--; }
-          maxWindow = Math.max(maxWindow, end - start + 1);
-          end++;
-      } else { // k = 0 and nums[end] == 0
-          while(k == 0 && start < nums.length) {
-              if(nums[start] == 0) {
-                  k++;
-              }
-              start++;
-          }
+    if(k > 0 || nums[end] == 1) {
+      if(nums[end] == 0) { k--; }
+      maxWindow = Math.max(maxWindow, end - start + 1);
+      end++;
+    } else { // k = 0 and nums[end] == 0
+      while(k == 0 && start < nums.length) {
+        if(nums[start] == 0) {
+          k++;
+        }
+        start++;
       }
+    }
   }
   
   return maxWindow;

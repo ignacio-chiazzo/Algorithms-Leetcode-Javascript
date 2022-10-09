@@ -1,5 +1,5 @@
-const assert = require('assert');
-const numIslands = require('../../LeetcodeProblems/Algorithms/Number_of_Islands').numIslands;
+const assert = require("assert");
+const numIslands = require("../../LeetcodeProblems/Algorithms/Number_of_Islands").numIslands;
 
 function test() {
   assert.equal(numIslands([[1]]), 1);

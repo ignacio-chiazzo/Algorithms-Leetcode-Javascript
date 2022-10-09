@@ -1,5 +1,5 @@
-const assert = require('assert');
-const isMatch = require('../../LeetcodeProblems/Algorithms/Regular_Expression_Matching').isMatch;
+const assert = require("assert");
+const isMatch = require("../../LeetcodeProblems/Algorithms/Regular_Expression_Matching").isMatch;
 
 var test = function() {
   assert.equal(isMatch("aa", "a"), false);
@@ -8,6 +8,6 @@ var test = function() {
   assert.equal(isMatch("ab", ".*"), true);
   assert.equal(isMatch("aab", "c*a*b"), true);
   assert.equal(isMatch("mississippi", "mis*is*p*."), false);
-}
+};
 
 module.exports.test = test;

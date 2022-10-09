@@ -1,14 +1,14 @@
-const TicTacToe = require('../../LeetcodeProblems/Algorithms/Tic_Tac_Toe').TicTacToe;
+const TicTacToe = require("../../LeetcodeProblems/Algorithms/Tic_Tac_Toe").TicTacToe;
 
 var test = function() {
-  ticTacToe = new TicTacToe();
+  let ticTacToe = new TicTacToe();
   ticTacToe.isBoardFull();
   ticTacToe.addToken(0, 1, "X");
   ticTacToe.printBoard();
   var iter = 0;
 
   while(iter < 8) {
-    const str = (iter % 2 == 0) ? "0" : "X"
+    const str = (iter % 2 == 0) ? "0" : "X";
     ticTacToe.makeMove(str);
     iter++;
   }
@@ -18,6 +18,6 @@ var test = function() {
 
   ticTacToe.addToken(0,0,"X");
   ticTacToe.printBoard();
-}
+};
 
 module.exports.test = test;

@@ -1,5 +1,5 @@
-const assert = require('assert');
-const minAddToMakeValid = require('../../LeetcodeProblems/Algorithms/Minimum_Add_To_Make_Parentheses_Valid').minAddToMakeValid;
+const assert = require("assert");
+const minAddToMakeValid = require("../../LeetcodeProblems/Algorithms/Minimum_Add_To_Make_Parentheses_Valid").minAddToMakeValid;
 
 var test = function() {
   assert.strictEqual(1, minAddToMakeValid("()("));

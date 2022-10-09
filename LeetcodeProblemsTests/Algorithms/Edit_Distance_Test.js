@@ -1,6 +1,6 @@
-const assert = require('assert');
-var minDistance = require('../../LeetcodeProblems/Algorithms/Edit_Distance').minDistance;
-var minDistance2 = require('../../LeetcodeProblems/Algorithms/Edit_Distance').minDistance2;
+const assert = require("assert");
+var minDistance = require("../../LeetcodeProblems/Algorithms/Edit_Distance").minDistance;
+var minDistance2 = require("../../LeetcodeProblems/Algorithms/Edit_Distance").minDistance2;
 
 function test() {
   assert.equal(minDistance("ros", "horse"), 3);

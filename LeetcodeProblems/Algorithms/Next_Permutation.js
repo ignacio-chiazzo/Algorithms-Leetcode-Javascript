@@ -33,37 +33,37 @@ Output: [1,5,1]
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 
- var nextPermutation = function(nums) {
+var nextPermutation = function(nums) {
   let k = nums.length - 2;
   while ( k >= 0 && nums[k] >= nums[k + 1]) {
-      --k;
+    --k;
   }
   if (k === -1) {
-      reverse(nums, 0, nums.length-1);
-      return;
+    reverse(nums, 0, nums.length-1);
+    return;
   }
   
   for (let l = nums.length - 1; l > k; l--) {
-      if (nums[l] > nums[k]) {
-          swap(nums, k, l);
-          break;
-      }
+    if (nums[l] > nums[k]) {
+      swap(nums, k, l);
+      break;
+    }
   }
   
   reverse(nums, k + 1, nums.length -1);
 };
 
 function swap(arr, a, b) {
-    let temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
+  let temp = arr[a];
+  arr[a] = arr[b];
+  arr[b] = temp;
 }
 
 function reverse(nums, start ,end) {
   while(start < end) {
-      swap(nums, start, end);
-      start++;
-      end--;
+    swap(nums, start, end);
+    start++;
+    end--;
   }
 }
 

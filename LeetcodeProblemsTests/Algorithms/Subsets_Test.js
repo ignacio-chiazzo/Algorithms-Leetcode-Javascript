@@ -1,5 +1,5 @@
-const assert = require('assert');
-const subsets = require('../../LeetcodeProblems/Algorithms/Subsets').subsets;
+const assert = require("assert");
+const subsets = require("../../LeetcodeProblems/Algorithms/Subsets").subsets;
 
 function test() {
   assert.deepEqual(subsets([]), [[]]);

@@ -1,5 +1,5 @@
-const assert = require('assert');
-const minSubArrayLength = require('../../LeetcodeProblems/Algorithms/Minimum_Size_Subarray').minSubArrayLength;
+const assert = require("assert");
+const minSubArrayLength = require("../../LeetcodeProblems/Algorithms/Minimum_Size_Subarray").minSubArrayLength;
 
 function test() {
   assert.equal(0, minSubArrayLength(10, []));

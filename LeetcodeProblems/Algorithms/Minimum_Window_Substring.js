@@ -73,59 +73,59 @@ var getHash = function (t) {
 // Solution 2
 // Similar idea code slightly different;
 var buildHash = function(t) {
-    let hash = {};
-    let occ = 0;
-    for(var i = 0; i < t.length; i++) {
-        occ = hash[t[i]] == undefined ? 0 : hash[t[i]];
-        hash[t[i]] = occ + 1;
-    }
-    return hash;
-}
+  let hash = {};
+  let occ = 0;
+  for(var i = 0; i < t.length; i++) {
+    occ = hash[t[i]] == undefined ? 0 : hash[t[i]];
+    hash[t[i]] = occ + 1;
+  }
+  return hash;
+};
 
 var minWindow2 = function(s, t) {
-    var hashT = buildHash(t);
-    var start = 0; 
-    var end = 0;
-    var countLeft = t.length;
-    var minWindow = "";
-    var minWindowLeft = -1;
-    var maxWindowRight = -1;
+  var hashT = buildHash(t);
+  var start = 0; 
+  var end = 0;
+  var countLeft = t.length;
+  var minWindowLeft = -1;
+  var maxWindowRight = -1;
 
-    while(start < s.length && end < s.length) {
-        if(countLeft > 0) { // window does not contain all elements            
-            if(hashT[s[end]] !== undefined) {
-                hashT[s[end]] = hashT[s[end]] - 1;
-                if(hashT[s[end]] >= 0) {
-                    countLeft--;
-                }
-            }
-            
-            if(countLeft > 0) {
-                end++;
-            }
-        } else { // found window
-            if(minWindowLeft == -1 || ((maxWindowRight - minWindowLeft + 1) > (end - start + 1)) ) {
-                minWindowLeft = start;
-                maxWindowRight = end;
-            }
-           if(hashT[s[start]] !== undefined) {
-               hashT[s[start]] = hashT[s[start]] + 1;
-               if(hashT[s[start]] > 0) {
-                   countLeft++;
-                   end++;
-               }
-           }
-           start++;
+  while(start < s.length && end < s.length) {
+    if(countLeft > 0) { // window does not contain all elements            
+      if(hashT[s[end]] !== undefined) {
+        hashT[s[end]] = hashT[s[end]] - 1;
+        if(hashT[s[end]] >= 0) {
+          countLeft--;
         }
+      }
+            
+      if(countLeft > 0) {
+        end++;
+      }
+    } else { // found window
+      if(minWindowLeft == -1 || ((maxWindowRight - minWindowLeft + 1) > (end - start + 1)) ) {
+        minWindowLeft = start;
+        maxWindowRight = end;
+      }
+      if(hashT[s[start]] !== undefined) {
+        hashT[s[start]] = hashT[s[start]] + 1;
+        if(hashT[s[start]] > 0) {
+          countLeft++;
+          end++;
+        }
+      }
+      start++;
     }
+  }
     
-    if(minWindowLeft > -1) {
-        return s.substring(minWindowLeft, maxWindowRight + 1);
-    }
+  if(minWindowLeft > -1) {
+    return s.substring(minWindowLeft, maxWindowRight + 1);
+  }
     
-    return "";
+  return "";
 };
 
 
 
 module.exports.minWindow = minWindow;
+module.exports.minWindow2 = minWindow2;

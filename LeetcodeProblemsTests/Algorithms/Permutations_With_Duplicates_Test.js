@@ -1,5 +1,5 @@
-const assert = require('assert');
-const subsetWithoutDuplicates = require('../../LeetcodeProblems/Algorithms/Permutations_With_Duplicates').subsetWithoutDuplicates;
+const assert = require("assert");
+const subsetWithoutDuplicates = require("../../LeetcodeProblems/Algorithms/Permutations_With_Duplicates").subsetWithoutDuplicates;
 
 var test = function() {
   assert.deepEqual(
@@ -19,6 +19,6 @@ var test = function() {
       [ 3, 2, 1, 1 ]
     ]
   );
-}
+};
 
 module.exports.test = test;

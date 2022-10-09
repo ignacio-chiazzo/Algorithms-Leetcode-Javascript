@@ -26,9 +26,9 @@ s1 and s2 consist of lowercase English letters.
  * @param {string} s2
  * @return {boolean}
  */
- var checkInclusion = function(s1, s2) {
+var checkInclusion = function(s1, s2) {
   if(s1.length > s2.length) {
-      return false
+    return false;
   }
   
   let start = 0;
@@ -37,37 +37,37 @@ s1 and s2 consist of lowercase English letters.
   let hashBuild = {};
   
   for(var i = 0; i < s1.length; i++) {
-      hashBuild[s1[i]] = (hashBuild[s1[i]] || 0) + 1;
+    hashBuild[s1[i]] = (hashBuild[s1[i]] || 0) + 1;
   }
   
   for(var j = start; j < end; j++) { // TODO: didn't count upper bound
-      if(hashBuild[s2[j]] !== undefined) {
-          hashBuild[s2[j]] = hashBuild[s2[j]] - 1;
-          if(hashBuild[s2[j]] >= 0) {
-              countLeft--;
-          }
+    if(hashBuild[s2[j]] !== undefined) {
+      hashBuild[s2[j]] = hashBuild[s2[j]] - 1;
+      if(hashBuild[s2[j]] >= 0) {
+        countLeft--;
       }
+    }
   }
   
   while(end < s2.length) {
-      if(hashBuild[s2[end]] !== undefined) {
-          hashBuild[s2[end]] = hashBuild[s2[end]] - 1;
-           if(hashBuild[s2[end]] >= 0) {
-              countLeft--;
-          }
+    if(hashBuild[s2[end]] !== undefined) {
+      hashBuild[s2[end]] = hashBuild[s2[end]] - 1;
+      if(hashBuild[s2[end]] >= 0) {
+        countLeft--;
       }
+    }
       
-      if(countLeft == 0) { return true }
+    if(countLeft == 0) { return true; }
       
-      if(hashBuild[s2[start]] !== undefined) {
-          hashBuild[s2[start]] = hashBuild[s2[start]] + 1;
-           if(hashBuild[s2[start]] >= 1) {
-              countLeft++;
-          }
+    if(hashBuild[s2[start]] !== undefined) {
+      hashBuild[s2[start]] = hashBuild[s2[start]] + 1;
+      if(hashBuild[s2[start]] >= 1) {
+        countLeft++;
       }
+    }
       
-      start++;
-      end++;
+    start++;
+    end++;
   }
   
   return false;

@@ -1,5 +1,5 @@
-const assert = require('assert');
-const maxSubArray = require('../../LeetcodeProblems/Algorithms/Maximun_Subarray').maxSubArray;
+const assert = require("assert");
+const maxSubArray = require("../../LeetcodeProblems/Algorithms/Maximun_Subarray").maxSubArray;
 
 function test() {
   assert.equal(maxSubArray([]), 0);

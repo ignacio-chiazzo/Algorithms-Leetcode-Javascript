@@ -32,8 +32,8 @@ s consists of English letters, digits, symbols and spaces.
  * @param {string} s
  * @return {number}
  */
- var lengthOfLongestSubstring = function(s) {
-  if(s.length == 0) { return 0 }
+var lengthOfLongestSubstring = function(s) {
+  if(s.length == 0) { return 0; }
   
   var repeatedChars = new Set();
   var maxLength = 1;
@@ -45,15 +45,15 @@ s consists of English letters, digits, symbols and spaces.
   while(end + 1 < s.length && start < s.length) {
     if(repeatedChars.has(s.charAt(end + 1))) {
       if(repeatedChars.has(s.charAt(start))) {
-          currentMaxLength--;
-          repeatedChars.delete(s.charAt(start))
+        currentMaxLength--;
+        repeatedChars.delete(s.charAt(start));
       }
-        start++;
+      start++;
     } else {
       repeatedChars.add(s.charAt(end + 1));
       currentMaxLength++;
       if(currentMaxLength > maxLength) {
-          maxLength = currentMaxLength;
+        maxLength = currentMaxLength;
       }
       end++;
     }

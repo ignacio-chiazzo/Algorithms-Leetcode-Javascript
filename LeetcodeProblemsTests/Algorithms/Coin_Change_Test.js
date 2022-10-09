@@ -1,5 +1,5 @@
-const assert = require('assert');
-const coinChange = require('../../LeetcodeProblems/Algorithms/Coin_Change').coinChange;
+const assert = require("assert");
+const coinChange = require("../../LeetcodeProblems/Algorithms/Coin_Change").coinChange;
 
 function test() {
   assert.equal(coinChange([], 3), -1);
