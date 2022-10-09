@@ -36,12 +36,14 @@ s[i] is either '0' or '1'.
  * @param {string} s
  * @return {number}
  */
- var secondsToRemoveOccurrences = function(s) {
+var secondsToRemoveOccurrences = function(s) {
   let result = 0;
-  while (true) {
-    const replaced = s.replaceAll('01', '10');
+  for(;;) {
+    const replaced = s.replaceAll("01", "10");
     if (s === replaced) return result;
     s = replaced;
     result += 1;
   }
 };
+
+module.exports.secondsToRemoveOccurrences = secondsToRemoveOccurrences;

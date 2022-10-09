@@ -24,8 +24,8 @@ Output: 0
  * @param {number[]} nums
  * @return {number}
  */
- var minSubArrayLength = function(target, nums) {
-  if(nums.length == 0) { return 0 }
+var minSubArrayLength = function(target, nums) {
+  if(nums.length == 0) { return 0; }
   
   let start = 0;
   let end = 0;
@@ -34,20 +34,20 @@ Output: 0
   let currentWindow = 1;
   
   while(start < nums.length && end < nums.length) {
-      currentWindow = (end + 1 - start) 
-      if(currentSum >= target || (minWindow != 0 && currentWindow > minWindow) )  {
-          if(minWindow == 0 || minWindow > currentWindow ) {
-              minWindow = currentWindow;
-              if(minWindow == 1) { return 1 };
-          }
-          currentSum -= nums[start];
-          start++;
-      } else {
-          end++;
-          if(end < nums.length) {
-              currentSum += nums[end];
-          }
+    currentWindow = (end + 1 - start); 
+    if(currentSum >= target || (minWindow != 0 && currentWindow > minWindow) )  {
+      if(minWindow == 0 || minWindow > currentWindow ) {
+        minWindow = currentWindow;
+        if(minWindow == 1) { return 1; }
       }
+      currentSum -= nums[start];
+      start++;
+    } else {
+      end++;
+      if(end < nums.length) {
+        currentSum += nums[end];
+      }
+    }
   }
   
   return minWindow;

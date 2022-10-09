@@ -1,5 +1,5 @@
-const assert = require('assert');
-const checkInclusion = require('../../LeetcodeProblems/Algorithms/Permutations_In_String').checkInclusion;
+const assert = require("assert");
+const checkInclusion = require("../../LeetcodeProblems/Algorithms/Permutations_In_String").checkInclusion;
 
 function test() {
   assert.equal(false, checkInclusion("abc", "ab"));

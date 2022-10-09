@@ -1,5 +1,5 @@
-const assert = require('assert');
-const permute = require('../../LeetcodeProblems/Algorithms/Permutations').permute;
+const assert = require("assert");
+const permute = require("../../LeetcodeProblems/Algorithms/Permutations").permute;
 
 function test() {
   assert.deepEqual(permute([]), [ [] ]);

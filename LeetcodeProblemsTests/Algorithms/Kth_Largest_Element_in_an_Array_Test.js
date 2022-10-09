@@ -1,5 +1,5 @@
-const assert = require('assert');
-const findKthLargest = require('../../LeetcodeProblems/Algorithms/Kth_Largest_Element_in_an_Array').findKthLargest;
+const assert = require("assert");
+const findKthLargest = require("../../LeetcodeProblems/Algorithms/Kth_Largest_Element_in_an_Array").findKthLargest;
 
 function test() {
   assert.equal(findKthLargest([3,2,1,5,6,4], 2), 5);

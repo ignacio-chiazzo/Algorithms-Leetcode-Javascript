@@ -30,31 +30,31 @@ Constraints:
  * @param {number} target
  * @return {number}
  */
- var threeSumClosest = function(nums, target) {
+var threeSumClosest = function(nums, target) {
   let mid = 1;
   let right = nums.length - 1;
   let currentSum = nums[0] + nums[mid] + nums[right];
   let closest = currentSum;
   
-  nums.sort(function(a,b) {return a - b})
+  nums.sort(function(a,b) {return a - b;});
   
   for(var left = 0 ; left < nums.length - 1; left++) {
-      mid = left + 1;
-      right = nums.length - 1;
+    mid = left + 1;
+    right = nums.length - 1;
       
-      while(mid < right) {
-          currentSum = nums[left] + nums[mid] + nums[right];
+    while(mid < right) {
+      currentSum = nums[left] + nums[mid] + nums[right];
           
-          if(Math.abs(target - currentSum) < Math.abs(target - closest)) {
-              closest = currentSum;
-          }
-          
-          if(currentSum > target) {
-              right--;
-          } else {
-              mid++;
-          }
+      if(Math.abs(target - currentSum) < Math.abs(target - closest)) {
+        closest = currentSum;
       }
+          
+      if(currentSum > target) {
+        right--;
+      } else {
+        mid++;
+      }
+    }
   }
   
   return closest;

@@ -1,6 +1,6 @@
 
-const assert = require('assert');
-var findAnagrams = require('../../LeetcodeProblems/Algorithms/Find_Anagrams').findAnagrams;
+const assert = require("assert");
+var findAnagrams = require("../../LeetcodeProblems/Algorithms/Find_Anagrams").findAnagrams;
 
 function test() {
   assert.deepEqual([], findAnagrams("AA", "BB"));

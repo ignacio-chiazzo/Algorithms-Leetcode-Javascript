@@ -25,9 +25,9 @@ Explanation: After shuffling, each character remains in its position.
  * @return {string}
  */
 var restoreString = function(s, indices) {
-    let arrshuffle = [];
-    indices.forEach((sindex, index) => arrshuffle[sindex] = s.charAt(index))
-    return arrshuffle.join('')
+  let arrshuffle = [];
+  indices.forEach((sindex, index) => arrshuffle[sindex] = s.charAt(index));
+  return arrshuffle.join("");
 };
 
 module.exports.restoreString = restoreString;

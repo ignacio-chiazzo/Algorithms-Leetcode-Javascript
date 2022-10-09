@@ -24,18 +24,18 @@ Output: 1
  * @param {number[]} height
  * @return {number}
  */
- var maxArea = function(height) {
+var maxArea = function(height) {
   let left = 0;
   let right = height.length - 1;
   let maxArea = calculateArea(left, right, height);
   
   while(left < right) {
-      if(height[left] < height[right]) {
-          left++
-      } else {
-          right--;
-      }
-      maxArea = Math.max(maxArea, calculateArea(left, right, height))   
+    if(height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+    maxArea = Math.max(maxArea, calculateArea(left, right, height));   
   }
   return maxArea;
 };
@@ -44,6 +44,6 @@ var calculateArea = function(x, y, height) {
   let minHeight = height[x] > height[y] ? height[y] : height[x];
   let width = y -x;
   return (width * minHeight);
-}
+};
 
 module.exports.maxArea = maxArea;

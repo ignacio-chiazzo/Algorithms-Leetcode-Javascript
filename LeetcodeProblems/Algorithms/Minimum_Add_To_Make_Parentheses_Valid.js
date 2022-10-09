@@ -33,15 +33,15 @@ var minAddToMakeValid = function(s) {
   var extraParClosing = 0;
   
   for(let i = 0; i < s.length; i++) {
-      if(s.charAt(i) == "(") {
-          opening++;
-      } else if(s.charAt(i) == ")") {
-          if(opening == 0) {
-              extraParClosing++;
-          } else {
-              opening--;;
-          }
-      } 
+    if(s.charAt(i) == "(") {
+      opening++;
+    } else if(s.charAt(i) == ")") {
+      if(opening == 0) {
+        extraParClosing++;
+      } else {
+        opening--;
+      }
+    } 
   }
   return extraParClosing + opening;
 };
@@ -52,18 +52,19 @@ var minAddToMakeValidUsingQueue = function(s) {
   var extraParClosing = 0;
   
   for(let i = 0; i < s.length; i++) {
-      if(s.charAt(i) == "(") {
-          queue.push(s.charAt(i))
-      } else if(s.charAt(i) == ")") {
-          if(queue.length > 0) {
-              queue.pop();
-          } else {
-              extraParClosing++;
-          }
-      } 
+    if(s.charAt(i) == "(") {
+      queue.push(s.charAt(i));
+    } else if(s.charAt(i) == ")") {
+      if(queue.length > 0) {
+        queue.pop();
+      } else {
+        extraParClosing++;
+      }
+    } 
   }
 
   return extraParClosing + queue.length;
 };
 
 module.exports.minAddToMakeValid = minAddToMakeValid;
+module.exports.minAddToMakeValidUsingQueue = minAddToMakeValidUsingQueue;

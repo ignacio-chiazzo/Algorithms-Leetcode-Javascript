@@ -1,5 +1,5 @@
-const assert = require('assert');
-const minWindow = require('../../LeetcodeProblems/Algorithms/Minimum_Window_Substring').minWindow;
+const assert = require("assert");
+const minWindow = require("../../LeetcodeProblems/Algorithms/Minimum_Window_Substring").minWindow;
 
 function test() {
   assert.equal(minWindow("ADOBECODEBANC", "ABC"), "BANC");

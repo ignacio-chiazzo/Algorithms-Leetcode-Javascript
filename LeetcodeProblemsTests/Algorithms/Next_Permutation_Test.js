@@ -1,5 +1,5 @@
-const assert = require('assert');
-const nextPermutation = require('../../LeetcodeProblems/Algorithms/Next_Permutation').nextPermutation;
+const assert = require("assert");
+const nextPermutation = require("../../LeetcodeProblems/Algorithms/Next_Permutation").nextPermutation;
 
 function test() {
   let test1 = [1,2,3];

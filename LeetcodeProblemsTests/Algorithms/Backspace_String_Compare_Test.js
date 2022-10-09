@@ -1,6 +1,6 @@
-const assert = require('assert');
-const backspaceCompare = require('../../LeetcodeProblems/Algorithms/Backspace_String_Compare').backspaceCompare;
-const backspaceCompare2 = require('../../LeetcodeProblems/Algorithms/Backspace_String_Compare').backspaceCompare2;
+const assert = require("assert");
+const backspaceCompare = require("../../LeetcodeProblems/Algorithms/Backspace_String_Compare").backspaceCompare;
+const backspaceCompare2 = require("../../LeetcodeProblems/Algorithms/Backspace_String_Compare").backspaceCompare2;
 
 function test() {
   assert.equal(backspaceCompare("ab#c", "ad#c"), true); // true

@@ -1,13 +1,13 @@
-const assert = require('assert');
-var ListNode = require('../../UtilsClasses/ListNode').ListNode;
-const detectCycle = require('../../LeetcodeProblems/Algorithms/Linked_List_Cycle_II').detectCycle;
+const assert = require("assert");
+var ListNode = require("../../UtilsClasses/ListNode").ListNode;
+const detectCycle = require("../../LeetcodeProblems/Algorithms/Linked_List_Cycle_II").detectCycle;
 
 var test = function() {
   const cycle = buildCycle();
   var list = cycle.list;
   var nodeCycle = cycle.nodeCycle;
   assert.equal(detectCycle(list), nodeCycle);
-}
+};
 
 function buildCycle() {
   var node1 =  ListNode.linkenList([1,2,3,4,5]);

@@ -1,5 +1,5 @@
-const assert = require('assert');
-const longestOnes = require('../../LeetcodeProblems/Algorithms/Max_Consecutive_Ones_III').longestOnes;
+const assert = require("assert");
+const longestOnes = require("../../LeetcodeProblems/Algorithms/Max_Consecutive_Ones_III").longestOnes;
 
 function test() {
   assert.equal(1, longestOnes([1], 1));

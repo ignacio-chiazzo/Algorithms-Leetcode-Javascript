@@ -21,13 +21,13 @@ Explanation: There is no common prefix among the input strings.
  * @param {string[]} strs
  * @return {string}
  */
- var longestCommonPrefix = function(strs) {
+var longestCommonPrefix = function(strs) {
   if(strs.length === 0) return "";
   
   return strs.reduce((result, curr)=>{
-      let i = 0;
-      while(result[i] && curr[i] && result[i] === curr[i]) i++;
-      return result.slice(0, i);
+    let i = 0;
+    while(result[i] && curr[i] && result[i] === curr[i]) i++;
+    return result.slice(0, i);
   });
 };
 

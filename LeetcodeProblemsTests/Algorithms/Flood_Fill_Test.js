@@ -1,5 +1,5 @@
-const assert = require('assert');
-const floodFill = require('../../LeetcodeProblems/Algorithms/Flood_Fill').floodFill;
+const assert = require("assert");
+const floodFill = require("../../LeetcodeProblems/Algorithms/Flood_Fill").floodFill;
 
 function test() {
   assert.deepEqual(

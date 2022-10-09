@@ -1,7 +1,7 @@
-const assert = require('assert');
-const numTrees1 = require('../../LeetcodeProblems/Algorithms/Unique_Binary_Search_Trees').numTrees1;
-const numTrees2 = require('../../LeetcodeProblems/Algorithms/Unique_Binary_Search_Trees').numTrees2;
-const numTrees3 = require('../../LeetcodeProblems/Algorithms/Unique_Binary_Search_Trees').numTrees3;
+const assert = require("assert");
+const numTrees1 = require("../../LeetcodeProblems/Algorithms/Unique_Binary_Search_Trees").numTrees1;
+const numTrees2 = require("../../LeetcodeProblems/Algorithms/Unique_Binary_Search_Trees").numTrees2;
+const numTrees3 = require("../../LeetcodeProblems/Algorithms/Unique_Binary_Search_Trees").numTrees3;
 
 var test = function () {
   assert.strictEqual(numTrees1(1), 1);
@@ -18,6 +18,6 @@ var test = function () {
   assert.strictEqual(numTrees3(2), 2);
   assert.strictEqual(numTrees3(3), 5);
   assert.strictEqual(numTrees3(5), 42); 
-}
+};
 
 module.exports.test = test;

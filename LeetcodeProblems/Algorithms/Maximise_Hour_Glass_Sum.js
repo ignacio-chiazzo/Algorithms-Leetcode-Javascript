@@ -31,18 +31,20 @@ Explanation: There is only one hourglass in the matrix, with the sum: 1 + 2 + 3 
  * @param {number[][]} grid
  * @return {number}
  */
- var maxSum = function(grid) {
+var maxSum = function(grid) {
   const m = grid.length;
   const n = grid[0].length;
   if(m<3 || n < 3) {
-      return 0;
+    return 0;
   }
   let max = 0;
   for(let i = 0; i<m-2; i++)
-      for(let j = 0; j<n-2;j++)
-      {
-          let cur = grid[i][j] + grid[i][j+1] + grid[i][j+2] + grid[i+1][j+1] + grid[i+2][j] + grid[i+2][j+1] + grid[i+2][j+2];
-          max = Math.max(cur, max);
-      }
+    for(let j = 0; j<n-2;j++)
+    {
+      let cur = grid[i][j] + grid[i][j+1] + grid[i][j+2] + grid[i+1][j+1] + grid[i+2][j] + grid[i+2][j+1] + grid[i+2][j+2];
+      max = Math.max(cur, max);
+    }
   return max;  
 };
+
+module.exports.maxSum = maxSum;

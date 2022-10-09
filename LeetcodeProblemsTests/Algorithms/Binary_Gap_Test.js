@@ -1,5 +1,5 @@
-const assert = require('assert');
-const binaryGap = require('../../LeetcodeProblems/Algorithms/Binary_Gap').binaryGap;
+const assert = require("assert");
+const binaryGap = require("../../LeetcodeProblems/Algorithms/Binary_Gap").binaryGap;
 
 function test() {
   assert.equal(binaryGap(22), 2); // 10110

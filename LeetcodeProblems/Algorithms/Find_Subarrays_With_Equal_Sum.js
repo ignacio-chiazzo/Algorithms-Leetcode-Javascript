@@ -35,7 +35,7 @@ Note that even though the subarrays have the same content, the two subarrays are
  * @param {number[]} nums
  * @return {boolean}
  */
- var findSubarrays = function (nums) {
+var findSubarrays = function (nums) {
   const sumsSeen = new Set();
 
   for (let i = 0; i < nums.length - 1; i++) {

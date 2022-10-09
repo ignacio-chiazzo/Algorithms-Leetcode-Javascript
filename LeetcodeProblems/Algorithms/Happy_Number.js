@@ -33,17 +33,17 @@ Output: false
  * @return {boolean}
  */
 var isHappy = function(n) {
-    return checkHappyNumber(n);
+  return checkHappyNumber(n);
 };
 
 function checkHappyNumber(n){
-    strNumber = n.toString();
-    splitNumber = strNumber.split("");
-    if(splitNumber.length <= 1){
-      return (n <= 1)? true:false;
-    }
-    const digit = splitNumber.reduce((a,b)=> parseInt(a) + Math.pow(parseInt(b),2),0);
-    return checkHappyNumber(digit)
+  let strNumber = n.toString();
+  let splitNumber = strNumber.split("");
+  if(splitNumber.length <= 1){
+    return (n <= 1)? true:false;
+  }
+  const digit = splitNumber.reduce((a,b)=> parseInt(a) + Math.pow(parseInt(b),2),0);
+  return checkHappyNumber(digit);
 }
 
 module.exports.isHappy = isHappy;
