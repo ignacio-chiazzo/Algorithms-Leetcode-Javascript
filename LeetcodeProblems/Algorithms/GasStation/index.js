@@ -34,7 +34,7 @@ var canCompleteCircuit = function(gas, cost) {
     return -1;
   else {
     gasSum = costSum = 0;
-    for (var i = 0; i < len; ++i) {
+    for (i = 0; i < len; ++i) {
       gasSum += gas[i];
       costSum += cost[i];
       if (costSum > gasSum) {
