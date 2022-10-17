@@ -68,7 +68,7 @@ To run a specific problem in your console run  `node <problem_file_path>` (e.g. 
 | [Reverse Integer](/LeetcodeProblems/Algorithms/Reverse_Integer.js)                                              | Medium | https://leetcode.com/problems/reverse-integer/ |
 | [Minimize Maximum Pair Sum in Array ](/LeetcodeProblems/Algorithms/Minimize_Maximum_Pair_Sum_In_Array.js)                                                   | Medium | https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/ |
 | [Top K Frequent Elements ](/LeetcodeProblems/Algorithms/Top_K_Frequent_Elements.js)                                                   | Medium | https://leetcode.com/problems/top-k-frequent-elements/ |
-| [Gas Station](/LeetcodeProblems/Algorithms/Gas Station/index.js)                                                | Medium | https://leetcode.com/problems/gas-station/description/|
+| [Gas Station](/LeetcodeProblems/Algorithms/GasStation/index.js)                                                | Medium | https://leetcode.com/problems/gas-station/description/|
 | [Flood Fill ](/LeetcodeProblems/Algorithms/Flood_Fill.js)                                                       | Easy   | https://leetcode.com/problems/flood-fill/ |
 | [Implement stack using queues ](/LeetcodeProblems/Algorithms/Implement_stack_using_queues.js)                   | Easy   | https://leetcode.com/problems/implement-stack-using-queues/ |
 | [Number of Segments in a String ](/LeetcodeProblems/Algorithms/Number_of_Segments_in_a_String.js)               | Easy   | https://leetcode.com/problems/number-of-segments-in-a-string/ |
