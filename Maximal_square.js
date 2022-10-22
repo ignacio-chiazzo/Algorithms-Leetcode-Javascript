@@ -1,4 +1,5 @@
 /*
+https://leetcode.com/problems/maximal-square
 Maximal Area of Square
 
 Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
@@ -22,7 +23,7 @@ Output: 0
  * @return {number}
  */
 var maximalSquare = function(matrix) {
-    var m = matrix.length;
+  var m = matrix.length;
   var n = (matrix[0] || []).length;
   var dp = Array(m).fill(0).map(_ => Array(n));
   var max = 0;
