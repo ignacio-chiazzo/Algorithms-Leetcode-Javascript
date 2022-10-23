@@ -47,4 +47,5 @@ var canCompleteCircuit = function(gas, cost) {
 
   return result;
 };
-module.exports = canCompleteCircuit;
+
+module.exports.canCompleteCircuit = canCompleteCircuit;
