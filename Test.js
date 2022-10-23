@@ -10,19 +10,15 @@ var test_all = async function () {
     const problems = await loadProblems();
     for (i in problems) {
       console.log("Solving: " + problems[i]);
-      const problem = require(TESTS_FOLDER + problems[i]);
-
-      if (typeof problem.test !== "undefined") {
-        problem.test();
-        console.log("✅ Tests for " + problems[i] + " run successfully \n");
-      } else {
-        console.warn(
-          problem,
-          "🔴 The problem " +
-            problems[i] +
-            " doesn't have a test method implemented.\n"
-        );
+      const tests = require(TESTS_FOLDER + problems[i]);  
+      if (Object.keys(tests).length == 0) {
+        console.warn("🔴 The problem " + problems[i] + " doesn't have a test method implemented.\n");
+        continue;
       }
+      for(testIdx in tests) {
+        tests[testIdx]();
+      }
+      console.log("✅ Tests for " + problems[i] + " run successfully \n");
     }
   } catch (error) {
     throw new Error(error);
