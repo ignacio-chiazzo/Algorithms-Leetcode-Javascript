@@ -70,6 +70,7 @@ The solutions are located under `/LeetcodeProblems`. Each problem has a test fil
 | [Minimize Maximum Pair Sum in Array ](/LeetcodeProblems/Algorithms/Minimize_Maximum_Pair_Sum_In_Array.js)                                                   | Medium | https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/ |
 | [Top K Frequent Elements ](/LeetcodeProblems/Algorithms/Top_K_Frequent_Elements.js)                                                   | Medium | https://leetcode.com/problems/top-k-frequent-elements/ |
 | [Gas Station](/LeetcodeProblems/Algorithms/GasStation/index.js)                                                | Medium | https://leetcode.com/problems/gas-station/description/|
+| [K Closest Points to Origin](/LeetcodeProblems/Algorithms/K_Closest_Points_to_Origin.js/)                       | Medium | https://leetcode.com/problems/k-closest-points-to-origin/
 | [Flood Fill ](/LeetcodeProblems/Algorithms/Flood_Fill.js)                                                       | Easy   | https://leetcode.com/problems/flood-fill/ |
 | [Implement stack using queues ](/LeetcodeProblems/Algorithms/Implement_stack_using_queues.js)                   | Easy   | https://leetcode.com/problems/implement-stack-using-queues/ |
 | [Number of Segments in a String ](/LeetcodeProblems/Algorithms/Number_of_Segments_in_a_String.js)               | Easy   | https://leetcode.com/problems/number-of-segments-in-a-string/ |
@@ -92,7 +93,6 @@ The solutions are located under `/LeetcodeProblems`. Each problem has a test fil
 | [Award Budget Cuts](/LeetcodeProblems/Algorithms/Award_Budget_Cuts.js)                                          |        | |
 | [Happy Number](https://leetcode.com/problems/happy-number/)                                                     | Easy   | https://leetcode.com/problems/happy-number/ |
 | [Shuffle String](https://leetcode.com/problems/shuffle-string/)                                                 | Easy   | https://leetcode.com/problems/shuffle-string/ |
-| [K Closest Points to Origin](/LeetcodeProblems/Algorithms/K_Closest_Points_to_Origin.js/)                       | Medium | https://leetcode.com/problems/k-closest-points-to-origin/
 
 ### Sorting Algorithms
 | Algoritmhs |
