@@ -29,18 +29,18 @@ Explanation: The answer [[-2,4],[3,3]] would also be accepted.
  */
 
 var kClosest = function(points, k) {
-    const queue = [];
+  const queue = [];
     
-    for (let i = 0; i < points.length; i++) {
-        queue.push(points[i]);
-        queue.sort((a, b) => ((a[0] * a[0]) + (a[1] * a[1])) - ((b[0] * b[0]) + (b[1] * b[1])));
+  for (let i = 0; i < points.length; i++) {
+    queue.push(points[i]);
+    queue.sort((a, b) => ((a[0] * a[0]) + (a[1] * a[1])) - ((b[0] * b[0]) + (b[1] * b[1])));
         
-        if (queue.length > k) {
-            queue.pop();
-        }
+    if (queue.length > k) {
+      queue.pop();
     }
+  }
     
-    return queue;
+  return queue;
 };
 
 module.exports.kClosest = kClosest;
