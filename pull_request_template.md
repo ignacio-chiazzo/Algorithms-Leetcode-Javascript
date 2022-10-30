@@ -5,5 +5,6 @@
 - [ ] I have added the description at the top of the solution file.
 - [ ] I have added a test file for the problem.
 - [ ] I have added an entry to the [README](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript/blob/master/README.md) file with a link to the new file.
+- [ ] I have run linter (`npx eslint LeetcodeProblems LeetcodeProblemsTests`) and unit tests (`node Test.js`) and they pass. [More info](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript#run-tests).
 
 Check the [guide](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript#contributions) and [this PR](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript/pull/39) example.
