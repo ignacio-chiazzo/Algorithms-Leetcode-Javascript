@@ -15,6 +15,7 @@ The solutions are located under `/LeetcodeProblems`. Each problem has a test fil
 
 | Name | Level | Link | 
 | - | - | - |
+| [Count of Smaller Numbers After Self ](/LeetcodeProblems/Algorithms/count-of-smaller-numbers-after-self)                                                 | Hard   | https://leetcode.com/problems/count-of-smaller-numbers-after-self/ |
 | [Edit Distance ](/LeetcodeProblems/Algorithms/Edit_Distance.js)                                                 | Hard   | https://leetcode.com/problems/edit-distance/ |
 | [Remove Invalid Parentheses ](/LeetcodeProblems/Algorithms/Remove_Invalid_Parentheses.js)                       | Hard   | https://leetcode.com/problems/remove-invalid-parentheses/ |
 | [Longest Consecutive Sequence ](/LeetcodeProblems/Algorithms/Longest_Consecutive_Sequence.js)                   | Hard   | https://leetcode.com/problems/longest-consecutive-sequence/ |
