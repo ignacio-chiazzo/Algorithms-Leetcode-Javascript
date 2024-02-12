@@ -25,6 +25,15 @@ Example 2:
 Input: n = 2
 Output: false
 
+Example 3:
+Input n = 7
+Output = true
+Explanation:
+7^2 = 49
+4^2 + 9^2 = 97
+9^2 + 7^2 = 130
+1^2 + 3^2 + 0^2 = 10
+1^2 + 0^2 = 1
 
  */
 
@@ -40,7 +49,7 @@ function checkHappyNumber(n){
   let strNumber = n.toString();
   let splitNumber = strNumber.split("");
   if(splitNumber.length <= 1){
-    return (n <= 1)? true:false;
+    return (n === 1 || n === 7)? true:false;
   }
   const digit = splitNumber.reduce((a,b)=> parseInt(a) + Math.pow(parseInt(b),2),0);
   return checkHappyNumber(digit);
