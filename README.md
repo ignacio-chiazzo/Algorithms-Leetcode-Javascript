@@ -84,7 +84,6 @@ The solutions are located under `/LeetcodeProblems`. Each problem has a test fil
 | [Valid Parentheses ](/LeetcodeProblems/Algorithms/easy/Valid_Parentheses.js)                                         | Easy   | https://leetcode.com/problems/valid-parentheses/ |
 | [Backspace String Compare ](/LeetcodeProblems/Algorithms/easy/Backspace_String_Compare.js)                           | Easy   | https://leetcode.com/problems/backspace-string-compare/ |
 | [Binary Gap ](/LeetcodeProblems/Algorithms/easy/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
-| [Binary Gap ](/LeetcodeProblems/Algorithms/easy/Binary_Gap.js)                                                       | Easy   | https://leetcode.com/problems/binary-gap/ |
 | [Majority Element](/LeetcodeProblems/Algorithms/easy/Majority_Element.js)                                            | Easy   | https://leetcode.com/problems/majority-element/ |
 | [Longest Common Prefix](/LeetcodeProblems/Algorithms/easy/Longest_Common_Prefix.js)                                  | Easy   | https://leetcode.com/problems/longest-common-prefix/ |
 | [Two Sum](/LeetcodeProblems/Algorithms/easy/2Sum.js)                                                                 | Easy   | https://leetcode.com/problems/two-sum/ |
