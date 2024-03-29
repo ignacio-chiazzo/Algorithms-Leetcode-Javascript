@@ -7,7 +7,7 @@ The solutions are located under `/LeetcodeProblems`. Each problem has a test fil
 
 ### Run Tests
 
-**Unit tests:** To run all the test run `node Test.js` in the console. To run a specific problem in your console run  `node <problem_file_path>` (e.g. `node LeetcodeProblems/Lowest_Common_Ancestor_of_a_Binary_Tree.js`).
+**Unit tests:** To run all the test run `node Test.js` in the console. To run a specific problem in your console run  `node Test.js <problem_file_path>` (e.g. `node Test.js ./LeetcodeProblemsTests/Algorithms/easy/2Sum_Test.js`).
 
 **Linter:** This repository uses [`es-lint`](https://eslint.org/docs/latest/user-guide/command-line-interface). To run all the tests you would need to install the packages by running `npm install` followed by `npx eslint LeetcodeProblems LeetcodeProblemsTests` which will run the eslint in all problems and tests. You can also use the [flag `--fix`](https://eslint.org/docs/latest/user-guide/command-line-interface#fixing-problems) which will automatically fix some of the errors.
 
