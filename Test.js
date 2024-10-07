@@ -34,7 +34,7 @@ var solve = (problem) => {
     console.log("Solving: " + problem);
 
     const tests = require(problem);  
-    console.log("*" * 100);
+    console.log("*".repeat(100));
     if (Object.keys(tests).length == 0) {
       console.warn("🔴 The problem " + problem + " doesn't have a test method implemented.\n");
       return;
@@ -65,4 +65,10 @@ var loadProblemsFiles = (folder) => {
   });
 };
 
-test_all();
+if (process.argv.length > 2) {
+  const path = process.argv.pop();
+  solve(path);
+} else {
+  test_all();
+}
+ 
