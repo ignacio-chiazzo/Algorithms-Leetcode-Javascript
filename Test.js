@@ -16,22 +16,20 @@ const TESTS_FOLDERS = [
 
 const REGEX_PATTERN_HIDDEN_FILES = /(^|\/)\.[^\/\.]/g;
 
-const get_all_tests = async function (paths) {
+const getAllTests = async function (paths) {
   let problems = [];
   for(const i in paths) {
     const folder = paths[i];
-    const new_problems = await loadProblemsFiles(folder); // await
-    problems = problems.concat(new_problems);
+    const newProblems = await loadProblemsFiles(folder); // await
+    problems = problems.concat(newProblems);
   }
   return problems;
 };
 
-const test_all = async function () {
+const runAllTests = async function (problems) {
   try {
-
-    const problems = await get_all_tests(TESTS_FOLDERS);
     console.log(problems);
-    var solvePromises = problems.map(solve);
+    var solvePromises = problems.map(solveProblem);
     
     await Promise.all(solvePromises);
   } catch (error) {
@@ -40,7 +38,7 @@ const test_all = async function () {
   }
 };
 
-const solve = (problem) => {
+const solveProblem = (problem) => {
   try {
     console.log("Solving: " + problem);
 
@@ -67,19 +65,16 @@ const loadProblemsFiles = (folder) => {
         reject(error);
       } else {
         console.log(folder);
-        new_problems = files.filter((item) => !REGEX_PATTERN_HIDDEN_FILES.test(item));
-        new_problems = new_problems.map((item) => folder + item);
+        newProblems = files.filter((item) => !REGEX_PATTERN_HIDDEN_FILES.test(item));
+        newProblems = newProblems.map((item) => folder + item);
 
-        resolve(new_problems);
+        resolve(newProblems);
       }
     });
   });
 };
 
-const get_missing_tests = async function () {
-  const tests = await get_all_tests(TESTS_FOLDERS);
-  const problems = await get_all_tests(PROBLEMS_FOLDERS);
-
+const getMissingTests = async function (tests, problems) {
   const hasTestStatus = problems.reduce((status, problemPath) => {
     const baseIndex = PROBLEMS_FOLDERS.findIndex((basePath) =>
       problemPath.startsWith(basePath)
@@ -105,11 +100,17 @@ const get_missing_tests = async function () {
   }
 };
 
-if (process.argv.length > 2) {
-  const path = process.argv.pop();
-  solve(path);
-} else {
-  test_all();
-  get_missing_tests();
+async function runScript() {
+  if (process.argv.length > 2) {
+    const path = process.argv.pop();
+    solveProblem(path);
+  } else {
+    const problems = await getAllTests(PROBLEMS_FOLDERS);
+    const tests = await getAllTests(TESTS_FOLDERS);
+  
+    await runAllTests(tests);
+    await getMissingTests(tests, problems);
+  }
 }
- 
+
+runScript();
