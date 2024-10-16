@@ -21,6 +21,8 @@ The data structure should be efficient enough to accommodate the operations acco
     Frequency: Least frequent. 
 */
 
+/*
+example:
 
 class effStructure {
   this.maxHeap = [];
@@ -34,3 +36,4 @@ class effStructure {
 4) deleteMax(): O(log N)
 5) Insert(log N)
 6) Delete: O(log N)
+*/
