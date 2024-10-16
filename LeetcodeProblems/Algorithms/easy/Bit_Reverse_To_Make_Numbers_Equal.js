@@ -60,21 +60,21 @@ Count the number of 1s in the result of the XOR operation.
  * @return {number}
  */
 var minChanges = function bitChanges(n, k) {
-    // Check if transformation is possible
-    if ((n & k) !== k) {
-        return -1;
-    }
+  // Check if transformation is possible
+  if ((n & k) !== k) {
+    return -1;
+  }
 
-    // Calculate the number of changes
-    let changes = 0;
-    let diff = n ^ k;
+  // Calculate the number of changes
+  let changes = 0;
+  let diff = n ^ k;
 
-    while (diff > 0) {
-        changes += diff & 1;
-        diff >>= 1;
-    }
+  while (diff > 0) {
+    changes += diff & 1;
+    diff >>= 1;
+  }
 
-    return changes;
-}
+  return changes;
+};
 
 module.exports.minChanges = minChanges;
