@@ -75,4 +75,5 @@ var minChanges = function bitChanges(n, k) {
     }
 
     return changes;
-}
+
+module.exports.minChanges = minChanges;
