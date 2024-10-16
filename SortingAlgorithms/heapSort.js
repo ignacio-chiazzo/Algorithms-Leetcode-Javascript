@@ -1,16 +1,17 @@
 // Testing Gist
 var heapSort = function(arr) {
   var n = arr.length;
-  for(var i = Math.floor(n/2) - 1; i >= 0; i--)
+  for(let i = Math.floor(n/2) - 1; i >= 0; i--) {
     heapify(arr, n, i);
+  }
 
-  for(var i = n - 1; i >= 0; i--) {
+  for(let i = n - 1; i >= 0; i--) {
     swap(arr, 0, i);
     heapify(arr, i, 0);
   }
 
   return arr;
-}
+};
 
 var heapify = function(arr, n, i) {
   var left = 2 * i + 1;
@@ -32,17 +33,17 @@ var heapify = function(arr, n, i) {
     swap(arr, i, right);
     heapify(arr, n, right);
   }
-}
+};
 
 var swap = function(arr, a, b) {
   var temp = arr[a];
   arr[a] = arr[b];
   arr[b] = temp;
-}
+};
 
 console.log(heapSort([14, 1, 10, 2, 3, 5, 6, 4, 7, 11, 12, 13]));
 console.log(heapSort([]));
 console.log(heapSort([1]));
 console.log(heapSort([2, 1]));
-console.log(heapSort([1,7,2,3,4,1,10,2,3,4,5]))
+console.log(heapSort([1,7,2,3,4,1,10,2,3,4,5]));
 
