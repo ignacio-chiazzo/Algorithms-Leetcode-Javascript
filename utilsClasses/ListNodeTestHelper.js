@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require("assert");
 
 var assertList = function(list, expectedArr) {
   const listlength = list ? list.length() : 0;
@@ -7,6 +7,6 @@ var assertList = function(list, expectedArr) {
     assert.strictEqual(list.val, expectedArr[i]);
     list = list.next;
   }
-}
+};
 
 module.exports.assertList = assertList;
