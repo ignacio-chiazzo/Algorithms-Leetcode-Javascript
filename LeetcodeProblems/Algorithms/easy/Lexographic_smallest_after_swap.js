@@ -59,23 +59,23 @@ how to check the parity of the number:
  * @return {string}
  */
 var getSmallestString = function(s) {
-    let arr = s.split('').map(Number);
+  let arr = s.split('').map(Number);
 
-    const getParity = (num) => {
-        if(num&1 === 0) return 'even';
-        else return 'odd';
+  const getParity = (num) => {
+    if(num&1 === 0) return 'even';
+    else return 'odd';
+  }
+
+  for(let i = 0; i< s.length - 1; i++) {
+    if(arr[i] > arr[i+1] && getParity(arr[i]) === getParity(arr[i + 1])) {
+      let tmp = arr[i+1];
+      arr[i+1] = arr[i];
+      arr[i] = tmp;
+      break;
     }
+  }
 
-    for(let i = 0; i< s.length - 1; i++) {
-        if(arr[i] > arr[i+1] && getParity(arr[i]) === getParity(arr[i + 1])) {
-            let tmp = arr[i+1];
-            arr[i+1] = arr[i];
-            arr[i] = tmp;
-            break;
-        }
-    }
-
-    return arr.join('');
+  return arr.join('');
 };
 
 module.exports.getSmallestString = getSmallestString;
