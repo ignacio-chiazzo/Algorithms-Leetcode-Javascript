@@ -30,41 +30,44 @@ Constraints:
 */
 /*
 Approach:
-let use initialize Left and Right pointer to first and second position of array
-Here Left is to buy stock and Right is to sell stock
+We will use a Two pointers strategy (Left and Right pointers). 
+The first will start pointing to the first element, and the right to the second position of array.
+The Left is to buy stock and Right is to sell stock
 
-Then we initialize our maxProfitValue as 0.
+We initialize our maxProfitValue as 0.
 
-Now we will start our while loop and we will run till our
-Right pointer less then length of array
+Now we will start our while loop, and we will run till our
+Right pointer less than the array's length.
+
 For Example:
 prices=[7,1,5,3,6,4]
 Note:
 prices[left] --> buy stock
 prices[right] --> sell stock
-now we will check price at right and left pointer
+We will check the price at the right and left pointer
 
 step 1:
 
 price[left]=7 price[right]=1 profit=-6
-here price[left] is greater than price[right] so we will move left pointer to the right position and increment our right pointer by 1. We always want our left point to be minimum
+here, price[left] is greater than price[right], so we will move the left pointer to the right position
+and increment our right pointer by 1. We always want our left point to be the minimum.
 
 step 2:
 
 price[left]=1 price[right]=5 profit=4
-here price[left] is less than price[right] which means we will get profit so we will update our maxProfitValue and move our right pointer alone
+here, price[left] is less than price[right], which means we will get profit, 
+so we will update our maxProfitValue and move our right pointer alone
 
 step 3:
 
 price[left]=1 price[right]=3 profit=2
-here price[left] is less than price[right] which means we will get profit so we will check our maxProfitValue previously it
-
-was 4 now our current profit is 2 so we will check which is maximum and update our maxProfitValue and move our right pointer alone
+here, price[left] is less than price[right], we will get profit, so we will compare the maxProfitValue with the current profit. 
+We will update our maxProfitValue and move our right pointer alone
 
 step 4:
 
 price[left]=1 price[right]=6 profit=5
-here price[left] is less than price[right] which means we will get profit so we will check our maxProfitValue previously it was 4 now our current profit is 5 so we will check which is maximum and update our maxProfitValue and move our right pointer alone
+same logic as above
 
 step 5:
 
