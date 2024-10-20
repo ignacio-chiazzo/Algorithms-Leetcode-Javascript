@@ -33,7 +33,7 @@ Approach:
 let use initialize Left and Right pointer to first and second position of array
 Here Left is to buy stock and Right is to sell stock
 
-Then we initialize our max_profit as 0.
+Then we initialize our maxProfitValue as 0.
 
 Now we will start our while loop and we will run till our
 Right pointer less then length of array
@@ -52,19 +52,19 @@ here price[left] is greater than price[right] so we will move left pointer to th
 step 2:
 
 price[left]=1 price[right]=5 profit=4
-here price[left] is less than price[right] which means we will get profit so we will update our max_profit and move our right pointer alone
+here price[left] is less than price[right] which means we will get profit so we will update our maxProfitValue and move our right pointer alone
 
 step 3:
 
 price[left]=1 price[right]=3 profit=2
-here price[left] is less than price[right] which means we will get profit so we will check our max_profit previously it
+here price[left] is less than price[right] which means we will get profit so we will check our maxProfitValue previously it
 
-was 4 now our current profit is 2 so we will check which is maximum and update our max_profit and move our right pointer alone
+was 4 now our current profit is 2 so we will check which is maximum and update our maxProfitValue and move our right pointer alone
 
 step 4:
 
 price[left]=1 price[right]=6 profit=5
-here price[left] is less than price[right] which means we will get profit so we will check our max_profit previously it was 4 now our current profit is 5 so we will check which is maximum and update our max_profit and move our right pointer alone
+here price[left] is less than price[right] which means we will get profit so we will check our maxProfitValue previously it was 4 now our current profit is 5 so we will check which is maximum and update our maxProfitValue and move our right pointer alone
 
 step 5:
 
@@ -75,18 +75,18 @@ same logic as above
 const maxProfit = (prices) => {
   let left = 0; // Buy
   let right = 1; // sell
-  let max_profit = 0;
+  let maxProfitValue = 0;
   while (right < prices.length) {
     if (prices[left] < prices[right]) {
       let profit = prices[right] - prices[left]; // our current profit
 
-      max_profit = Math.max(max_profit, profit);
+      maxProfitValue = Math.max(maxProfitValue, profit);
     } else {
       left = right;
     }
     right++;
   }
-  return max_profit;
+  return maxProfitValue;
 };
 
 module.exports.maxProfit = maxProfit;
