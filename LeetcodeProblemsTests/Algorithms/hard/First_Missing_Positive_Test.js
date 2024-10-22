@@ -4,7 +4,7 @@ const bitReverseToMakeNumberEqual = require("../../../LeetcodeProblems/Algorithm
 function test() {
   assert.deepEqual(
     firstMissingPositive([1,2,0]),
-    2
+   3
   );
   assert.deepEqual(
     firstMissingPositive([3,4,-1,1]),
