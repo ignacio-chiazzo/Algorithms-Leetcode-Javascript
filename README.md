@@ -102,6 +102,7 @@ The solutions are located under `/LeetcodeProblems`. Each problem has a test fil
 | Algoritmhs |
 |      -     |
 | [Heap Sort](/SortingAlgorithms/heapSort.js)  |
+| [Merge Sort](/SortingAlgorithms/mergeSort.js) |
 | [Quick Sort](/SortingAlgorithms/QuickSort.js) |
 
 ### Databases
