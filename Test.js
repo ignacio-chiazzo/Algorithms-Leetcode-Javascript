@@ -5,13 +5,15 @@ const fs = require("fs");
 const PROBLEMS_FOLDERS = [
   "./LeetcodeProblems/Algorithms/easy/",
   "./LeetcodeProblems/Algorithms/medium/",
-  "./LeetcodeProblems/Algorithms/hard/"
+  "./LeetcodeProblems/Algorithms/hard/",
+  "./SortingAlgorithms/"
 ];
 
 const TESTS_FOLDERS = [
   "./LeetcodeProblemsTests/Algorithms/easy/",
   "./LeetcodeProblemsTests/Algorithms/medium/",
-  "./LeetcodeProblemsTests/Algorithms/hard/"
+  "./LeetcodeProblemsTests/Algorithms/hard/",
+  "./SortingAlgorithmsTest/"
 ];
 
 const REGEX_PATTERN_HIDDEN_FILES = /(^|\/)\.[^\/\.]/g;
